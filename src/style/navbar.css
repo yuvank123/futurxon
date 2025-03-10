@@ -1,0 +1,36 @@
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+      rgba(59, 130, 246, 0.4),
+      rgba(139, 92, 246, 0.4)
+    );
+    border-radius: 15px;
+    opacity: 0;
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale(0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+  
+  @layer utilities {
+    .text-shadow {
+      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+    .text-glow {
+      text-shadow: 0px 4px 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+  

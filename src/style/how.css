@@ -1,0 +1,9 @@
+@keyframes rotate-border {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .animate-rotate-border {
+    animation: rotate-border 8s linear infinite;
+    background-size: 200% 200%;
+  }
