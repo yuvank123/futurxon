@@ -16,7 +16,7 @@ import Footer from '../components/footer';
 
 const homepage = () => {
   return (
-    <div className='h-[1600vh] relative'>
+    <div className='h-auto relative'>
       <div>
         <Background />
       </div>
@@ -59,13 +59,13 @@ const homepage = () => {
       <div className='h-auto border-0 border-white'>
         <Fortune/>
       </div>
-      <div className='h-auto border-2 border-white'>
+      <div className='h-auto border-0 border-white'>
         <Testinomial/>
       </div>
-      <div className='h-auto border-2 border-white'>
+      <div className='h-auto border-0 border-white'>
          <Form/>
       </div>
-      <div className='h-auto border-2 border-amber-50'>
+      <div className='h-auto border-0 border-amber-50'>
         <Footer/>
       </div>
     </div>

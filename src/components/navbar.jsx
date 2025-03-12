@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import "../style/navbar.css";
+import Logo from '../images/logo.png'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -117,15 +118,19 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent font-sans text-[14px] md:text-[18px] ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-0 border-0 border-amber-50">
         <div className="flex justify-between items-center h-16 md:h-25">
           {/* Left - Logo */}
-          <div className="flex-shrink-0">
-            <span className="text-[25px] md:text-[35px] font-bold text-blue-600">FutureOn</span>
+          <div className="flex-shrink-0 overflow-hidden">
+            <span className="text-[25px] md:text-[35px] font-bold text-blue-600">
+              <a href="/" className=''>
+              <img src={Logo} alt="image" className="w-24 md:w-60 h-[200px]" />
+              </a>
+            </span>
           </div>
 
           {/* Center - Navigation Links */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center -ml-[40px]">
             <div className="flex items-center space-x-4 md:space-x-8 bg-white/30 backdrop-blur-md rounded-[15px] p-2 md:p-3 font-[12px] md:font-[14px]">
               
               {/* About Us Dropdown */}
@@ -155,7 +160,7 @@ const Navbar = () => {
                   ],
                   [
                     { text: 'Agile Mindset', href: '/agile' },
-                    { text: 'Our Team', href: '/team' },
+                    { text: 'Our Team', href: '/leadership' },
                     { text: 'Awards', href: '/awards' }
                   ]
                 )}
@@ -268,7 +273,7 @@ const Navbar = () => {
           </div>
 
           {/* Right - Animated CTA Button */}
-          <div className="flex items-center space-x-4 md:space-x-6">
+          <div className="flex items-center space-x-4 md:space-x-6 pr-1">
             <button
               ref={ctaButton}
               onClick={handleCtaClick}
