@@ -1,15 +1,12 @@
 import React from 'react'
-import Navbar from '../../src/components/navbar'
-import About from '../components/about-campany/about'
-import About1 from '../components/about-campany/about1'
-import About2 from '../components/about-campany/about2'
-import About3 from '../components/about-campany/about3'
-import About4 from '../components/about-campany/about4'
-import About5 from '../components/about-campany/about5'
-import Form from '../components/home/form';
-import Footer from '../components/footer';
+import Navbarhire from '../../components/navhireme'
+import Review from '../../components/About/customer-review/review';
+import Review1 from '../../components/About/customer-review/review1';
+import Review2 from '../../components/About/customer-review/review2';
+import Review3 from '../../components/About/customer-review/review3';
+import Footer from '../../components/footer';
 
-const aboutus = () => {
+const customer = () => {
   return (
     <div className='relative'>
       {/* Fixed background */}
@@ -25,28 +22,19 @@ const aboutus = () => {
       {/* Scrollable content */}
       <div className='relative z-10 h-auto'>
         <div className='sticky top-0 z-30'>
-          <Navbar/>
+          <Navbarhire/>
         </div>
-        <div className='relative border-0 border-amber-100'>
-          <About/>
+        <div className='relative border-0 border-amber-100 h-auto'>
+          <Review/>
         </div>
-        <div className='relative border-0 border-amber-100'>
-          <About1/>
+        <div className='relative border-0 border-amber-100 h-auto'>
+          <Review1/>
         </div>
-        <div className='relative border-0 border-purple-500'>
-          <About2/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About3/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About4/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About5/>
-        </div>
-        <div>
-           <Form/>
+        {/* <div className='relative border-0 border-amber-100 h-auto'>
+          <Review2/>
+        </div> */}
+        <div className='relative border-0 border-amber-100 h-auto'>
+          <Review3/>
         </div>
         <div>
           <Footer/>
@@ -56,4 +44,4 @@ const aboutus = () => {
   )
 }
 
-export default aboutus
+export default customer

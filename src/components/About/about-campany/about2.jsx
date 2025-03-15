@@ -1,7 +1,7 @@
 import React from "react";
-import T1 from "../../images/david.png";
-import T2 from "../../images/philip.png";
-import T3 from "../../images/brett.png";
+import T1 from "../../../images/david.png";
+import T2 from "../../../images/philip.png";
+import T3 from "../../../images/brett.png";
 
 const Testimonials = () => {
   const testimonials = [

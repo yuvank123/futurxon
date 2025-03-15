@@ -38,9 +38,9 @@ const homepage = () => {
           </video>
         </div>
       </div>
-      <div className='h-[60vh] relative z-20 bg-gradient-to-r from-blue-700/20 via-purple-700/20 to-blue-700/20'>    
+      {/* <div className='h-[60vh] relative z-20 bg-gradient-to-r from-blue-700/20 via-purple-700/20 to-blue-700/20'>    
         <Wehelped />
-      </div>
+      </div> */}
       <div className='h-auto relative z-20 border-0 border-blue-200'>
         <Connect />
       </div>
@@ -56,9 +56,9 @@ const homepage = () => {
       <div className='h-[80vh] border-0 border-white '>
         <Offering/>
       </div>
-      <div className='h-auto border-0 border-white'>
+      {/* <div className='h-auto border-0 border-white'>
         <Fortune/>
-      </div>
+      </div> */}
       <div className='h-auto border-0 border-white'>
         <Testinomial/>
       </div>

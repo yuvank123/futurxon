@@ -1,10 +1,10 @@
 import React from "react";
-import C1 from "../../images/c-1.svg";
-import C2 from "../../images/c-2.svg";
-import C3 from "../../images/c-3.svg";
-import C4 from "../../images/c-4.svg";
-import C5 from "../../images/c-5.svg";
-import C6 from "../../images/c-6.svg";
+import C1 from "../../../images/c-1.svg";
+import C2 from "../../../images/c-2.svg";
+import C3 from "../../../images/c-3.svg";
+import C4 from "../../../images/c-4.svg";
+import C5 from "../../../images/c-5.svg";
+import C6 from "../../../images/c-6.svg";
 
 const About3 = () => {
   const certificateImages = [

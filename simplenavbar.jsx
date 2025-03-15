@@ -96,10 +96,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        
-
         {/* Right Column */}
-        <div className="space-y-0 pl-3">
+        <div className="space-y-4 pl-3">
           {rightItems.map((item, index) => (
             <a
               key={item.text}
@@ -111,83 +109,6 @@ const Navbar = () => {
               {item.text}
             </a>
           ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  const renderserviceDropdown = (menuName, leftItems, middleItems, rightItems) => (
-    <div
-      className={`absolute top-full -left-[300px] mt-5 w-[900px] bg-white border border-gray-200 rounded-[18px] shadow-xl py-8 z-50 transition-all duration-200 ${
-        activeMenu === menuName
-          ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-2 pointer-events-none'
-      }`}
-      onMouseEnter={() => handleMenuEnter(menuName)}
-      onMouseLeave={() => handleMenuLeave(menuName)}
-    >
-      <div className="grid grid-cols-3 gap-8 px-8">
-        {/* Left Column */}
-        <div className="space-y-0">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Development</h3>
-          <div className="space-y-0">
-            {leftItems.map((item, index) => (
-              <a
-                key={item.text}
-                href={item.href}
-                ref={el => (dropdownItems.current[index] = el)}
-                onClick={() => handleDropdownItemClick(index)}
-                className="flex items-center px-4 py-3 text-gray-600 transition-all rounded-lg hover:bg-gray-50 hover:text-gray-900 group"
-              >
-                {item.text}
-                <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Middle Column */}
-        <div className="space-y-0 border-l border-gray-200 pl-8">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Solutions</h3>
-          <div className="space-y-0">
-            {middleItems.map((item, index) => (
-              <a
-                key={item.text}
-                href={item.href}
-                ref={el => (dropdownItems.current[index + leftItems.length] = el)}
-                onClick={() => handleDropdownItemClick(index + leftItems.length)}
-                className="flex items-center px-4 py-3 text-gray-600 transition-all rounded-lg hover:bg-gray-50 hover:text-gray-900 group"
-              >
-                {item.text}
-                <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="space-y-0 border-l border-gray-200 pl-8">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Emerging Tech</h3>
-          <div className="space-y-0">
-            {rightItems.map((item, index) => (
-              <a
-                key={item.text}
-                href={item.href}
-                ref={el => (dropdownItems.current[index + leftItems.length + middleItems.length] = el)}
-                onClick={() => handleDropdownItemClick(index + leftItems.length + middleItems.length)}
-                className="flex items-center px-4 py-3 text-gray-600 transition-all rounded-lg hover:bg-gray-50 hover:text-gray-900 group"
-              >
-                {item.text}
-                <svg className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </div>
@@ -234,11 +155,13 @@ const Navbar = () => {
                 {renderDropdown('about', 
                   [
                     { text: 'About Company', href: '/about-company' },
-                    { text: 'Customer Reviews', href: '/customer-reviews' }
+                    { text: 'Customer Reviews', href: '/reviews' },
+                    { text: 'Bacancy Values', href: '/values' }
                   ],
                   [
                     { text: 'Agile Mindset', href: '/agile' },
-                    { text: 'Bacancy Values', href: '/values' }
+                    { text: 'Our Team', href: '/leadership' },
+                    { text: 'Awards', href: '/awards' }
                   ]
                 )}
               </div>
@@ -262,7 +185,7 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                {renderserviceDropdown('services',
+                {renderDropdown('services',
                   [
                     { text: 'Web Development', href: '/web-dev' },
                     { text: 'Mobile Apps', href: '/mobile-apps' },
@@ -272,24 +195,19 @@ const Navbar = () => {
                     { text: 'Cloud Services', href: '/cloud' },
                     { text: 'AI Solutions', href: '/ai' },
                     { text: 'Blockchain', href: '/blockchain' }
-                  ],
-                  [
-                    { text: 'Cloud Services', href: '/cloud' },
-                    { text: 'AI Solutions', href: '/ai' },
-                    { text: 'Blockchain', href: '/blockchain' }
                   ]
                 )}
               </div>
 
-              {/* career Dropdown */}
+              {/* Hire-Me Dropdown */}
               <div
                 className="relative"
                 onMouseEnter={() => handleMenuEnter('hireme')}
                 onMouseLeave={() => handleMenuLeave('hireme')}
               >
                 <button className="text-purple-300 hover:text-white-600 transition-colors flex items-center gap-1">
-                  Career
-                  {/* <svg
+                  Hire-Me
+                  <svg
                     className={`w-4 h-4 transition-transform ${
                       activeMenu === 'hireme' ? 'rotate-180' : ''
                     }`}
@@ -298,9 +216,9 @@ const Navbar = () => {
                     viewBox="0 0 24 24"
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg> */}
+                  </svg>
                 </button>
-                {/* {renderDropdown('hireme',
+                {renderDropdown('hireme',
                   [
                     { text: 'Full-Time', href: '/full-time' },
                     { text: 'Part-Time', href: '/part-time' },
@@ -311,7 +229,7 @@ const Navbar = () => {
                     { text: 'Project Basis', href: '/project' },
                     { text: 'Hourly', href: '/hourly' }
                   ]
-                )} */}
+                )}
               </div>
 
               {/* Portfolio Dropdown */}
@@ -336,11 +254,13 @@ const Navbar = () => {
                 {renderDropdown('portfolio',
                   [
                     { text: 'Case Studies', href: '/case-studies' },
-                    { text: 'Our Clients', href: '/clients' }
+                    { text: 'Our Clients', href: '/clients' },
+                    { text: 'Success Stories', href: '/success-stories' }
                   ],
                   [
                     { text: 'Testimonials', href: '/testimonials' },
-                    { text: 'Success Stories', href: '/success-stories' }
+                    { text: 'Awards', href: '/portfolio-awards' },
+                    { text: 'Statistics', href: '/stats' }
                   ]
                 )}
               </div>

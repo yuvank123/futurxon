@@ -1,5 +1,5 @@
 import React from 'react';
-import Sample from '../../images/sample.png';
+import Sample from '../../../images/sample.png';
 
 const About4 = () => {
   return (
@@ -45,7 +45,7 @@ const About4 = () => {
           hover:shadow-xl hover:shadow-purple-500/30 hover:scale-[1.02]
           before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-700 before:to-blue-600 before:rounded-xl before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100'
         >
-          <span className='relative z-10'>MEET OUR LEADERSHIP TEAM</span>
+          <span className='relative z-10'>BOOK A FREE CONSULTATION</span>
           <div className='absolute inset-0 bg-noise opacity-10 rounded-xl' />
         </a>
       </div>

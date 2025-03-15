@@ -234,7 +234,7 @@ const Navbar = () => {
                 {renderDropdown('about', 
                   [
                     { text: 'About Company', href: '/about-company' },
-                    { text: 'Customer Reviews', href: '/customer-reviews' }
+                    { text: 'Customer Reviews', href: '/reviews' }
                   ],
                   [
                     { text: 'Agile Mindset', href: '/agile' },
@@ -359,7 +359,7 @@ const Navbar = () => {
               onClick={handleCtaClick}
               className="cta-button bg-gradient-to-r from-blue-600 to-purple-500 text-white p-2 md:p-3 rounded-[15px] hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
             >
-              <span className="relative z-10">Book in 30 min</span>
+              <span className="relative z-10">Hire Me</span>
             </button>
           </div>
         </div>
