@@ -6,6 +6,7 @@ import Web3 from '../../components/services/web/web3';
 import Web4 from '../../components/services/web/web4';
 import Web5 from '../../components/services/web/web5';
 import Web6 from '../../components/services/web/web6';
+import Footer from '../../components/footer';
 
 const webdev = () => {
   return (
@@ -51,7 +52,7 @@ const webdev = () => {
       </div>
 
       {/* Content layer */}
-      <div className='relative z-10 h-[1000vh]'>
+      <div className='relative z-10 h-auto'>
         <div className='sticky top-0 z-50 backdrop-blur-[6px] bg-gradient-to-b from-purple-950/40 to-pink-950/20 border-b border-purple-900/30'>
           <Navbar/>
         </div>
@@ -72,6 +73,9 @@ const webdev = () => {
         </div>
         <div className='relative'>
           <Web6/>
+        </div>
+        <div className='relative'>
+          <Footer/>
         </div>
       </div>
 

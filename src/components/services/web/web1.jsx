@@ -7,10 +7,10 @@ const EnterpriseWebUI = () => {
       {/* Left Section */}
       <div className="w-1/2 pr-12">
         <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
-          Enterprise Web Development Company –
+        Leading Enterprise Web Solutions –
           <br /> 
           <span className="bg-gradient-to-r from-purple-300 to-blue-200 bg-clip-text text-transparent">
-            Custom Solutions & Expert Services
+          Custom Development & Expert Services
           </span>
         </h1>
         <p className="text-lg text-gray-300/80 mb-8 leading-relaxed">
