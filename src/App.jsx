@@ -4,7 +4,9 @@ import Homepage from './pages/homepage';
 import Aboutus from './pages/Aboutus/aboutus';
 // import Leadership from './pages/leadership';
 import Customer from './pages/Aboutus/customer';
-import Webdevpage from './pages/Service/webdev'
+import Webdevpage from './pages/Service/webdev';
+import MobileDev from './pages/Service/mobiledev';
+import Contact from './pages/contact/Contactus';
 
 
 const App = () => {
@@ -15,7 +17,9 @@ const App = () => {
           <Route path='/about-company' element={<Aboutus/>} />
           {/* <Route path='/leadership' element={<Leadership/>} /> */}
           <Route path='/customer-reviews' element={<Customer/>} /> 
-          <Route path='/web-dev' element={<Webdevpage/>} />       
+          <Route path='/web-dev' element={<Webdevpage/>} />
+          <Route path='/mobile-apps' element={<MobileDev/>} />    
+          <Route path='/contact' element={<Contact/>}/>       
           </Routes>
       </div>
   );
