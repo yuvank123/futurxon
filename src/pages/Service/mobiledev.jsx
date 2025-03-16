@@ -1,6 +1,11 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
 import Mobile1 from '../../components/services/mobile-app/mobile1';
+import Mobile2 from '../../components/services/mobile-app/mobile2';
+import Mobile3 from '../../components/services/mobile-app/mobile3';
+import Mobile4 from '../../components/services/mobile-app/mobile4';
+import Mobile5 from '../../components/services/mobile-app/mobile5';
+import Mobile6 from '../../components/services/mobile-app/mobile6';
 import Footer from '../../components/footer';
 
 const mobiledev = () => {
@@ -53,6 +58,21 @@ const mobiledev = () => {
         </div>
         <div className='relative'>
           <Mobile1/>
+        </div>
+        <div className='relative'>
+          <Mobile2/>
+        </div>
+        <div className='relative'>
+          <Mobile3/>
+        </div>
+        <div className='relative'>
+          <Mobile4/>
+        </div>
+        <div className='relative'>
+          <Mobile5/>
+        </div>
+        <div className='relative'>
+          <Mobile6/>
         </div>
         <div className='relative'>
           <Footer/>
