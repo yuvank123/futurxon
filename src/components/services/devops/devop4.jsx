@@ -1,42 +1,42 @@
 import React from "react";
-import { FiSmartphone, FiTablet, FiCodesandbox, FiTool, FiServer, FiCloud, FiDatabase } from 'react-icons/fi';
+import { FiCloud, FiRepeat, FiServer, FiPackage, FiActivity, FiUsers } from 'react-icons/fi';
 
-const MobileTechnologyStack = () => {
+const DevOpsTechnologyStack = () => {
   const categories = [
     {
-      title: "Platforms",
-      icon: FiSmartphone,
-      items: ["iOS", "Android", "HarmonyOS", "KaiOS", "WatchOS", "Wear OS", "Android TV", "iPadOS"],
+      title: "Cloud Platforms",
+      icon: FiCloud,
+      items: ["AWS", "Google Cloud", "Azure", "DigitalOcean", "Linode", "IBM Cloud", "Oracle Cloud", "Alibaba Cloud"],
       color: "purple"
     },
     {
-      title: "Cross-Platform",
-      icon: FiTablet,
-      items: ["React Native", "Flutter", "Ionic", "Xamarin", "NativeScript", "Kotlin Multiplatform", "SwiftUI", "Jetpack Compose"],
+      title: "CI/CD",
+      icon: FiRepeat,
+      items: ["Jenkins", "GitHub Actions", "CircleCI", "GitLab CI", "Argo CD", "Spinnaker", "Travis CI", "Azure DevOps"],
       color: "pink"
     },
     {
-      title: "Dev Tools",
-      icon: FiTool,
-      items: ["Android Studio", "Xcode", "AppCode", "Expo", "Firebase Console", "React Native Debugger", "Genymotion", "Charles Proxy"],
+      title: "IaC & Config",
+      icon: FiServer,
+      items: ["Terraform", "Ansible", "Pulumi", "CloudFormation", "Chef", "Puppet", "SaltStack", "Crossplane"],
       color: "blue"
     },
     {
-      title: "Backend Services",
-      icon: FiCloud,
-      items: ["Firebase", "AWS Amplify", "Supabase", "Appwrite", "GraphQL", "Auth0", "Contentful", "OneSignal"],
+      title: "Containerization",
+      icon: FiPackage,
+      items: ["Docker", "Kubernetes", "Helm", "OpenShift", "Rancher", "Istio", "Containerd", "Podman"],
       color: "purple"
     },
     {
-      title: "State Management",
-      icon: FiCodesandbox,
-      items: ["Redux", "MobX", "Riverpod", "BLoC", "Provider", "GetX", "ViewModel", "Recoil"],
+      title: "Monitoring",
+      icon: FiActivity,
+      items: ["Prometheus", "Grafana", "New Relic", "Datadog", "Splunk", "Elastic Stack", "Nagios", "Zabbix"],
       color: "pink"
     },
     {
-      title: "Mobile Databases",
-      icon: FiDatabase,
-      items: ["Realm", "SQLite", "Room DB", "WatermelonDB", "ObjectBox", "PouchDB", "Couchbase Lite", "Hive"],
+      title: "Collaboration",
+      icon: FiUsers,
+      items: ["Slack", "Jira", "Confluence", "Notion", "Discord", "Microsoft Teams", "Trello", "Asana"],
       color: "blue"
     }
   ];
@@ -54,10 +54,10 @@ const MobileTechnologyStack = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
-            Mobile Tech Ecosystem
+            DevOps Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Full-stack mobile development capabilities from native to cross-platform solutions
+            End-to-end DevOps solutions ensuring seamless development, deployment, and operational excellence
           </p>
         </div>
 
@@ -101,4 +101,4 @@ const MobileTechnologyStack = () => {
   );
 };
 
-export default MobileTechnologyStack;
+export default DevOpsTechnologyStack;
