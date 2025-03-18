@@ -275,7 +275,7 @@ const Navbar = () => {
                   ],
                   [
                     { text: 'Devops', href: '/devops' },
-                    { text: 'AR/VR', href: '/arvr' },
+                    { text: 'AR/VR/3D-modelling', href: '/arvr' },
                     { text: 'Cybersecurity', href: '/cybersecurity' }
                   ]
                 )}

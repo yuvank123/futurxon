@@ -9,6 +9,8 @@ import MobileDev from './pages/Service/mobiledev';
 import Devops from './pages/Service/devops';
 import Cloud from './pages/Service/clouddev';
 import UIUX from './pages/Service/UIUXdev';
+import AIsolution from './pages/Service/AIsolution';
+import Blockchain from './pages/Service/blockchain';
 import Contact from './pages/contact/Contactus';
 
 
@@ -25,7 +27,9 @@ const App = () => {
           <Route path='/devops' element={<Devops/>} /> 
           <Route path='/cloud' element={<Cloud/>} />    
           <Route path='/contact' element={<Contact/>}/> 
-          <Route path='/ui-ux' element={<UIUX/>}/>       
+          <Route path='/ui-ux' element={<UIUX/>}/>  
+          <Route path='/ai' element={<AIsolution/>}/> 
+          <Route path='/blockchain' element={<Blockchain/>}/>       
           </Routes>
       </div>
   );
