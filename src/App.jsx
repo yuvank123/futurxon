@@ -8,6 +8,7 @@ import Webdevpage from './pages/Service/webdev';
 import MobileDev from './pages/Service/mobiledev';
 import Devops from './pages/Service/devops';
 import Cloud from './pages/Service/clouddev';
+import UIUX from './pages/Service/UIUXdev';
 import Contact from './pages/contact/Contactus';
 
 
@@ -23,7 +24,8 @@ const App = () => {
           <Route path='/mobile-apps' element={<MobileDev/>} /> 
           <Route path='/devops' element={<Devops/>} /> 
           <Route path='/cloud' element={<Cloud/>} />    
-          <Route path='/contact' element={<Contact/>}/>       
+          <Route path='/contact' element={<Contact/>}/> 
+          <Route path='/ui-ux' element={<UIUX/>}/>       
           </Routes>
       </div>
   );
