@@ -7,6 +7,7 @@ import Customer from './pages/Aboutus/customer';
 import Webdevpage from './pages/Service/webdev';
 import MobileDev from './pages/Service/mobiledev';
 import Devops from './pages/Service/devops';
+import Cloud from './pages/Service/clouddev';
 import Contact from './pages/contact/Contactus';
 
 
@@ -20,7 +21,8 @@ const App = () => {
           <Route path='/customer-reviews' element={<Customer/>} /> 
           <Route path='/web-dev' element={<Webdevpage/>} />
           <Route path='/mobile-apps' element={<MobileDev/>} /> 
-          <Route path='/devops' element={<Devops/>} />    
+          <Route path='/devops' element={<Devops/>} /> 
+          <Route path='/cloud' element={<Cloud/>} />    
           <Route path='/contact' element={<Contact/>}/>       
           </Routes>
       </div>
