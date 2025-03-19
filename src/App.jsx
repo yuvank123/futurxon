@@ -7,6 +7,7 @@ import Customer from './pages/Aboutus/customer';
 import Webdevpage from './pages/Service/webdev';
 import MobileDev from './pages/Service/mobiledev';
 import Contact from './pages/contact/Contactus';
+import CyberSctpage from './pages/Service/cybersecurity';
 
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
           <Route path='/customer-reviews' element={<Customer/>} /> 
           <Route path='/web-dev' element={<Webdevpage/>} />
           <Route path='/mobile-apps' element={<MobileDev/>} />    
-          <Route path='/contact' element={<Contact/>}/>       
+          <Route path='/contact' element={<Contact/>}/> 
+          <Route path='/cyber' element={<CyberSctpage/>} />       
           </Routes>
       </div>
   );

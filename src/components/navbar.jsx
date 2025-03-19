@@ -274,7 +274,7 @@ const Navbar = () => {
                     { text: 'Blockchain', href: '/blockchain' }
                   ],
                   [
-                    { text: 'Cloud Services', href: '/cloud' },
+                    { text: 'Cyber Security', href: '/cyber' },
                     { text: 'AI Solutions', href: '/ai' },
                     { text: 'Blockchain', href: '/blockchain' }
                   ]
