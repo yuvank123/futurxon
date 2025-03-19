@@ -9,7 +9,12 @@ const FullScreenUI = () => {
         <img
           src={Devopsbg}
           alt="Background"
-          className="w-[50vw] h-[100vh] object-cover animate-zoom-in-out animate-spin-slow"
+          className="w-full h-full md:w-[50vw] md:h-[100vh] object-contain animate-zoom-in-out animate-spin-slow"
+          style={{
+            maxHeight:"100%",
+            maxWidth:"100%",
+            transform:"scale(1)"
+          }}
         />
       </div>
 

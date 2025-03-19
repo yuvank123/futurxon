@@ -28,7 +28,12 @@ const FullScreenUI = () => {
           <img
             src={UIUXbg}
             alt="UI/UX Background"
-            className="w-[50vw] h-[80vh] object-cover animate-slow-bounce"
+            className="w-full h-full md:w-[50vw] md:h-[80vh] object-contain animate-slow-bounce"
+            style={{
+              maxHeight:"100%",
+              maxWidth:"100%",
+              transform:"scale(1)"
+            }}
           />
         </div>
       </div>

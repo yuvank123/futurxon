@@ -9,10 +9,14 @@ const FullScreenUI = () => {
         <img
           src={AIsolutionbg}
           alt="AI Background"
-          className="w-[50vw] h-[80vh] object-cover animate-zoom-in-out animate-spin-slow"
+          className="w-full h-full md:w-[50vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow"
+          style={{
+            maxWidth: '100%',
+            maxHeight: '100%',
+            transform: 'scale(1)',
+          }}
         />
       </div>
-
       {/* Floating Particles */}
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (

@@ -9,7 +9,12 @@ const FullScreenUI = () => {
         <img
           src={Cloudbg}
           alt="Cloud Background"
-          className="w-[40vw] h-[80vh] object-cover animate-zoom-in-out animate-spin-slow"
+          className=" w-full h-full md:w-[40vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow"
+          style={{
+            maxWidth:"100%",
+            maxHeight:"100%",
+            transform: "scale(1)"
+          }}
         />
       </div>
 
