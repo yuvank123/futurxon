@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
-import Cs1 from '../../components/services/CyberSecurity/Cs1';
+import Devop1 from '../../components/services/devops/devop1';
+import Devop2 from '../../components/services/devops/devop2';
+import Devop3 from '../../components/services/devops/devop3';
+import Devop4 from '../../components/services/devops/devop4';
+import Devop5 from '../../components/services/devops/devop5';
 import Footer from '../../components/footer';
+import Contact2 from '../../components/contact/Contact2';
 
-const cybersecurity = () => {
+const mobiledev = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
       {/* Deep cosmic void background */}
@@ -52,7 +57,22 @@ const cybersecurity = () => {
           <Navbar/>
         </div>
         <div className='relative'>
-          <Cs1/>
+          <Devop1/>
+        </div>
+        <div className='relative'>
+          <Devop2/>
+        </div>
+        <div className='relative'>
+          <Devop3/>
+        </div>
+        <div className='relative'>
+          <Devop4/>
+        </div>
+        <div className='relative'>
+          <Devop5/>
+        </div>
+        <div className='relative'>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>
@@ -115,4 +135,4 @@ const cybersecurity = () => {
   )
 }
 
-export default cybersecurity;
+export default mobiledev;

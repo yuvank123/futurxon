@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
-import Cs1 from '../../components/services/CyberSecurity/Cs1';
+import Cloud1 from '../../components/services/Cloud/cloud1';
+import Cloud2 from '../../components/services/Cloud/cloud2';
+import Cloud3 from '../../components/services/Cloud/cloud3';
+import Cloud4 from '../../components/services/Cloud/cloud4';
+import Cloud5 from '../../components/services/Cloud/cloud5';
 import Footer from '../../components/footer';
+import Contact2 from '../../components/contact/Contact2';
 
-const cybersecurity = () => {
+const clouddev = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
       {/* Deep cosmic void background */}
@@ -52,7 +57,22 @@ const cybersecurity = () => {
           <Navbar/>
         </div>
         <div className='relative'>
-          <Cs1/>
+          <Cloud1/>
+        </div>
+        <div className='relative'>
+          <Cloud2/>
+        </div>
+        <div className='relative'>
+          <Cloud3/>
+        </div>
+        <div className='relative'>
+          <Cloud4/>
+        </div>
+        <div className='relative'>
+          <Cloud5/>
+        </div>
+        <div className='relative'>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>
@@ -115,4 +135,4 @@ const cybersecurity = () => {
   )
 }
 
-export default cybersecurity;
+export default clouddev;

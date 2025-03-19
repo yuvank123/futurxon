@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
-import Cs1 from '../../components/services/CyberSecurity/Cs1';
+import AI1 from '../../components/services/AI-solution/ai1';
+import AI2 from '../../components/services/AI-solution/ai2';
+import AI3 from '../../components/services/AI-solution/ai3';
+import AI4 from '../../components/services/AI-solution/ai4';
+import AI5 from '../../components/services/AI-solution/ai5';
 import Footer from '../../components/footer';
+import Contact2 from '../../components/contact/Contact2';
 
-const cybersecurity = () => {
+const aidev = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
       {/* Deep cosmic void background */}
@@ -52,7 +57,22 @@ const cybersecurity = () => {
           <Navbar/>
         </div>
         <div className='relative'>
-          <Cs1/>
+          <AI1/>
+        </div>
+        <div className='relative'>
+          <AI2/>
+        </div>
+        <div className='relative'>
+          <AI3/>
+        </div>
+        <div className='relative'>
+          <AI4/>
+        </div>
+        <div className='relative'>
+          <AI5/>
+        </div>
+        <div className='relative'>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>
@@ -115,4 +135,4 @@ const cybersecurity = () => {
   )
 }
 
-export default cybersecurity;
+export default aidev;

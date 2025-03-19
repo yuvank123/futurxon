@@ -1,77 +1,72 @@
 import React from "react";
-import { FiSmartphone, FiTablet, FiCodesandbox, FiTool, FiServer, FiCloud, FiDatabase } from 'react-icons/fi';
+import { FiLock, FiDatabase, FiGlobe, FiShield, FiCode, FiActivity } from 'react-icons/fi';
 
-const MobileTechnologyStack = () => {
+const BlockchainTechnologyStack = () => {
   const categories = [
     {
-      title: "Platforms",
-      icon: FiSmartphone,
-      items: ["iOS", "Android", "HarmonyOS", "KaiOS", "WatchOS", "Wear OS", "Android TV", "iPadOS"],
+      title: "Smart Contracts",
+      icon: FiCode,
+      items: ["Ethereum (Solidity)", "Hyperledger Fabric", "Solana (Rust)", "Polkadot (Substrate)", "Tezos (Michelson)", "NEO Smart Contracts"],
       color: "purple"
     },
     {
-      title: "Cross-Platform",
-      icon: FiTablet,
-      items: ["React Native", "Flutter", "Ionic", "Xamarin", "NativeScript", "Kotlin Multiplatform", "SwiftUI", "Jetpack Compose"],
-      color: "pink"
-    },
-    {
-      title: "Dev Tools",
-      icon: FiTool,
-      items: ["Android Studio", "Xcode", "AppCode", "Expo", "Firebase Console", "React Native Debugger", "Genymotion", "Charles Proxy"],
+      title: "Blockchain Networks",
+      icon: FiGlobe,
+      items: ["Ethereum", "Binance Smart Chain", "Hyperledger Fabric", "Polkadot", "Cardano", "Avalanche", "Solana"],
       color: "blue"
     },
     {
-      title: "Backend Services",
-      icon: FiCloud,
-      items: ["Firebase", "AWS Amplify", "Supabase", "Appwrite", "GraphQL", "Auth0", "Contentful", "OneSignal"],
-      color: "purple"
-    },
-    {
-      title: "State Management",
-      icon: FiCodesandbox,
-      items: ["Redux", "MobX", "Riverpod", "BLoC", "Provider", "GetX", "ViewModel", "Recoil"],
-      color: "pink"
-    },
-    {
-      title: "Mobile Databases",
+      title: "Decentralized Storage",
       icon: FiDatabase,
-      items: ["Realm", "SQLite", "Room DB", "WatermelonDB", "ObjectBox", "PouchDB", "Couchbase Lite", "Hive"],
+      items: ["IPFS", "Filecoin", "Arweave", "Storj", "Sia", "Swarm", "BigchainDB"],
+      color: "pink"
+    },
+    {
+      title: "Security & Encryption",
+      icon: FiShield,
+      items: ["SHA-256", "Elliptic Curve Cryptography", "Zero-Knowledge Proofs", "Multi-Sig Wallets", "Threshold Cryptography", "HMAC"],
+      color: "purple"
+    },
+    {
+      title: "Consensus Mechanisms",
+      icon: FiActivity,
+      items: ["Proof of Work (PoW)", "Proof of Stake (PoS)", "Delegated PoS (DPoS)", "Proof of Authority (PoA)", "Byzantine Fault Tolerance (BFT)", "Hashgraph Consensus"],
       color: "blue"
+    },
+    {
+      title: "Identity & Authentication",
+      icon: FiLock,
+      items: ["Decentralized Identifiers (DIDs)", "Self-Sovereign Identity (SSI)", "OAuth on Blockchain", "Zero-Knowledge Identity Proofs", "Biometric Blockchain Authentication"],
+      color: "pink"
     }
   ];
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Animated Gradient Background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob animate-delay-2000 filter blur-3xl opacity-30" />
-        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob animate-delay-3000 filter blur-3xl opacity-30" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
+        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob filter blur-3xl opacity-30" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
       </div>
 
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
-            Mobile Tech Ecosystem
+            Blockchain Technology Stack
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Full-stack mobile development capabilities from native to cross-platform solutions
+            Explore the essential components of blockchain ecosystems, from consensus mechanisms to decentralized storage and smart contracts.
           </p>
         </div>
 
-        {/* Category Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category, index) => (
             <div 
               key={index}
               className={`group relative p-8 rounded-3xl bg-white/5 backdrop-blur-2xl border border-${category.color}-400/20 hover:border-${category.color}-400/40 transition-all duration-300 hover:-translate-y-2 shadow-xl hover:shadow-${category.color}-500/10`}
             >
-              {/* Gradient Border Effect */}
               <div className={`absolute -inset-px rounded-3xl bg-gradient-to-br from-${category.color}-400/30 to-transparent -z-10`} />
               
-              {/* Category Header */}
               <div className="flex items-center mb-6 space-x-4">
                 <div className={`p-3 rounded-xl bg-${category.color}-400/10 backdrop-blur-sm`}>
                   <category.icon className={`text-3xl text-${category.color}-400 animate-icon-hover`} />
@@ -81,7 +76,6 @@ const MobileTechnologyStack = () => {
                 </h2>
               </div>
 
-              {/* Technology Items */}
               <div className="grid grid-cols-2 gap-3">
                 {category.items.map((item, itemIndex) => (
                   <div
@@ -101,4 +95,4 @@ const MobileTechnologyStack = () => {
   );
 };
 
-export default MobileTechnologyStack;
+export default BlockchainTechnologyStack;

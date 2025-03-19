@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
-import Cs1 from '../../components/services/CyberSecurity/Cs1';
+import Chain1 from '../../components/services/Blockchain/chain1';
+import Chain2 from '../../components/services/Blockchain/chain2';
+import Chain3 from '../../components/services/Blockchain/chain3';
+import Chain4 from '../../components/services/Blockchain/chain4';
+import Chain5 from '../../components/services/Blockchain/chain5';
 import Footer from '../../components/footer';
+import Contact2 from '../../components/contact/Contact2';
 
-const cybersecurity = () => {
+const bcdev = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
       {/* Deep cosmic void background */}
@@ -52,7 +57,23 @@ const cybersecurity = () => {
           <Navbar/>
         </div>
         <div className='relative'>
-          <Cs1/>
+          <Chain1/>
+        </div>
+        <div className='relative'>
+          <Chain2/>
+        </div>
+        <div className='relative'>
+          <Chain3/>
+        </div>
+        <div className='relative'>
+          <Chain4/>
+        </div>
+        <div className='relative'>
+          <Chain5/>
+        </div>
+        <div
+         className='relative'>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>
@@ -115,4 +136,4 @@ const cybersecurity = () => {
   )
 }
 
-export default cybersecurity;
+export default bcdev;

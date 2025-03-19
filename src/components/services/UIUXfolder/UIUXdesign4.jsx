@@ -1,42 +1,42 @@
 import React from "react";
-import { FiSmartphone, FiTablet, FiCodesandbox, FiTool, FiServer, FiCloud, FiDatabase } from 'react-icons/fi';
+import { FiLayout, FiUsers, FiSmartphone, FiPackage, FiSliders, FiMonitor } from 'react-icons/fi';
 
-const MobileTechnologyStack = () => {
+const UIUXDesignEcosystem = () => {
   const categories = [
     {
-      title: "Platforms",
-      icon: FiSmartphone,
-      items: ["iOS", "Android", "HarmonyOS", "KaiOS", "WatchOS", "Wear OS", "Android TV", "iPadOS"],
+      title: "Design Tools",
+      icon: FiLayout,
+      items: ["Figma", "Adobe XD", "Sketch", "InVision", "Framer", "ProtoPie", "Axure", "Origami"],
       color: "purple"
     },
     {
-      title: "Cross-Platform",
-      icon: FiTablet,
-      items: ["React Native", "Flutter", "Ionic", "Xamarin", "NativeScript", "Kotlin Multiplatform", "SwiftUI", "Jetpack Compose"],
+      title: "User Research",
+      icon: FiUsers,
+      items: ["User Interviews", "Surveys", "Personas", "Journey Maps", "Usability Testing", "Card Sorting", "A/B Testing", "Heatmaps"],
       color: "pink"
     },
     {
-      title: "Dev Tools",
-      icon: FiTool,
-      items: ["Android Studio", "Xcode", "AppCode", "Expo", "Firebase Console", "React Native Debugger", "Genymotion", "Charles Proxy"],
+      title: "Prototyping",
+      icon: FiSmartphone,
+      items: ["Interactive Prototypes", "Microinteractions", "Animations", "Design Handoff", "Responsive Previews", "User Flow Diagrams", "Design Specs", "Version Control"],
       color: "blue"
     },
     {
-      title: "Backend Services",
-      icon: FiCloud,
-      items: ["Firebase", "AWS Amplify", "Supabase", "Appwrite", "GraphQL", "Auth0", "Contentful", "OneSignal"],
+      title: "Design Systems",
+      icon: FiPackage,
+      items: ["Component Libraries", "Style Guides", "Tokens", "Documentation", "Accessibility", "Theming", "Plugins", "Governance"],
       color: "purple"
     },
     {
-      title: "State Management",
-      icon: FiCodesandbox,
-      items: ["Redux", "MobX", "Riverpod", "BLoC", "Provider", "GetX", "ViewModel", "Recoil"],
+      title: "Collaboration",
+      icon: FiSliders,
+      items: ["Miro", "Notion", "Zeroheight", "Storybook", "Abstract", "Zeplin", "Avocode", "Lingo"],
       color: "pink"
     },
     {
-      title: "Mobile Databases",
-      icon: FiDatabase,
-      items: ["Realm", "SQLite", "Room DB", "WatermelonDB", "ObjectBox", "PouchDB", "Couchbase Lite", "Hive"],
+      title: "Analytics",
+      icon: FiMonitor,
+      items: ["Hotjar", "FullStory", "Mixpanel", "Google Analytics", "Amplitude", "Lucky Orange", "Crazy Egg", "Smartlook"],
       color: "blue"
     }
   ];
@@ -54,10 +54,10 @@ const MobileTechnologyStack = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
-            Mobile Tech Ecosystem
+            UI/UX Design Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Full-stack mobile development capabilities from native to cross-platform solutions
+            Comprehensive design solutions enabling seamless user experiences, creative workflows, and pixel-perfect implementations
           </p>
         </div>
 
@@ -101,4 +101,4 @@ const MobileTechnologyStack = () => {
   );
 };
 
-export default MobileTechnologyStack;
+export default UIUXDesignEcosystem;

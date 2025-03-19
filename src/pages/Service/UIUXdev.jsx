@@ -1,9 +1,14 @@
 import React from 'react';
 import Navbar from '../../components/navbar';
-import Cs1 from '../../components/services/CyberSecurity/Cs1';
+import UIux1 from '../../components/services/UIUXfolder/UIUXdesign1';
+import UIux2 from '../../components/services/UIUXfolder/UIUXdesign2';
+import UIux3 from '../../components/services/UIUXfolder/UIUXdesign3';
+import UIux4 from '../../components/services/UIUXfolder/UIUXdesign4';
+import UIux5 from '../../components/services/UIUXfolder/UIUXdesign5';
 import Footer from '../../components/footer';
+import Contact2 from '../../components/contact/Contact2';
 
-const cybersecurity = () => {
+const UIUXdev = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
       {/* Deep cosmic void background */}
@@ -52,7 +57,22 @@ const cybersecurity = () => {
           <Navbar/>
         </div>
         <div className='relative'>
-          <Cs1/>
+          <UIux1/>
+        </div>
+        <div className='relative'>
+          <UIux2/>
+        </div>
+        <div className='relative'>
+          <UIux3/>
+        </div>
+        <div className='relative'>
+          <UIux4/>
+        </div>
+        <div className='relative'>
+          <UIux5/>
+        </div>
+        <div className='relative'>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>
@@ -115,4 +135,4 @@ const cybersecurity = () => {
   )
 }
 
-export default cybersecurity;
+export default UIUXdev;

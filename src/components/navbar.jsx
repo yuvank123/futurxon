@@ -274,9 +274,15 @@ const Navbar = () => {
                     { text: 'Blockchain', href: '/blockchain' }
                   ],
                   [
+<<<<<<< HEAD
                     { text: 'Cyber Security', href: '/cyber' },
                     { text: 'AI Solutions', href: '/ai' },
                     { text: 'Blockchain', href: '/blockchain' }
+=======
+                    { text: 'Devops', href: '/devops' },
+                    { text: 'AR/VR/3D-modelling', href: '/arvr' },
+                    { text: 'Cybersecurity', href: '/cybersecurity' }
+>>>>>>> ac0f3ec444cf492a2c778d9838666f923507e66c
                   ]
                 )}
               </div>
