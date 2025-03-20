@@ -41,40 +41,38 @@ const Offering = () => {
   ];
 
   return (
-    <div className="w-full h-full  relative overflow-hidden mt-10">
-
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto p-6 lg:p-8">
+    <div className="w-full h-full relative overflow-hidden mt-10 px-4 sm:px-6 lg:px-8 mb-10">
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between gap-8 mb-12">
-          <div className="md:w-1/2">
-            <h2 className="text-4xl md:text-8xl font-bold text-purple-400 mb-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 mb-12 text-center lg:text-left">
+          <div className="lg:w-1/2">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-purple-400 mb-4">
               Enterprise Solutions
-              <span className="block mt-2  text-transparent bg-clip-text text-stroke-lg">Redefined</span>
+              <span className="block mt-2 text-transparent bg-clip-text text-stroke-lg">Redefined</span>
             </h2>
-            <p className="text-lg text-gray-400">
+            <p className="text-base sm:text-lg text-gray-400">
               Transformative technology solutions for modern business challenges
             </p>
           </div>
+        </div>
 
-          {/* Features Grid */}
-          <div className="md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div 
-                key={index}
-                className="p-6 bg-gray-900 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-700"
-              >
-                <div className="mb-4 text-blue-600">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-purple-400 mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className="p-6 bg-gray-900 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-700"
+            >
+              <div className="mb-4 text-blue-600 flex justify-center lg:justify-start">{feature.icon}</div>
+              <h3 className="text-lg sm:text-xl font-semibold text-purple-400 mb-2 text-center lg:text-left">{feature.title}</h3>
+              <p className="text-gray-400 text-center lg:text-left">{feature.description}</p>
+            </div>
+          ))}
         </div>
 
         {/* CTA Section */}
-        <div className="flex justify-end mt-12">
-          <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg 
+        <div className="flex justify-center lg:justify-end mt-12">
+          <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg 
             font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300
             flex items-center gap-2 shadow-md hover:shadow-lg">
             Explore Solutions

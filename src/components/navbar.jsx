@@ -403,9 +403,9 @@ const Navbar = () => {
                   onMouseEnter={() => handleMenuEnter('hireme')}
                   onMouseLeave={() => handleMenuLeave('hireme')}
                 >
-                  <button className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
+                  <a href='/career' className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
                     Career
-                  </button>
+                  </a>
                 </div>
                 {/* Portfolio Dropdown */}
                 <div
