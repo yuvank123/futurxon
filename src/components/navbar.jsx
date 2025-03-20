@@ -274,38 +274,18 @@ const Navbar = () => {
                     { text: 'Blockchain', href: '/blockchain' }
                   ],
                   [
-<<<<<<< HEAD
-                    { text: 'Cyber Security', href: '/cyber' },
-                    { text: 'AI Solutions', href: '/ai' },
-                    { text: 'Blockchain', href: '/blockchain' }
-=======
                     { text: 'Devops', href: '/devops' },
                     { text: 'AR/VR/3D-modelling', href: '/arvr' },
                     { text: 'Cybersecurity', href: '/cybersecurity' }
->>>>>>> ac0f3ec444cf492a2c778d9838666f923507e66c
                   ]
                 )}
               </div>
 
               {/* career Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMenuEnter('hireme')}
-                onMouseLeave={() => handleMenuLeave('hireme')}
-              >
-                <button className="text-purple-300 hover:text-white-600 transition-colors flex items-center gap-1">
-                  Career
-                  {/* <svg
-                    className={`w-4 h-4 transition-transform ${
-                      activeMenu === 'hireme' ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg> */}
-                </button>
+              
+              <a href="/career" className="text-purple-300 hover:text-white-600 transition-colors font-[12px] md:font-[14px] hidden md:inline">
+                Career
+              </a>
                 {/* {renderDropdown('hireme',
                   [
                     { text: 'Full-Time', href: '/full-time' },
@@ -318,7 +298,6 @@ const Navbar = () => {
                     { text: 'Hourly', href: '/hourly' }
                   ]
                 )} */}
-              </div>
 
               {/* Portfolio Dropdown */}
               <div
