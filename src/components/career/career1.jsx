@@ -19,9 +19,9 @@ const Career = () => {
         </button>
       </div>
 
-      {/* Right Section: Ascending Glowing Stairs */}
+      {/* Right Section: Dynamic Glowing Stairs */}
       <div className="relative w-full md:w-1/2 flex justify-center items-center">
-        <div className="fixed flex flex-col items-center space-y-6" style={{ right: "5%", top: "20%" }}>
+        <div className="relative flex flex-col items-center space-y-6">
           {Array.from({ length: 10 }).map((_, i) => (
             <div
               key={i}
@@ -32,9 +32,7 @@ const Career = () => {
                 background: `linear-gradient(to right, rgba(128,0,255,0.8), rgba(255,64,129,0.8))`,
                 boxShadow: `0 4px 15px rgba(128,0,255,0.6), 0 -2px 10px rgba(255,64,129,0.5)`,
                 borderRadius: "10px",
-                position: "absolute",
-                top: `${i * 50}px`,
-                right: `${i * 30}px`,
+                transform: `translateY(${i * 50}px) translateX(${i * 20}px)`,
                 animation: `glow 3s ${0.2 * i}s infinite`,
               }}
             ></div>
@@ -44,6 +42,8 @@ const Career = () => {
 
       {/* Tagline Section */}
       <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full px-4 text-center">
+      <br />
+      <br />
         <p className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-300/80">
           Your Future Awaits: <span className="text-purple-400">Step into Career Growth.</span>
         </p>

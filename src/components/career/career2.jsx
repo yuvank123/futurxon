@@ -35,27 +35,6 @@ const Career2 = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-16 bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-      {/* Decorative Ladder Section */}
-      <div className="absolute right-10 top-20">
-        <div className="relative flex flex-col items-center space-y-4">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div
-              key={i}
-              className="glowing-step"
-              style={{
-                width: `${100 + i * 15}px`,
-                height: "18px",
-                background: `linear-gradient(to right, rgba(128,0,255,0.7), rgba(255,64,129,0.7))`,
-                boxShadow: `0 4px 15px rgba(128,0,255,0.5), 0 -2px 10px rgba(255,64,129,0.4)`,
-                borderRadius: "8px",
-                transform: `translateY(${i * 40}px) translateX(${i * 15}px)`,
-                animation: `glow 3s ${0.2 * i}s infinite ease-in-out`,
-              }}
-            ></div>
-          ))}
-        </div>
-      </div>
-
       {/* Content Section */}
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -105,29 +84,6 @@ const Career2 = () => {
           </div>
         </div>
       </div>
-
-      {/* Global Styles */}
-      <style jsx global>{`
-        /* Glowing Animation */
-        @keyframes glow {
-          0% {
-            transform: scale(1);
-            opacity: 0.8;
-          }
-          50% {
-            transform: scale(1.1);
-            opacity: 1;
-          }
-          100% {
-            transform: scale(1);
-            opacity: 0.8;
-          }
-        }
-
-        .glowing-step {
-          animation: glow 3s ease-in-out infinite;
-        }
-      `}</style>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import Navbar from '../../components/navbar'
 import Career1 from '../../components/career/career1'
 import Career2 from '../../components/career/career2'
 import Career3 from '../../components/career/career3'
+import Career4 from '../../components/career/career4'
 import Footer from '../../components/footer';
 
 const Career = () => {
@@ -61,6 +62,9 @@ const Career = () => {
             </div>
             <div className='relative'>
               <Career3/>
+            </div>
+            <div className='relative'>
+              <Career4/>
             </div>
             <div className='relative'>
               <Footer/>

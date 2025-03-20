@@ -319,147 +319,6 @@ const Navbar = () => {
   );
 
   return (
-<<<<<<< HEAD
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent font-sans text-[14px] md:text-[18px] ${
-      isVisible ? 'translate-y-0' : '-translate-y-full'
-    }`}>
-      <div className="max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-0 border-0 border-amber-50">
-        <div className="flex justify-between items-center h-16 md:h-25">
-          {/* Left - Logo */}
-          <div className="flex-shrink-0 overflow-hidden">
-            <span className="text-[25px] md:text-[35px] font-bold text-blue-600">
-              <a href="/" className=''>
-              <img src={Logo} alt="image" className="w-24 md:w-60 h-[200px]" />
-              </a>
-            </span>
-          </div>
-
-          {/* Center - Navigation Links */}
-          <div className="hidden md:flex items-center -ml-[40px]">
-            <div className="flex items-center space-x-4 md:space-x-8 bg-white/30 backdrop-blur-md rounded-[15px] p-2 md:p-3 font-[12px] md:font-[14px]">
-              
-              {/* About Us Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMenuEnter('about')}
-                onMouseLeave={() => handleMenuLeave('about')}
-              >
-                <button className="text-purple-300 hover:text-white-600 transition-colors flex items-center gap-1">
-                  About Us
-                  <svg
-                    className={`w-4 h-4 transition-transform ${
-                      activeMenu === 'about' ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {renderDropdown('about', 
-                  [
-                    { text: 'About Company', href: '/about-company' },
-                    { text: 'Customer Reviews', href: '/customer-reviews' }
-                  ],
-                  [
-                    { text: 'Agile Mindset', href: '/agile' },
-                    { text: 'Bacancy Values', href: '/values' }
-                  ]
-                )}
-              </div>
-
-              {/* Services Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMenuEnter('services')}
-                onMouseLeave={() => handleMenuLeave('services')}
-              >
-                <button className="text-purple-300 hover:text-white-600 transition-colors flex items-center gap-1">
-                  Services
-                  <svg
-                    className={`w-4 h-4 transition-transform ${
-                      activeMenu === 'services' ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {renderserviceDropdown('services',
-                  [
-                    { text: 'Web Development', href: '/web-dev' },
-                    { text: 'Mobile Apps', href: '/mobile-apps' },
-                    { text: 'UI/UX Design', href: '/ui-ux' }
-                  ],
-                  [
-                    { text: 'Cloud Services', href: '/cloud' },
-                    { text: 'AI Solutions', href: '/ai' },
-                    { text: 'Blockchain', href: '/blockchain' }
-                  ],
-                  [
-                    { text: 'Devops', href: '/devops' },
-                    { text: 'AR/VR/3D-modelling', href: '/arvr' },
-                    { text: 'Cybersecurity', href: '/cybersecurity' }
-                  ]
-                )}
-              </div>
-
-              {/* career Dropdown */}
-              
-              <a href="/career" className="text-purple-300 hover:text-white-600 transition-colors font-[12px] md:font-[14px] hidden md:inline">
-                Career
-              </a>
-                {/* {renderDropdown('hireme',
-                  [
-                    { text: 'Full-Time', href: '/full-time' },
-                    { text: 'Part-Time', href: '/part-time' },
-                    { text: 'Contract', href: '/contract' }
-                  ],
-                  [
-                    { text: 'Freelance', href: '/freelance' },
-                    { text: 'Project Basis', href: '/project' },
-                    { text: 'Hourly', href: '/hourly' }
-                  ]
-                )} */}
-
-              {/* Portfolio Dropdown */}
-              <div
-                className="relative"
-                onMouseEnter={() => handleMenuEnter('portfolio')}
-                onMouseLeave={() => handleMenuLeave('portfolio')}
-              >
-                <button className="text-purple-300 hover:text-white-600 transition-colors flex items-center gap-1">
-                  Portfolio
-                  <svg
-                    className={`w-4 h-4 transition-transform ${
-                      activeMenu === 'portfolio' ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                {renderDropdown('portfolio',
-                  [
-                    { text: 'Case Studies', href: '/case-studies' },
-                    { text: 'Our Clients', href: '/clients' }
-                  ],
-                  [
-                    { text: 'Testimonials', href: '/testimonials' },
-                    { text: 'Success Stories', href: '/success-stories' }
-                  ]
-                )}
-              </div>
-
-              {/* Contact Us */}
-              <a href="/contact" className="text-purple-300 hover:text-white-600 transition-colors font-[12px] md:font-[14px] hidden md:inline">
-                Contact Us
-=======
     <>
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent font-sans text-[14px] md:text-[18px] ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
@@ -470,7 +329,6 @@ const Navbar = () => {
             <div className="flex-shrink-0 overflow-hidden">
               <a href="/" className="flex items-center">
                 <img src={One} alt="logo" className="w-20 md:w-60 transition-all duration-300" />
->>>>>>> yuvank/main
               </a>
             </div>
             {/* Desktop Navigation */}
@@ -542,12 +400,10 @@ const Navbar = () => {
                 {/* Career */}
                 <div
                   className="relative"
-                  onMouseEnter={() => handleMenuEnter('hireme')}
-                  onMouseLeave={() => handleMenuLeave('hireme')}
                 >
-                  <button className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
-                    Career
-                  </button>
+                  <a href="/career" className="text-purple-300 hover:text-white transition-colors font-[12px] md:font-[14px]">
+                  Career
+                </a>
                 </div>
                 {/* Portfolio Dropdown */}
                 <div

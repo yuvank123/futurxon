@@ -1,119 +1,117 @@
-import React from "react";
-import { FiPhone, FiMail, FiMapPin, FiBriefcase } from 'react-icons/fi';
+import React, { useState } from "react";
 
-const ContactUs = () => {
+const positions = [
+  {
+    title: "Business Analyst",
+    location: "Pune, Maharashtra, India",
+    description:
+      "Demonstrate experience in requirement elicitation, system analysis, and translating business problems to functional specifications. Thorough skills in ...",
+  },
+  {
+    title: "Inside Sales Executive",
+    location: "Pune City, Maharashtra, India",
+    description:
+      "Roles and Responsibilities: Build relationships with prospective clients. Maintain consistent contact with existing clients. Make cold calls for new bus...",
+  },
+  {
+    title: "DevOps Engineer",
+    location: "Pune, Maharashtra, India",
+    description:
+      "Continuous Integration and Continuous Delivery (CI/CD): Establishing and maintaining CI/CD pipelines to automate the build, testing, and deploy...",
+  },
+  {
+    title: "Content Strategist",
+    location: "Pune, Maharashtra, India",
+    description:
+      "We are looking for qualified and ambitious content writing professionals who are resourceful and sharp to deliver interactive content. Someone who bel...",
+  },
+  {
+    title: "Angular Developer",
+    location: "Pune City, Maharashtra, India",
+    description:
+      "We are seeking a skilled Angular Developer with 3–6 years of experience to join our development team. As an Angular Developer, you will be responsib...",
+  },
+  {
+    title: "Project Manager",
+    location: "Pune, Maharashtra, India",
+    description:
+      "Job Responsibilities: To lead a team that comprises project personnel, designers, researchers, and engineers. To act as the first point of...",
+  },
+];
+
+const FeaturedPositions = () => {
+  const [selectedPosition, setSelectedPosition] = useState(null);
+
   return (
-    <div className="min-h-screen relative flex items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-black py-20 px-4 sm:px-6 lg:px-8">
-      {/* 3D Ladder Animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="w-[200%] h-[200%] bg-gradient-to-br from-purple-500 to-blue-500 opacity-30 blur-3xl animate-pulse transform rotate-45"></div>
-      </div>
-
-      <div className="container mx-auto max-w-7xl flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10">
-        {/* Left Section - Contact Form */}
-        <div className="lg:w-1/2 backdrop-blur-xl bg-gradient-to-br from-gray-800/80 to-black/60 p-8 rounded-3xl border border-gray-700 shadow-xl">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 bg-clip-text text-transparent mb-6">
-            Get in Touch
+    <div className="min-h-screen w-full">
+      <div className="container mx-auto px-4 py-16 max-w-7xl">
+        <div className="mb-16 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+            Featured Positions
           </h1>
-          <p className="text-gray-400 text-lg mb-8">
-            Let's collaborate! Share your details and we'll craft digital magic together.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover exciting career opportunities that match your aspirations and expertise.
           </p>
-          
-          <form className="space-y-6">
-            <div className="space-y-4">
-              <input
-                type="text"
-                placeholder="Your full name*"
-                className="w-full p-4 bg-gray-700/40 backdrop-blur-sm rounded-xl border border-gray-600 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
-              />
-              <input
-                type="email"
-                placeholder="Your email*"
-                className="w-full p-4 bg-gray-700/40 backdrop-blur-sm rounded-xl border border-gray-600 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all"
-              />
-              <select className="w-full p-4 bg-gray-700/40 backdrop-blur-sm rounded-xl border border-gray-600 text-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent appearance-none">
-                <option className="bg-gray-800">Select Country</option>
-                <option className="bg-gray-800">India</option>
-                <option className="bg-gray-800">USA</option>
-              </select>
-              <textarea
-                placeholder="How can we help you?"
-                className="w-full p-4 bg-gray-700/40 backdrop-blur-sm rounded-xl border border-gray-600 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent h-32 resize-none transition-all"
-              ></textarea>
-            </div>
-
-            <button className="w-full bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/30">
-              Submit
-            </button>
-
-            <p className="text-gray-500 text-sm text-center">
-              By submitting, you agree to our {' '}
-              <a href="#" className="text-blue-400 hover:text-teal-400 transition-colors">Terms</a> and {' '}
-              <a href="#" className="text-blue-400 hover:text-teal-400 transition-colors">Privacy Policy</a>
-            </p>
-          </form>
         </div>
 
-        {/* Right Section - Contact Info */}
-        <div className="lg:w-1/2 space-y-8">
-          <div className="backdrop-blur-xl bg-gradient-to-br from-gray-800/80 to-black/60 p-8 rounded-3xl border border-gray-700 shadow-xl">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent mb-8">
-              Connect Directly
-            </h2>
-
-            <div className="space-y-8">
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-gradient-to-br from-teal-500/20 to-blue-500/20 rounded-lg group-hover:bg-teal-500/30 transition-all">
-                  <FiPhone className="text-2xl text-teal-300" />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {positions.map((position, index) => (
+            <div
+              key={index}
+              className={`relative p-6 rounded-2xl transition-all duration-500 cursor-pointer group ${
+                selectedPosition?.title === position.title
+                  ? "bg-gradient-to-br scale-[1.02] shadow-2xl"
+                  : "hover:bg-gray-800/30 shadow-lg bg-gray-900/40"
+              } border border-gray-700/30`}
+              onClick={() =>
+                setSelectedPosition((prev) =>
+                  prev?.title === position.title ? null : position
+                )
+              }
+            >
+              <div className="flex flex-col h-full">
+                <div className="flex items-start justify-between">
+                  <h2
+                    className={`text-lg font-semibold ${
+                      selectedPosition?.title === position.title
+                        ? "text-white"
+                        : "text-blue-400 group-hover:text-white transition-colors"
+                    }`}
+                  >
+                    {position.title}
+                  </h2>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-teal-200 mb-2">Call Us</h3>
-                  <p className="text-gray-400">USA: +1-855-572-2777</p>
-                  <p className="text-gray-400">IND: +91-858-600-8627</p>
+                <p className="text-sm text-gray-400 mt-1">{position.location}</p>
+
+                {selectedPosition?.title === position.title && (
+                  <div className="mt-4 overflow-hidden">
+                    <p className="text-gray-300 text-base leading-relaxed animate-fadeIn">
+                      {position.description}
+                    </p>
+                  </div>
+                )}
+
+                <div className="mt-auto">
+                  <button
+                    className="text-blue-400 group-hover:text-white transition-colors text-sm mt-4"
+                    onClick={() => alert(`More details about ${position.title}`)}
+                  >
+                    Job Details →
+                  </button>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg group-hover:bg-purple-500/30 transition-all">
-                  <FiMail className="text-2xl text-purple-300" />
+              {selectedPosition?.title === position.title && (
+                <div className="absolute inset-0 -z-10 animate-gradient-rotate opacity-30">
+                  <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-purple-200 mb-2">Emails</h3>
-                  <p className="text-gray-400">business@mobisoftinfotech.com</p>
-                  <p className="text-gray-400">info@mobisoftinfotech.com</p>
-                  <p className="text-gray-400">jobs@mobisoftinfotech.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-lg group-hover:bg-blue-500/30 transition-all">
-                  <FiMapPin className="text-2xl text-blue-300" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-200 mb-2">Locations</h3>
-                  <p className="text-gray-400">5718, Westheimer Rd Suite 1000 Houston, TX 77057</p>
-                  <p className="text-gray-400">Level 2, Trident Business Center, Baner, Pune – 411045</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4 group">
-                <div className="p-3 bg-gradient-to-br from-teal-500/20 to-purple-500/20 rounded-lg group-hover:bg-teal-500/30 transition-all">
-                  <FiBriefcase className="text-2xl text-teal-300" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-teal-200 mb-2">Careers</h3>
-                  <p className="text-gray-400">Join our team of innovators</p>
-                  <p className="text-teal-400 hover:text-blue-400 transition-colors cursor-pointer">
-                    View Open Positions →
-                  </p>
-                </div>
-              </div>
+              )}
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default FeaturedPositions;
