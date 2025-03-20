@@ -11,6 +11,8 @@ import Cloud from './pages/Service/clouddev';
 import UIUX from './pages/Service/UIUXdev';
 import AIsolution from './pages/Service/AIsolution';
 import Blockchain from './pages/Service/blockchain';
+import Cybersecurity from './pages/Service/cybersecurity';
+import Arvr from './pages/Service/ARVR';
 import Contact from './pages/contact/Contactus';
 import Career from './pages/Career/career';
 
@@ -32,6 +34,8 @@ const App = () => {
           <Route path='/ai' element={<AIsolution/>}/> 
           <Route path='/blockchain' element={<Blockchain/>}/>
           <Route path='/career' element={<Career/>}/>       
+          <Route path='/cybersecurity' element={<Cybersecurity/>}/>    
+          <Route path='/arvr' element={<Arvr/>}/>       
           </Routes>
       </div>
   );
