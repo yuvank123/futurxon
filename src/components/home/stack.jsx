@@ -1,5 +1,31 @@
 import React, { useState, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+//WEB/BACKEND
+import W1 from '../../images/w1.svg';
+import W2 from "../../images/w2.svg";
+import W3 from "../../images/w3.svg";
+import W4 from "../../images/w4.svg";
+import W5 from "../../images/w5.svg";
+import W6 from "../../images/w6.svg";
+import W7 from "../../images/w7.svg";
+import W8 from "../../images/w8.svg";
+//WEB/FRONTEND
+import WF1 from '../../images/wf1.svg';
+import WF2 from "../../images/wf2.svg";
+import WF3 from "../../images/wf3.svg";
+import WF4 from "../../images/wf4.svg";
+import WF5 from "../../images/wf5.svg";
+import WF6 from "../../images/wf6.svg";
+import WF7 from "../../images/wf8.svg";
+//mobile/frontend
+import MOBF1 from '../../images/mobf1.svg';
+import MOBF2 from "../../images/mobf2.svg";
+import MOBF3 from "../../images/mobf3.svg";
+import MOBF4 from "../../images/mobf4.svg";
+//mobile/backend
+import MOB1 from '../../images/mob1.svg';
+import MOB2 from "../../images/mob2.svg";
+import MOB3 from "../../images/mob3.svg";
 
 // Updated categories including the new "Desktop" and renamed "Information Security"
 const categories = [
@@ -23,29 +49,15 @@ const categories = [
 const techStack = {
   Web: {
     backend: [
-      "/images/ruby.png",
-      "/images/nodejs.png",
-      "/images/golang.png",
-      "/images/dotnet.png",
-      "/images/java.png",
-      "/images/php.png",
-      "/images/cpp.png",
-      "/images/laravel.png",
+      W1,W2,W3,W4,W5,W6,W7,W8
     ],
     frontend: [
-      "/images/angular.png",
-      "/images/react.png",
-      "/images/vue.png",
-      "/images/javascript.png",
-      "/images/html5.png",
-      "/images/ember.png",
-      "/images/tailwind.png",
-      "/images/typescript.png",
+      WF1,WF2,WF3,WF4,WF5,WF6,WF7
     ],
   },
   Mobile: {
-    backend: ["/images/firebase.png", "/images/kotlin.png", "/images/swift.png"],
-    frontend: ["/images/flutter.png", "/images/react-native.png", "/images/android.png"],
+    backend: [MOB1,MOB2,MOB3],
+    frontend: [MOBF1,MOBF2,MOBF3,MOBF4],
   },
   // DevOps split into multiple subcategories
   DevOps: {
