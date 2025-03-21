@@ -1,5 +1,5 @@
 import React from "react";
-import Csbg from "../../../images/csbg.jpg"
+import Csbg from "../../../../public/images/csbg.jpg"
 
 const AboutUs = () => {
     const sections = [

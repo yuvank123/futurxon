@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ArvrBg from "../../../images/arvrbg.svg";
+import ArvrBg from "../../../../public/images/arvrbg.svg";
 
 const FullScreenCyberServices = () => {
     const [rotate, setRotate] = useState(0);

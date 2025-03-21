@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import C1 from '../../../images/c-1.svg';
-import C2 from '../../../images/c-2.svg';
-import C3 from '../../../images/c-3.svg';
-import C4 from '../../../images/c-4.svg';
-import C5 from '../../../images/c-5.svg';
+import C1 from '../../../../public/images/c-1.svg';
+import C2 from '../../../../public/images/c-2.svg';
+import C3 from '../../../../public/images/c-3.svg';
+import C4 from '../../../../public/images/c-4.svg';
+import C5 from '../../../../public/images/c-5.svg';
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

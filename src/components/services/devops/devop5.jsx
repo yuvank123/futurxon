@@ -1,13 +1,13 @@
 import React from "react";
-import AWS from "../../../images/aws.svg";
-import Docker from "../../../images/docker.svg";
-import Kubernetes from "../../../images/kubernetes.svg";
-import Terraform from "../../../images/terraform.svg";
-import Jenkins from "../../../images/jenkins.svg";
-import Prometheus from "../../../images/prometheus.svg";
-import Ansible from "../../../images/ansible.svg";
-import GitHubActions from "../../../images/github-actions.svg";
-import Grafana from "../../../images/grafana.svg";
+import AWS from "../../../../public/images/aws.svg";
+import Docker from "../../../../public/images/docker.svg";
+import Kubernetes from "../../../../public/images/kubernetes.svg";
+import Terraform from "../../../../public/images/terraform.svg";
+import Jenkins from "../../../../public/images/jenkins.svg";
+import Prometheus from "../../../../public/images/prometheus.svg";
+import Ansible from "../../../../public/images/ansible.svg";
+import GitHubActions from "../../../../public/images/github-actions.svg";
+import Grafana from "../../../../public/images/grafana.svg";
 
 const DevOpsTechStackUI = () => {
   const technologies = [

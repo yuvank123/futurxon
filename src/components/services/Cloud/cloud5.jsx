@@ -1,9 +1,9 @@
 import React from "react";
-import AWS from "../../../images/aws.svg";
-import GoogleCloud from "../../../images/google-cloud.svg";
-import Azure from "../../../images/azure.svg";
-import IBMCloud from "../../../images/ibm-cloud.svg";
-import AlibabaCloud from "../../../images/alibaba-cloud.svg";
+import AWS from "../../../../public/images/aws.svg";
+import GoogleCloud from "../../../../public/images/google-cloud.svg";
+import Azure from "../../../../public/images/azure.svg";
+import IBMCloud from "../../../../public/images/ibm-cloud.svg";
+import AlibabaCloud from "../../../../public/images/alibaba-cloud.svg";
 
 const CloudServicesTechStackUI = () => {
   const technologies = [

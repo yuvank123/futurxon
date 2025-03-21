@@ -1,9 +1,9 @@
 import React from "react";
-import Figma from "../../../images/figma.svg";
-import AdobeXD from "../../../images/adobe-xd.svg";
-import Sketch from "../../../images/sketch.svg";
-import InVision from "../../../images/invision.svg";
-import Framer from "../../../images/framer.svg";
+import Figma from "../../../../public/images/figma.svg";
+import AdobeXD from "../../../../public/images/adobe-xd.svg";
+import Sketch from "../../../../public/images/sketch.svg";
+import InVision from "../../../../public/images/invision.svg";
+import Framer from "../../../../public/images/framer.svg";
 
 const UIUXTechStack = () => {
   const technologies = [

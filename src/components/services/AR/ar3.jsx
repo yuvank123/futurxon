@@ -1,5 +1,5 @@
 import React from "react";
-import Trackpng from "../../../images/screen.png";
+import Trackpng from "../../../../public/images/screen.png";
 
 const ARVR3DProcess = () => {
   return (

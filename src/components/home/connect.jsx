@@ -1,6 +1,6 @@
 import React from 'react';
-import Sideimg from '../../../src/images/side-img-1.jpg';
-import Target from '../../../src/images/target.png';
+import Sideimg from '../../../public/images/side-img-1.jpg';
+import Target from '../../../public/images/target.png';
 
 const Connect = () => {
   return (

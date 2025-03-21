@@ -1,5 +1,5 @@
 import React from "react";
-import Screenpng from '../../../images/screen.png';
+import Screenpng from '../../../../public/images/screen.png';
 
 const EnterpriseWebUI = () => {
   return (

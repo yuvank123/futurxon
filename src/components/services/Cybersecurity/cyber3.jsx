@@ -1,5 +1,5 @@
 import React from "react";
-import CyberImage from "../../../images/screen.png";
+import CyberImage from "../../../../public/images/screen.png";
 
 const cybersecurityProcess = () => {
   return (

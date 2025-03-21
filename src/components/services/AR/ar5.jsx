@@ -1,8 +1,8 @@
 import React from "react";
 // import ARKit from "../../../images/arkit.svg";
 // import Oculus from "../../../images/oculus.svg";
-import Blender from "../../../images/blender.svg";
-import Unity from "../../../images/unity.svg";
+import Blender from "../../../../public/images/blender.svg";
+import Unity from "../../../../public/images/unity.svg";
 
 const ARVR3DTechStackUI = () => {
   const technologies = [

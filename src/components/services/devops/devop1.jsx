@@ -1,5 +1,5 @@
 import React from "react";
-import Devopsbg from "../../../images/devopsbg.svg";
+import Devopsbg from "../../../../public/images/devopsbg.svg";
 
 const FullScreenUI = () => {
   return (

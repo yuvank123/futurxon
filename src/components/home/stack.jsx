@@ -1,31 +1,31 @@
 import React, { useState, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 //WEB/BACKEND
-import W1 from '../../images/w1.svg';
-import W2 from "../../images/w2.svg";
-import W3 from "../../images/w3.svg";
-import W4 from "../../images/w4.svg";
-import W5 from "../../images/w5.svg";
-import W6 from "../../images/w6.svg";
-import W7 from "../../images/w7.svg";
-import W8 from "../../images/w8.svg";
+import W1 from '../../../public/images/w1.svg';
+import W2 from "../../../public/images/w2.svg";
+import W3 from "../../../public/images/w3.svg";
+import W4 from "../../../public/images/w4.svg";
+import W5 from "../../../public/images/w5.svg";
+import W6 from "../../../public/images/w6.svg";
+import W7 from "../../../public/images/w7.svg";
+import W8 from "../../../public/images/w8.svg";
 //WEB/FRONTEND
-import WF1 from '../../images/wf1.svg';
-import WF2 from "../../images/wf2.svg";
-import WF3 from "../../images/wf3.svg";
-import WF4 from "../../images/wf4.svg";
-import WF5 from "../../images/wf5.svg";
-import WF6 from "../../images/wf6.svg";
-import WF7 from "../../images/wf8.svg";
+import WF1 from '../../../public/images/wf1.svg';
+import WF2 from "../../../public/images/wf2.svg";
+import WF3 from "../../../public/images/wf3.svg";
+import WF4 from "../../../public/images/wf4.svg";
+import WF5 from "../../../public/images/wf5.svg";
+import WF6 from "../../../public/images/wf6.svg";
+import WF7 from "../../../public/images/wf8.svg";
 //mobile/frontend
-import MOBF1 from '../../images/mobf1.svg';
-import MOBF2 from "../../images/mobf2.svg";
-import MOBF3 from "../../images/mobf3.svg";
-import MOBF4 from "../../images/mobf4.svg";
+import MOBF1 from '../../../public/images/mobf1.svg';
+import MOBF2 from "../../../public/images/mobf2.svg";
+import MOBF3 from "../../../public/images/mobf3.svg";
+import MOBF4 from "../../../public/images/mobf4.svg";
 //mobile/backend
-import MOB1 from '../../images/mob1.svg';
-import MOB2 from "../../images/mob2.svg";
-import MOB3 from "../../images/mob3.svg";
+import MOB1 from '../../../public/images/mob1.svg';
+import MOB2 from "../../../public/images/mob2.svg";
+import MOB3 from "../../../public/images/mob3.svg";
 
 // Updated categories including the new "Desktop" and renamed "Information Security"
 const categories = [

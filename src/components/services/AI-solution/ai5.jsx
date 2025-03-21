@@ -1,9 +1,9 @@
 import React from "react";
-import TensorFlow from "../../../images/tensorflow.svg";
-import PyTorch from "../../../images/pytorch.svg";
+import TensorFlow from "../../../../public/images/tensorflow.svg";
+import PyTorch from "../../../../public/images/pytorch.svg";
 // import OpenAI from "../../../images/openai.svg";
 // import HuggingFace from "../../../images/huggingface.svg";
-import NVIDIA from "../../../images/nvidia.svg";
+import NVIDIA from "../../../../public/images/nvidia.svg";
 
 const AIServicesTechStackUI = () => {
   const technologies = [

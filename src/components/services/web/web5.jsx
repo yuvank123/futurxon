@@ -1,9 +1,9 @@
 import React from "react";
-import Mongo from "../../../images/mongo.svg";
-import Aws from "../../../images/aws.svg";
-import Vscode from '../../../images/vscode.svg';
-import Angular from "../../../images/angular.svg";
-import Azure from "../../../images/azure.svg";
+import Mongo from "../../../../public/images/mongo.svg";
+import Aws from "../../../../public/images/aws.svg";
+import Vscode from '../../../../public/images/vscode.svg';
+import Angular from "../../../../public/images/angular.svg";
+import Azure from "../../../../public/images/azure.svg";
 
 const WebTechStackUI = () => {
   const technologies = [

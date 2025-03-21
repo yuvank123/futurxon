@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CyberBg from "../../../images/uiuxbg.svg";
+import CyberBg from "../../../../public/images/uiuxbg.svg";
 
 const FullScreenCyberServices = () => {
   const [rotate, setRotate] = useState(0);

@@ -1,5 +1,5 @@
 import React from "react";
-import Blockchainbg from "../../../images/blockchainbg.svg";
+import Blockchainbg from "../../../../public/images/blockchainbg.svg";
 
 const FullScreenUI = () => {
   return (

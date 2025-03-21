@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import UIUXbg from "../../../images/uiuxbg.svg"; // Make sure this image exists in your project
+import UIUXbg from "../../../../public/images/uiuxbg.svg"; // Make sure this image exists in your project
 
 const FullScreenUI = () => {
   const [rotate, setRotate] = useState(0);

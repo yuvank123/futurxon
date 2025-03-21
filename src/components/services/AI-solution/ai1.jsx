@@ -1,5 +1,5 @@
 import React from "react";
-import AIsolutionbg from "../../../images/aisolutionbg.svg";
+import AIsolutionbg from "../../../../public/images/aisolutionbg.svg";
 
 const FullScreenUI = () => {
   return (

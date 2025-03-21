@@ -1,6 +1,6 @@
 import React from "react";
-import Bitcoin from "../../../images/bitcoin.svg";
-import Ethereum from "../../../images/ethereum.svg";
+import Bitcoin from "../../../../public/images/bitcoin.svg";
+import Ethereum from "../../../../public/images/ethereum.svg";
 
 const BlockchainTechStackUI = () => {
   const technologies = [

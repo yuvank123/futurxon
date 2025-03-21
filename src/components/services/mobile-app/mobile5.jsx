@@ -1,10 +1,10 @@
 import React from "react";
-import Swift from "../../../images/swift.svg";
-import Kotlin from "../../../images/kotlin.svg";
-import ReactNative from '../../../images/react-native.svg';
-import Flutter from "../../../images/flutter.svg";
-import Firebase from "../../../images/firebase.svg";
-import AndroidStudio from "../../../images/android-studio.svg";
+import Swift from "../../../../public/images/swift.svg";
+import Kotlin from "../../../../public/images/kotlin.svg";
+import ReactNative from '../../../../public/images/react-native.svg';
+import Flutter from "../../../../public/images/flutter.svg";
+import Firebase from "../../../../public/images/firebase.svg";
+import AndroidStudio from "../../../../public/images/android-studio.svg";
 
 const MobileTechStackUI = () => {
   const technologies = [

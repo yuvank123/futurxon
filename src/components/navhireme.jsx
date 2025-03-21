@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import "../style/navbar.css";
-import Logo from '../images/logo.png'
+import Logo from '../../public/images/6.svg'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);

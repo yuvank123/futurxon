@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Office0 from "../../../images/office0.jpg";
-import Office1 from "../../../images/office1.jpg";
-import Office2 from "../../../images/office2.jpg"; // Ensure correct path
+import Office0 from "../../../../public/images/office0.jpg";
+import Office1 from "../../../../public/images/office1.jpg";
+import Office2 from "../../../../public/images/office2.jpg"; // Ensure correct path
 
 const About5 = () => {
   const [activeIndex, setActiveIndex] = useState(0);

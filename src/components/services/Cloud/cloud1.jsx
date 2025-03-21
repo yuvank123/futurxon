@@ -1,5 +1,5 @@
 import React from "react";
-import Cloudbg from "../../../images/cloud.svg"; // Make sure to have this image in your project
+import Cloudbg from "../../../../public/images/cloud.svg"; // Make sure to have this image in your project
 
 const FullScreenUI = () => {
   return (

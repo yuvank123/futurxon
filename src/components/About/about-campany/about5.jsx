@@ -5,9 +5,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // For stylish icons
-import T1 from "../../../images/david.png";
-import T2 from "../../../images/philip.png";
-import T3 from "../../../images/brett.png";
+import T1 from "../../../../public/images/david.png";
+import T2 from "../../../../public/images/philip.png";
+import T3 from "../../../../public/images/brett.png";
 
 const Testimonials = () => {
   const testimonials = [
