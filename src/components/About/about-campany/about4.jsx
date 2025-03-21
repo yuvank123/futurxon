@@ -1,56 +1,73 @@
-import React from 'react';
-import Sample from '../../../images/sample.png';
+import React from "react";
+import T1 from "../../../images/david.png";
+import T2 from "../../../images/philip.png";
+import T3 from "../../../images/brett.png";
 
-const About4 = () => {
+const Testimonials = () => {
+  const testimonials = [
+    {
+      name: "David Carta",
+      title: "CEO/President of Telaeris, Inc.",
+      heading: "Timezone is Not a Boundary",
+      quote:
+        "The communication is brilliant and they stayed very consistent. The coder puts in a phenomenal amount of effort to ensure he is available given the time difference between India and the USA.",
+      img: T1, // Replace with actual image
+    },
+    {
+      name: "Philip Gomez",
+      title: "Co-owner of Patty’s Cakes & Desserts",
+      heading: "Interview Before Hiring Developers",
+      quote:
+        "The team at Bacancy is reliable and accommodating to my business needs. We had the option to Interview Before Hiring. Their account management is a pleasant experience and I highly recommend them.",
+      img: T2,
+    },
+    {
+      name: "Brett Williams",
+      title: "Founder of Aegis",
+      heading: "Quick-Onboarding",
+      quote:
+        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
+      img: T3,
+    },
+  ];
+
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center py-16 px-4 sm:px-6 lg:px-8'>
-      <div className='flex flex-col lg:flex-row gap-8 w-full max-w-7xl items-center'>
-        {/* Text Content */}
-        <div className='relative lg:w-1/2 w-full group transition-transform duration-500 hover:-translate-y-2'>
-          <div className='relative p-8 bg-gray-800 rounded-3xl border border-gray-700/50 shadow-2xl space-y-6'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-amber-300 via-amber-200 to-amber-300 bg-clip-text text-transparent'>
-              Heart-to-Heart
-              <span className='block mt-2'>With the Leader</span>
-            </h1>
-            
-            <p className='text-lg text-gray-300 leading-relaxed'>
-              We partner with clients worldwide to craft exceptional digital products loved by millions. 
-              Our passion for diversity fuels every innovation.
-            </p>
+    <div className="w-full flex flex-col items-center justify-center  text-white py-20 px-6">
+      <h2 className="text-4xl font-bold text-center text-purple-400">
+        We Are Trusted By Businesses Worldwide
+      </h2>
+      <p className="text-gray-300 text-center mt-2 max-w-2xl">
+        Leading companies trust us and our staff augmentation model to fulfill their IT needs.
+      </p>
 
-            <div className='space-y-1 border-l-4 border-amber-400 pl-4'>
-              <h3 className='text-xl font-semibold text-white'>Chandresh Patel</h3>
-              <p className='text-gray-400'>M. D. & Agile Coach | India</p>
+      <div className="mt-12 grid md:grid-cols-3 gap-8 w-full max-w-6xl">
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={index}
+            className="bg-[#222244] shadow-lg p-6 rounded-xl border border-[#4c669f] transform transition duration-300 hover:scale-105"
+          >
+            <div className="flex items-center space-x-4">
+              <img
+                src={testimonial.img}
+                alt={testimonial.name}
+                className="w-14 h-14 rounded-full border-2 border-purple-500"
+              />
+              <div>
+                <h3 className="text-purple-400 font-semibold">{testimonial.name}</h3>
+                <p className="text-gray-400 text-sm">{testimonial.title}</p>
+              </div>
             </div>
+            <h4 className="text-blue-300 font-semibold mt-4">{testimonial.heading}</h4>
+            <p className="text-gray-300 mt-2 italic">"{testimonial.quote}"</p>
           </div>
-        </div>
-
-        {/* Image Container */}
-        <div className='lg:w-1/2 w-full relative group'>
-          <div className='relative rounded-3xl overflow-hidden shadow-2xl before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-600/20 before:to-amber-500/20 before:z-10'>
-            <img 
-              src={Sample} 
-              alt='Leadership Team' 
-              className='w-full h-[560px] object-cover transform transition-transform duration-700 group-hover:scale-105'
-            />
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Button */}
-      <div className='mt-12 group'>
-        <a 
-          href='/leadership' 
-          className='inline-block relative px-8 py-4 text-lg font-bold rounded-xl bg-gradient-to-r from-purple-600 to-blue-500 text-white shadow-lg transition-all duration-300 
-          hover:shadow-xl hover:shadow-purple-500/30 hover:scale-[1.02]
-          before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-700 before:to-blue-600 before:rounded-xl before:opacity-0 before:transition-opacity before:duration-300 hover:before:opacity-100'
-        >
-          <span className='relative z-10'>BOOK A FREE CONSULTATION</span>
-          <div className='absolute inset-0 bg-noise opacity-10 rounded-xl' />
-        </a>
-      </div>
+      <button className="mt-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition duration-300">
+        TALK TO OUR EXPERT
+      </button>
     </div>
   );
 };
 
-export default About4;
+export default Testimonials;

@@ -10,7 +10,7 @@ const AboutUs = () => {
         <h3 className="text-lg md:text-xl text-purple-300 font-medium mb-4">
           We drive success for businesses worldwide!
         </h3>
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent mb-6 p-2">
           Unlocking Tomorrow's Tech Today!
         </h1>
         <h2 className="text-lg md:text-xl text-purple-100/80 mb-8 leading-relaxed">

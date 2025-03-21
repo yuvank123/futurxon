@@ -1,13 +1,8 @@
 import React from 'react'
-import Navbar from '../../components/navbar'
-import About from '../../components/About/about-campany/about'
-import About1 from '../../components/About/about-campany/about1'
-import About2 from '../../components/About/about-campany/about2'
-import About3 from '../../components/About/about-campany/about3'
-import About4 from '../../components/About/about-campany/about4'
-// import About5 from '../../components/About/about-campany/about5'
-// import Form from '../../components/home/form';
-import Footer from '../../components/footer';
+import Navbar from '../../../components/navbar'
+import F1 from '../../../components/portfolio/case_studies/case_sections/First/f1'
+import About2 from '../../../components/About/about-campany/about2'
+import Footer from '../../../components/footer';
 
 const aboutus = () => {
   return (
@@ -28,26 +23,11 @@ const aboutus = () => {
           <Navbar/>
         </div>
         <div className='relative border-0 border-amber-100'>
-          <About/>
+          <F1/>
         </div>
         <div className='relative border-0 border-amber-100'>
-          <About1/>
-        </div>
-        <div className='relative border-0 border-purple-500'>
           <About2/>
         </div>
-        <div className='relative border-0 border-purple-100'>
-          <About3/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About4/>
-        </div>
-        {/* <div className='relative border-0 border-purple-100'>
-          <About5/>
-        </div> */}
-        {/* <div>
-           <Form/>
-        </div> */}
         <div>
           <Footer/>
         </div>

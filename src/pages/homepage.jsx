@@ -11,7 +11,7 @@ import Mapping from '../components/home/mapping';
 import Offering from '../components/home/offering';
 import Fortune from '../components/home/fortune';
 import Testinomial from '../components/home/testinomial';
-import Form from '../components/home/form';
+// import Form from '../components/home/form';
 import Footer from '../components/footer';
 
 const homepage = () => {
@@ -64,9 +64,9 @@ const homepage = () => {
       <div className='h-auto border-0 border-white'>
         <Testinomial />
       </div>
-      <div className='h-auto border-0 border-white'>
+      {/* <div className='h-auto border-0 border-white'>
         <Form />
-      </div>
+      </div> */}
       <div className='h-auto border-0 border-amber-50'>
         <Footer />
       </div>

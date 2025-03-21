@@ -103,13 +103,13 @@ const Testimonial = () => {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex(prev => 
+    setCurrentIndex(prev =>
       prev + itemsPerPage >= videos.length ? 0 : prev + itemsPerPage
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex(prev => 
+    setCurrentIndex(prev =>
       prev === 0 ? videos.length - itemsPerPage : prev - itemsPerPage
     );
   };
@@ -129,10 +129,10 @@ const Testimonial = () => {
       <div className="relative z-10">
         {/* Header */}
         <div className="max-w-7xl mx-auto text-center mb-8 md:mb-16">
-          <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2 md:mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent mb-2 md:mb-4 px-4 leading-tight sm:leading-snug transition-all duration-300">
             Client Testimonials
           </h1>
-          <p className="text-sm md:text-base lg:text-xl text-gray-400 max-w-2xl mx-auto px-2">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-400 max-w-2xl mx-auto px-2 md:px-4 leading-relaxed md:leading-loose">
             Leading start-ups, SMEs and large-scale organizations have trusted us.
           </p>
         </div>
@@ -156,7 +156,7 @@ const Testimonial = () => {
             </button>
 
             {/* Videos Container - Scrollbar Hidden */}
-            <div 
+            <div
               ref={containerRef}
               className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory w-full max-w-4xl"
               style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
@@ -204,9 +204,8 @@ const Testimonial = () => {
             <button
               key={i}
               onClick={() => setCurrentIndex(i * itemsPerPage)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                currentIndex === i * itemsPerPage ? 'bg-purple-400 scale-150' : 'bg-white/20'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all ${currentIndex === i * itemsPerPage ? 'bg-purple-400 scale-150' : 'bg-white/20'
+                }`}
             />
           ))}
         </div>

@@ -1,12 +1,8 @@
 import React from 'react'
 import Navbar from '../../components/navbar'
-import About from '../../components/About/about-campany/about'
-import About1 from '../../components/About/about-campany/about1'
-import About2 from '../../components/About/about-campany/about2'
-import About3 from '../../components/About/about-campany/about3'
-import About4 from '../../components/About/about-campany/about4'
-// import About5 from '../../components/About/about-campany/about5'
-// import Form from '../../components/home/form';
+// import Client1 from '../../components/portfolio/our_client/client1'
+import Client2 from '../../components/portfolio/our_client/client2'
+import Client3 from '../../components/portfolio/our_client/client3'
 import Footer from '../../components/footer';
 
 const aboutus = () => {
@@ -27,27 +23,15 @@ const aboutus = () => {
         <div className='sticky top-0 z-30'>
           <Navbar/>
         </div>
-        <div className='relative border-0 border-amber-100'>
-          <About/>
-        </div>
-        <div className='relative border-0 border-amber-100'>
-          <About1/>
-        </div>
-        <div className='relative border-0 border-purple-500'>
-          <About2/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About3/>
-        </div>
-        <div className='relative border-0 border-purple-100'>
-          <About4/>
-        </div>
-        {/* <div className='relative border-0 border-purple-100'>
-          <About5/>
+        {/* <div className='relative border-0 border-amber-100'>
+          <Client1/>
         </div> */}
-        {/* <div>
-           <Form/>
-        </div> */}
+        <div className='relative border-0 border-amber-100'>
+          <Client2/>
+        </div>
+        <div className='relative border-0 border-amber-100'>
+          <Client3/>
+        </div>
         <div>
           <Footer/>
         </div>
