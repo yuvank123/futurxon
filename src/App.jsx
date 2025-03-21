@@ -14,6 +14,16 @@ import Blockchain from './pages/Service/blockchain';
 import Cybersecurity from './pages/Service/cybersecurity';
 import Arvr from './pages/Service/ARVR';
 import Contact from './pages/contact/Contactus';
+<<<<<<< HEAD
+=======
+import Casestudies from './pages/CaseStudies/casestudies';
+import Firstportfolio from './pages/CaseStudies/CaseSections/first'
+import Secondportfolio from './pages/CaseStudies/CaseSections/second'
+import Threeportfolio from './pages/CaseStudies/CaseSections/three'
+import Fourportfolio from './pages/CaseStudies/CaseSections/four'
+import Fiveportfolio from './pages/CaseStudies/CaseSections/five'
+import Sixportfolio from './pages/CaseStudies/CaseSections/six'
+import Ourclient from './pages/ourclients/OurClients'
 import Career from './pages/Career/career';
 
 
@@ -35,7 +45,16 @@ const App = () => {
           <Route path='/blockchain' element={<Blockchain/>}/>
           <Route path='/career' element={<Career/>}/>       
           <Route path='/cybersecurity' element={<Cybersecurity/>}/>    
-          <Route path='/arvr' element={<Arvr/>}/>       
+          <Route path='/arvr' element={<Arvr/>}/> 
+          <Route path='/case-studies' element={<Casestudies/>}/>  
+          <Route path='/first' element={<Firstportfolio/>}/>  
+          <Route path='/second' element={<Secondportfolio/>}/>  
+          <Route path='/three' element={<Threeportfolio/>}/>  
+          <Route path='/four' element={<Fourportfolio/>}/>  
+          <Route path='/five' element={<Fiveportfolio/>}/>  
+          <Route path='/six' element={<Sixportfolio/>}/>
+          <Route path='/clients' element={<Ourclient/>}/> 
+          <Route path='/career' element={<Career/>}/>          
           </Routes>
       </div>
   );

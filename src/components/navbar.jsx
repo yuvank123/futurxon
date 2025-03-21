@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import One from '../images/5.svg';
+import One from '../images/2.svg';
 import "../style/navbar.css";
 // import Logo from '../images/logo.png'
 
@@ -228,21 +228,22 @@ const Navbar = () => {
       <nav className="flex flex-col space-y-6 flex-grow">
         {/* About Us Accordion */}
         <div>
-          <button
-            onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+          <a
+            // onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
             className="w-full flex items-center justify-between text-white text-xl md:text-2xl px-3 py-2.5"
+            href='/about-company'
           >
             <span>About Us</span>
-            <FiChevronDown className={`transition-transform duration-300 ${mobileAboutOpen ? 'rotate-180' : ''}`} />
-          </button>
-          {mobileAboutOpen && (
+            {/* <FiChevronDown className={`transition-transform duration-300 ${mobileAboutOpen ? 'rotate-180' : ''}`} /> */}
+          </a>
+          {/* {mobileAboutOpen && (
             <div className="mt-2 pl-4 space-y-2 md:space-y-3">
               <a href="/about-company" className="block text-white text-base md:text-lg">About Company</a>
               <a href="/customer-reviews" className="block text-white text-base md:text-lg">Customer Reviews</a>
               <a href="/agile" className="block text-white text-base md:text-lg">Agile Mindset</a>
               <a href="/values" className="block text-white text-base md:text-lg">Bacancy Values</a>
             </div>
-          )}
+          )} */}
         </div>
         {/* Services Accordion */}
         <div>
@@ -283,8 +284,6 @@ const Navbar = () => {
             <div className="mt-2 pl-4 flex flex-col space-y-2 md:space-y-3">
               <a href="/case-studies" className="block text-white text-base md:text-lg">Case Studies</a>
               <a href="/clients" className="block text-white text-base md:text-lg">Our Clients</a>
-              <a href="/testimonials" className="block text-white text-base md:text-lg">Testimonials</a>
-              <a href="/success-stories" className="block text-white text-base md:text-lg">Success Stories</a>
             </div>
           )}
         </div>
@@ -340,18 +339,18 @@ const Navbar = () => {
                   onMouseEnter={() => handleMenuEnter('about')}
                   onMouseLeave={() => handleMenuLeave('about')}
                 >
-                  <button className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
+                  <a href="/about-company" className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
                     About Us
-                    <svg
+                    {/* <svg
                       className={`w-4 h-4 transition-transform ${activeMenu === 'about' ? 'rotate-180' : ''}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {renderDropdown('about', 
+                    </svg> */}
+                  </a>
+                  {/* {renderDropdown('about', 
                     [
                       { text: 'About Company', href: '/about-company' },
                       { text: 'Customer Reviews', href: '/customer-reviews' }
@@ -360,7 +359,7 @@ const Navbar = () => {
                       { text: 'Agile Mindset', href: '/agile' },
                       { text: 'Bacancy Values', href: '/values' }
                     ]
-                  )}
+                  )} */}
                 </div>
                 {/* Services Dropdown */}
                 <div
@@ -404,6 +403,10 @@ const Navbar = () => {
                   <a href="/career" className="text-purple-300 hover:text-white transition-colors font-[12px] md:font-[14px]">
                   Career
                 </a>
+                  <a href='/career' className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
+                    Career
+                  </a>
+
                 </div>
                 {/* Portfolio Dropdown */}
                 <div
@@ -425,11 +428,9 @@ const Navbar = () => {
                   {renderDropdown('portfolio',
                     [
                       { text: 'Case Studies', href: '/case-studies' },
-                      { text: 'Our Clients', href: '/clients' }
                     ],
                     [
-                      { text: 'Testimonials', href: '/testimonials' },
-                      { text: 'Success Stories', href: '/success-stories' }
+                      { text: 'Our Clients', href: '/clients' }
                     ]
                   )}
                 </div>

@@ -27,7 +27,7 @@ const FullScreenCyberServices = () => {
                     <img
                         src={ArvrBg}
                         alt="Cyber Security Background"
-                        className="w-full h-full md:w-[40vw] md:h-[80vh] object-contain animate-bounce"
+                        className="w-full h-full md:w-[40vw] md:h-[80vh] object-contain animate-bounce opacity-40"
                         style={{
                             maxWidth: "100%",
                             maxHeight: "100%",

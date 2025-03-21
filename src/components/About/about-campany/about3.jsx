@@ -1,41 +1,58 @@
-import React from "react";
-import C1 from "../../../images/c-1.svg";
-import C2 from "../../../images/c-2.svg";
-import C3 from "../../../images/c-3.svg";
-import C4 from "../../../images/c-4.svg";
-import C5 from "../../../images/c-5.svg";
-import C6 from "../../../images/c-6.svg";
+import React from 'react';
+import { FaBriefcaseMedical, FaCog, FaTruck, FaBroadcastTower, FaGasPump, FaChartPie, FaUniversity, FaShoppingCart, FaCar, FaGraduationCap, FaStore, FaGamepad, FaBuilding, FaLink } from 'react-icons/fa';
 
-const About3 = () => {
-  const certificateImages = [
-    C1, // Replace with actual image URLs
-    C2,
-    C3,
-    C4,
-    C5,
-    C6,
-  ];
+const industries = [
+  { icon: <FaBriefcaseMedical />, label: 'Healthcare' },
+  { icon: <FaCog />, label: 'Manufacturing' },
+  { icon: <FaTruck />, label: 'Transportation' },
+  { icon: <FaBroadcastTower />, label: 'Telecom' },
+  { icon: <FaGasPump />, label: 'Oil & Gas' },
+  // { icon: <FaChartPie />, label: 'Fintech' },
+  // { icon: <FaUniversity />, label: 'Banking' },
+  // { icon: <FaShoppingCart />, label: 'E-Commerce' },
+  // { icon: <FaCar />, label: 'Automotive' },
+  // { icon: <FaGraduationCap />, label: 'Education' },
+  // { icon: <FaStore />, label: 'Retail' },
+  // { icon: <FaLink />, label: 'Supply Chain' },
+  // { icon: <FaBuilding />, label: 'Real Estate' },
+  // { icon: <FaGamepad />, label: 'Gaming' },
+  // { icon: <FaStore />, label: 'AI & ML' },
+];
 
+const About5 = () => {
   return (
-    <div className="h-[60vh] flex flex-col justify-center items-center p-10">
-      <h1 className="text-5xl font-bold text-purple-400 mb-8">Certificates</h1>
-      
-      <div className="grid grid-cols-6 gap-6">
-        {certificateImages.map((src, index) => (
-          <div
-            key={index}
-            className=" p-4 rounded-xl shadow-md transform transition duration-300 hover:scale-105"
-          >
-            <img
-              src={src}
-              alt={`Certificate ${index + 1}`}
-              className="w-full h-40 object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        ))}
+    <div className='relative py-20 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+        <div className='text-center mb-16'>
+          <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent mb-4'>
+            Industries We Transform
+          </h2>
+          <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
+            Pioneering digital transformation across diverse sectors through cutting-edge solutions and domain expertise
+          </p>
+        </div>
+
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6'>
+          {industries.map((industry, index) => (
+            <div 
+              key={index}
+              className='group relative p-6 bg-gray-800 rounded-xl transition-all duration-300 hover:bg-gradient-to-br from-purple-900/50 to-blue-900/30 hover:border-purple-500/30 border border-gray-700/50 shadow-2xl hover:shadow-purple-900/20'
+            >
+              <div className='absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-[radial-gradient(200px_circle_at_var(--x)_var(--y),rgba(125,90,250,0.1),transparent)]' />
+              <div className='flex flex-col items-center gap-4 z-10 relative'>
+                <div className='p-4 bg-gradient-to-br from-purple-600 to-blue-500 rounded-xl text-3xl text-white transform transition-transform duration-300 group-hover:-translate-y-2'>
+                  {industry.icon}
+                </div>
+                <h3 className='text-xl font-semibold text-gray-200 group-hover:text-white transition-colors'>
+                  {industry.label}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default About3;
+export default About5;

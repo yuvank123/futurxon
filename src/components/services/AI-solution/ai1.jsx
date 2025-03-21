@@ -9,7 +9,7 @@ const FullScreenUI = () => {
         <img
           src={AIsolutionbg}
           alt="AI Background"
-          className="w-full h-full md:w-[50vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow"
+          className="w-full h-full md:w-[50vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow opacity-50"
           style={{
             maxWidth: '100%',
             maxHeight: '100%',

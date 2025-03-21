@@ -27,7 +27,7 @@ const FullScreenCyberServices = () => {
           <img
             src={CyberBg}
             alt="Cyber Security Background"
-            className="w-full h-full md:w-[40vw] md:h-[80vh] object-cover animate-glitch"
+            className="w-full h-full md:w-[40vw] md:h-[80vh] object-cover animate-glitch opacity-50"
             style={{
               maxHeight:"100%",
               maxWidth:"100%",

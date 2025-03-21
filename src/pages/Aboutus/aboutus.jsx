@@ -6,7 +6,7 @@ import About2 from '../../components/About/about-campany/about2'
 import About3 from '../../components/About/about-campany/about3'
 import About4 from '../../components/About/about-campany/about4'
 import About5 from '../../components/About/about-campany/about5'
-import Form from '../../components/home/form';
+// import Form from '../../components/home/form';
 import Footer from '../../components/footer';
 
 const aboutus = () => {
@@ -36,18 +36,18 @@ const aboutus = () => {
         <div className='relative border-0 border-purple-500'>
           <About2/>
         </div>
-        {/* <div className='relative border-0 border-purple-100'>
+        <div className='relative border-0 border-purple-100'>
           <About3/>
-        </div> */}
+        </div>
         <div className='relative border-0 border-purple-100'>
           <About4/>
         </div>
         <div className='relative border-0 border-purple-100'>
           <About5/>
         </div>
-        <div>
+        {/* <div>
            <Form/>
-        </div>
+        </div> */}
         <div>
           <Footer/>
         </div>

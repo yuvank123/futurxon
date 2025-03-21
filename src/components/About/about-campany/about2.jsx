@@ -1,73 +1,94 @@
-import React from "react";
-import T1 from "../../../images/david.png";
-import T2 from "../../../images/philip.png";
-import T3 from "../../../images/brett.png";
+import React, { useState } from "react";
+import Office from "../../../images/Office.jpg";
 
-const Testimonials = () => {
-  const testimonials = [
+const About3 = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleDropdown = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const sections = [
     {
-      name: "David Carta",
-      title: "CEO/President of Telaeris, Inc.",
-      heading: "Timezone is Not a Boundary",
-      quote:
-        "The communication is brilliant and they stayed very consistent. The coder puts in a phenomenal amount of effort to ensure he is available given the time difference between India and the USA.",
-      img: T1, // Replace with actual image
+      title: "Expertise That Matters",
+      content: "Our team comprises industry veterans and emerging talents who are passionate about technology. With years of experience and a commitment to staying at the forefront of industry trends, we bring a wealth of expertise to the table."
     },
     {
-      name: "Philip Gomez",
-      title: "Co-owner of Patty’s Cakes & Desserts",
-      heading: "Interview Before Hiring Developers",
-      quote:
-        "The team at Bacancy is reliable and accommodating to my business needs. We had the option to Interview Before Hiring. Their account management is a pleasant experience and I highly recommend them.",
-      img: T2,
+      title: "Tailored Solutions",
+      content: "We don’t believe in one-size-fits-all solutions. Every organization is unique, and we take the time to understand your specific needs. Our solutions are meticulously crafted to align with your goals and challenges."
     },
     {
-      name: "Brett Williams",
-      title: "Founder of Aegis",
-      heading: "Quick-Onboarding",
-      quote:
-        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
-      img: T3,
+      title: "Innovation at the Core",
+      content: "Innovation isn’t just a buzzword for us; it’s in our DNA. We embrace cutting-edge technologies, explore new possibilities, and challenge the status quo to deliver solutions that drive your business forward."
     },
+    {
+      title: "Proven Track Record",
+      content: "Our success is measured by the results we’ve achieved for our clients. With a portfolio of successful projects and satisfied clients, we have a proven track record of delivering value and excellence."
+    },
+    {
+      title: "Dedication to Quality",
+      content: "Quality is non-negotiable for us. From the code we write to the services we provide, we maintain the highest standards of quality and attention to detail."
+    }
   ];
 
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-gradient-to-b from-[#1a1a2e] to-[#16213e] text-white py-20 px-6">
-      <h2 className="text-4xl font-bold text-center text-purple-400">
-        We Are Trusted By Businesses Worldwide
-      </h2>
-      <p className="text-gray-300 text-center mt-2 max-w-2xl">
-        Leading companies trust us and our staff augmentation model to fulfill their IT needs.
-      </p>
-
-      <div className="mt-12 grid md:grid-cols-3 gap-8 w-full max-w-6xl">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={index}
-            className="bg-[#222244] shadow-lg p-6 rounded-xl border border-[#4c669f] transform transition duration-300 hover:scale-105"
-          >
-            <div className="flex items-center space-x-4">
-              <img
-                src={testimonial.img}
-                alt={testimonial.name}
-                className="w-14 h-14 rounded-full border-2 border-purple-500"
-              />
-              <div>
-                <h3 className="text-purple-400 font-semibold">{testimonial.name}</h3>
-                <p className="text-gray-400 text-sm">{testimonial.title}</p>
-              </div>
-            </div>
-            <h4 className="text-blue-300 font-semibold mt-4">{testimonial.heading}</h4>
-            <p className="text-gray-300 mt-2 italic">"{testimonial.quote}"</p>
-          </div>
-        ))}
+    <div className="relative min-h-screen py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={Office}
+          alt="Team Discussion"
+          className="w-full h-full object-cover opacity-20"
+        />
       </div>
 
-      <button className="mt-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition duration-300">
-        TALK TO OUR EXPERT
-      </button>
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-16 space-y-6">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Why Choose Us?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            In the ever-evolving landscape of technology, choosing the right IT
+            partner is pivotal to your organization's success.
+          </p>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 relative z-10">
+          {sections.map((section, index) => (
+            <div 
+              key={index}
+              className="relative group p-8 rounded-2xl border border-white/10 bg-gray-900/30 backdrop-blur-lg hover:bg-gray-700/30 transition-all duration-300 cursor-pointer"
+              onClick={() => toggleDropdown(index)}
+            >
+              <div className="flex items-start space-x-4">
+                <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                  openIndex === index 
+                    ? "bg-purple-400 text-gray-900" 
+                    : "bg-gray-700/50 text-purple-400"
+                }`}>
+                  <span className="font-bold">{index + 1}</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className={`text-xl font-semibold mb-3 ${
+                    openIndex === index ? "text-purple-400" : "text-gray-100"
+                  }`}>
+                    {section.title}
+                  </h3>
+                  {openIndex === index && (
+                    <p className="text-gray-300 leading-relaxed">
+                      {section.content}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Testimonials;
+export default About3;

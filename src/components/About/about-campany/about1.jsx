@@ -15,9 +15,9 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/* <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"> */}
         {/* Info Cards */}
-        {[
+        {/* {[
           { icon: "\ud83d\udcbc", label: "13+ Years of Experience" },
           { icon: "\ud83d\udc65", label: "1050+ IT Professionals" },
           { icon: "\ud83d\udcd6", label: "2500+ Success Stories" },
@@ -30,7 +30,7 @@ const AboutUs = () => {
             <p className="text-lg font-semibold text-white">{item.label}</p>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

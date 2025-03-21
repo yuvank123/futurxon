@@ -9,7 +9,7 @@ const FullScreenUI = () => {
         <img
           src={Blockchainbg}
           alt="Blockchain Background"
-          className="w-full h-full md:w-[40vw] md:h-[85vh] lg:w-[35vw] lg:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow"
+          className="w-full h-full md:w-[40vw] md:h-[85vh] lg:w-[35vw] lg:h-[80vh] object-contain animate-zoom-in-out opacity-40 animate-spin-slow"
           style={{
             maxWidth: '100%',
             maxHeight: '100%',
@@ -39,8 +39,8 @@ const FullScreenUI = () => {
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 animate-text-shine">
           <span className="inline-block">Empower Your</span>
           <br />
-          <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-wide md:tracking-wider text-white/90 drop-shadow-2xl">
-            Blockchain Solutions
+          <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-wide md:tracking-wider bg-gradient-to-r from-white via-blue-300 to-purple-200 bg-clip-text text-transparent drop-shadow-2xl">
+            Blockchain
           </span>
         </h1>
 
