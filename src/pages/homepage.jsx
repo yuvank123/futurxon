@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import Background from '../components/home/background';
 import Navbar from '../components/navbar';
 import Titlepage from '../components/home/titlepage';
-import Aboutvideo from '../video/aboutvideo.mp4';
+import Aboutvideo from '../../public/video/aboutvideo.mp4';
 import Connect from '../components/home/connect';
 import How from '../components/home/how';
 import Accerate from '../components/home/accerate';
