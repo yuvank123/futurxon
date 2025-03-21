@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import One from '../images/2.svg';
+import One from '../images/6.svg';
 import "../style/navbar.css";
 // import Logo from '../images/logo.png'
 
@@ -319,7 +319,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent font-sans text-[14px] md:text-[18px] ${
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white font-sans text-[14px] md:text-[18px]${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}>
         <div className="max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-0">
