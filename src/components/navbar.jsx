@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import One from '../images/5.svg';
+import One from '../images/2.svg';
 import "../style/navbar.css";
 // import Logo from '../images/logo.png'
 

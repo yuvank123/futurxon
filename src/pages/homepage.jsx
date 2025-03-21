@@ -11,6 +11,7 @@ import Mapping from '../components/home/mapping';
 import Offering from '../components/home/offering';
 import Fortune from '../components/home/fortune';
 import Testinomial from '../components/home/testinomial';
+import Stack from '../components/home/stack';
 // import Form from '../components/home/form';
 import Footer from '../components/footer';
 
@@ -61,6 +62,9 @@ const homepage = () => {
       {/* <div className='h-auto border-0 border-white'>
         <Fortune/>
       </div> */}
+      <div className='h-auto border-0 border-white '>
+        <Stack />
+      </div>
       <div className='h-auto border-0 border-white'>
         <Testinomial />
       </div>
