@@ -53,7 +53,7 @@ const aidev = () => {
 
       {/* Content layer */}
       <div className='relative z-10 h-auto'>
-        <div className='sticky top-0 z-50 backdrop-blur-[6px] bg-gradient-to-b from-purple-950/40 to-pink-950/20 border-b border-purple-900/30'>
+      <div className='sticky top-0 z-30'>
           <Navbar/>
         </div>
         <div className='relative'>

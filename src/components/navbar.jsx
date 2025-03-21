@@ -40,16 +40,16 @@ const Navbar = () => {
     setCloseTimeoutId(id);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      setIsVisible(currentScroll < lastScroll || currentScroll === 0);
-      setLastScroll(currentScroll);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScroll = window.scrollY;
+  //     setIsVisible(currentScroll < lastScroll || currentScroll === 0);
+  //     setLastScroll(currentScroll);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [lastScroll]);
 
   // Close mobile menu if viewport becomes large (xl and above)
   useEffect(() => {
@@ -319,8 +319,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 bg-white font-sans text-[14px] md:text-[18px]${
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
+      } ${
+        // Changed background styling here
+        lastScroll > 50 
+          ? 'bg-gradient-to-r from-purple-800 to-blue-800 shadow-lg' 
+          : 'bg-transparent backdrop-blur-sm'
       }`}>
         <div className="max-w-[92vw] mx-auto px-4 sm:px-6 lg:px-0">
           <div className="flex justify-between items-center h-16 md:h-25">
@@ -330,44 +335,28 @@ const Navbar = () => {
                 <img src={One} alt="logo" className="w-20 md:w-60 transition-all duration-300" />
               </a>
             </div>
-            {/* Desktop Navigation */}
+            
+            {/* Desktop Navigation - Changed text colors and hover effects */}
             <div className="hidden lg:flex items-center">
-              <div className="flex items-center space-x-4 md:space-x-8 bg-white/30 backdrop-blur-md rounded-xl p-2 md:p-3 font-[12px] md:font-[14px]">
+              <div className="flex items-center space-x-4 md:space-x-8 rounded-xl p-2 md:p-3 font-[12px] md:font-[14px]">
                 {/* About Us Dropdown */}
                 <div
                   className="relative"
                   onMouseEnter={() => handleMenuEnter('about')}
                   onMouseLeave={() => handleMenuLeave('about')}
                 >
-                  <a href="/about-company" className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
+                  <a href="/about-company" className="text-white hover:text-purple-200 transition-colors flex items-center gap-1">
                     About Us
-                    {/* <svg
-                      className={`w-4 h-4 transition-transform ${activeMenu === 'about' ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg> */}
                   </a>
-                  {/* {renderDropdown('about', 
-                    [
-                      { text: 'About Company', href: '/about-company' },
-                      { text: 'Customer Reviews', href: '/customer-reviews' }
-                    ],
-                    [
-                      { text: 'Agile Mindset', href: '/agile' },
-                      { text: 'Bacancy Values', href: '/values' }
-                    ]
-                  )} */}
                 </div>
+
                 {/* Services Dropdown */}
                 <div
                   className="relative"
                   onMouseEnter={() => handleMenuEnter('services')}
                   onMouseLeave={() => handleMenuLeave('services')}
                 >
-                  <button className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
+                  <button className="text-white hover:text-purple-200 transition-colors flex items-center gap-1">
                     Services
                     <svg
                       className={`w-4 h-4 transition-transform ${activeMenu === 'services' ? 'rotate-180' : ''}`}
@@ -395,35 +384,37 @@ const Navbar = () => {
                       { text: 'Cybersecurity', href: '/cybersecurity' }
                     ]
                   )}
-                </div>
-                {/* Career */}
-                <div
-                  className="relative"
-                  onMouseEnter={() => handleMenuEnter('hireme')}
-                  onMouseLeave={() => handleMenuLeave('hireme')}
-                >
-                  <a href='/career' className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
-                    Career
-                  </a>
-                </div>
-                {/* Portfolio Dropdown */}
-                <div
-                  className="relative"
-                  onMouseEnter={() => handleMenuEnter('portfolio')}
-                  onMouseLeave={() => handleMenuLeave('portfolio')}
-                >
-                  <button className="text-purple-300 hover:text-white transition-colors flex items-center gap-1">
-                    Portfolio
-                    <svg
-                      className={`w-4 h-4 transition-transform ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  {renderDropdown('portfolio',
+                  </div>
+  
+                  {/* Career */}
+                  <div
+                    className="relative"
+                    onMouseEnter={() => handleMenuEnter('hireme')}
+                    onMouseLeave={() => handleMenuLeave('hireme')}
+                  >
+                    <a href='/career' className="text-white hover:text-purple-200 transition-colors flex items-center gap-1">
+                      Career
+                    </a>
+                  </div>
+  
+                  {/* Portfolio Dropdown */}
+                  <div
+                    className="relative"
+                    onMouseEnter={() => handleMenuEnter('portfolio')}
+                    onMouseLeave={() => handleMenuLeave('portfolio')}
+                  >
+                    <button className="text-white hover:text-purple-200 transition-colors flex items-center gap-1">
+                      Portfolio
+                      <svg
+                        className={`w-4 h-4 transition-transform ${activeMenu === 'portfolio' ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {renderDropdown('portfolio',
                     [
                       { text: 'Case Studies', href: '/case-studies' },
                     ],
@@ -431,35 +422,38 @@ const Navbar = () => {
                       { text: 'Our Clients', href: '/clients' }
                     ]
                   )}
+                  </div>
+  
+                  {/* Contact Us */}
+                  <a href="/contact" className="text-white hover:text-purple-200 transition-colors font-[12px] md:font-[14px]">
+                    Contact Us
+                  </a>
                 </div>
-                {/* Contact Us */}
-                <a href="/contact" className="text-purple-300 hover:text-white transition-colors font-[12px] md:font-[14px]">
-                  Contact Us
-                </a>
+              </div>
+  
+              {/* Right - Desktop CTA Button - Updated gradient */}
+              <div className="hidden lg:flex items-center space-x-4 md:space-x-6 pr-1">
+                <button
+                  ref={ctaButton}
+                  onClick={handleCtaClick}
+                  className="cta-button bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
+                >
+                  <span className="relative z-10">Book in 30 min</span>
+                </button>
+              </div>
+  
+              {/* Mobile Hamburger Menu - Changed icon color */}
+              <div className="flex lg:hidden">
+                <button onClick={() => setMobileMenuOpen(true)}>
+                  <FiMenu className="text-white text-3xl" />
+                </button>
               </div>
             </div>
-            {/* Right - Desktop CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4 md:space-x-6 pr-1">
-              <button
-                ref={ctaButton}
-                onClick={handleCtaClick}
-                className="cta-button bg-gradient-to-r from-blue-600 to-purple-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
-              >
-                <span className="relative z-10">Book in 30 min</span>
-              </button>
-            </div>
-            {/* Mobile Hamburger Menu */}
-            <div className="flex lg:hidden">
-              <button onClick={() => setMobileMenuOpen(true)}>
-                <FiMenu className="text-purple-300 text-3xl" />
-              </button>
-            </div>
           </div>
-        </div>
-      </nav>
-      {mobileMenuOpen && mobileNav}
-    </>
-  );
-};
+        </nav>
+        {mobileMenuOpen && mobileNav}
+      </>
+    );
+  };
 
 export default Navbar;
