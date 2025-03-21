@@ -3,7 +3,6 @@ import Background from '../components/home/background';
 import Navbar from '../components/navbar';
 import Titlepage from '../components/home/titlepage';
 import Aboutvideo from '../video/aboutvideo.mp4';
-import Wehelped from '../components/home/wehelped';
 import Connect from '../components/home/connect';
 import How from '../components/home/how';
 import Accerate from '../components/home/accerate';
