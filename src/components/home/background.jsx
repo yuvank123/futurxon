@@ -1,5 +1,5 @@
 import React from "react";
-import Bgvideo from "../../../public/video/bgvideo.mp4";
+import Bgvideo from "../../../public/videos/bgvideo.mp4";
 
 const Background = () => {
   return (

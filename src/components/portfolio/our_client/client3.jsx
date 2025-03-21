@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import Bgvideo from "../../../../public/video/bgvideo.mp4";
+import Bgvideo from "../../../../public/videos/bgvideo.mp4";
 
 const Testimonial = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
