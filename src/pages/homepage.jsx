@@ -9,7 +9,6 @@ import How from '../components/home/how';
 import Accerate from '../components/home/accerate';
 import Mapping from '../components/home/mapping';
 import Offering from '../components/home/offering';
-import Fortune from '../components/home/fortune';
 import Testinomial from '../components/home/testinomial';
 import Stack from '../components/home/stack';
 // import Form from '../components/home/form';
