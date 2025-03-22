@@ -306,13 +306,14 @@ const Navbar = () => {
       
       {/* Sticky Mobile CTA Button (Visible on mobile and iPad) */}
       <div className="sticky bottom-6 pt-4 bg-gradient-to-t from-gray-900/80 to-transparent">
-        <button
+        <a
+          href='https://calendly.com/infinoidtech/infinoid-technologies'
           ref={ctaButton}
           onClick={handleCtaClick}
           className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
         >
           Schedule a Call
-        </button>
+        </a>
       </div>
     </div>
   );
@@ -433,13 +434,14 @@ const Navbar = () => {
   
               {/* Right - Desktop CTA Button - Updated gradient */}
               <div className="hidden lg:flex items-center space-x-4 md:space-x-6 pr-1">
-                <button
+                <a
+                  href='https://calendly.com/infinoidtech/infinoid-technologies'
                   ref={ctaButton}
                   onClick={handleCtaClick}
                   className="cta-button bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
                 >
                   <span className="relative z-10">Schedule a Call</span>
-                </button>
+                </a>
               </div>
   
               {/* Mobile Hamburger Menu - Changed icon color */}
