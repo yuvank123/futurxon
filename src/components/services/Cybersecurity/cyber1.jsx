@@ -21,17 +21,17 @@ const FullScreenCyberServices = () => {
         <div
           style={{
             transform: `rotate(${rotate}deg)`,
-            transition: "transform 0.1s ease-out"
+            transition: "transform 0.1s ease-out",
           }}
         >
           <img
             src={CyberBg}
             alt="Cyber Security Background"
-            className="w-full h-full md:w-[40vw] md:h-[80vh] object-cover animate-glitch opacity-50"
+            className="w-full h-full sm:w-[90vw] sm:h-[70vh] md:w-[40vw] md:h-[80vh] lg:w-[35vw] lg:h-[80vh] object-cover animate-glitch opacity-50"
             style={{
-              maxHeight:"100%",
-              maxWidth:"100%",
-              filter: "hue-rotate(90deg) contrast(1.2)"
+              maxWidth: "100%",
+              maxHeight: "100%",
+              filter: "hue-rotate(90deg) contrast(1.2)",
             }}
           />
         </div>
@@ -45,7 +45,7 @@ const FullScreenCyberServices = () => {
         {[...Array(50)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 rounded-full"
+            className="absolute w-1 h-1 rounded-full hidden sm:block"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -54,34 +54,34 @@ const FullScreenCyberServices = () => {
               }, transparent)`,
               animation: `float ${4 + Math.random() * 4}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
-              filter: `blur(${Math.random() * 2}px)`
+              filter: `blur(${Math.random() * 2}px)`,
             }}
           ></div>
         ))}
       </div>
 
       {/* Main Content */}
-      <div className="relative text-center px-4 space-y-8 z-10">
-        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 animate-text-shine">
+      <div className="relative text-center px-4 sm:px-6 md:px-8 space-y-6 sm:space-y-8 lg:space-y-10 z-10">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 animate-text-shine">
           <span className="inline-block uppercase tracking-[0.2em]">
             Secure The
           </span>
           <br />
-          <span className="text-6xl md:text-8xl font-black bg-gradient-to-r from-pink-300 via-blue-300 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
+          <span className="text-5xl sm:text-6xl md:text-8xl font-black bg-gradient-to-r from-pink-300 via-blue-300 to-purple-400 bg-clip-text text-transparent drop-shadow-2xl">
             Cyber Frontier
           </span>
         </h1>
 
-        <p className="text-xl md:text-[17px] font-light max-w-4xl mx-auto leading-relaxed backdrop-blur-xl p-6 rounded-2xl border border-pink-400/20 bg-gradient-to-br from-purple-900/40 to-blue-900/40">
+        <p className="text-base sm:text-lg md:text-xl lg:text-[17px] font-light max-w-3xl md:max-w-4xl mx-auto leading-relaxed backdrop-blur-xl p-4 sm:p-6 rounded-2xl lg:rounded-3xl border border-pink-400/20 bg-gradient-to-br from-purple-900/40 to-blue-900/40">
           Advanced threat detection meets aesthetic security design. Our solutions combine
-          <span className="text-pink-300"> AI-powered defense systems</span>, 
-          <span className="text-blue-300"> quantum encryption protocols</span>, and 
+          <span className="text-pink-300"> AI-powered defense systems</span>,{" "}
+          <span className="text-blue-300"> quantum encryption protocols</span>, and{" "}
           <span className="text-purple-300"> neural network monitoring</span> in a seamless digital armor.
         </p>
 
-        <button className="group relative inline-flex items-center justify-center px-8 py-4 md:px-12 md:py-5 text-lg font-semibold rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
+        <button className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-4 md:px-12 md:py-5 text-lg sm:text-xl font-semibold rounded-full lg:rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
           <span className="relative z-10 flex items-center gap-3">
-            <ShieldIcon className="w-6 h-6 text-pink-200 animate-pulse" />
+            <ShieldIcon className="w-6 h-6 sm:w-7 sm:h-7 text-pink-200 animate-pulse" />
             <span className="text-shadow">Activate Protection</span>
           </span>
           <div className="absolute inset-0 rounded-full border-2 border-pink-400/30 animate-border-glow" />
@@ -89,10 +89,10 @@ const FullScreenCyberServices = () => {
         </button>
       </div>
 
-      {/* Scrolling Indicator */}
-      <div className="absolute bottom-8 animate-cyber-float">
-        <div className="w-10 h-16 rounded-3xl border-2 border-pink-400/50 flex items-start justify-center backdrop-blur-sm">
-          <div className="w-1.5 h-4 bg-pink-300 rounded-full mt-3 animate-scroll-pulse" />
+      {/* Responsive Scrolling Indicator */}
+      <div className="absolute bottom-8 sm:bottom-10 animate-cyber-float">
+        <div className="w-10 h-16 sm:w-12 sm:h-18 rounded-3xl border-2 border-pink-400/50 flex items-start justify-center backdrop-blur-sm">
+          <div className="w-1.5 h-4 sm:h-5 bg-pink-300 rounded-full mt-3 animate-scroll-pulse" />
         </div>
       </div>
 
@@ -102,17 +102,6 @@ const FullScreenCyberServices = () => {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           50% { transform: translateY(-20px) rotate(180deg); }
         }
-
-        // @keyframes glitch {
-        //   0% { clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%); }
-        //   20% { clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%); }
-        //   30% { clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%); }
-        //   40% { clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%); }
-        //   50% { clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%); }
-        //   55% { clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%); }
-        //   60% { clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%); }
-        //   100% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
-        // }
 
         @keyframes text-shine {
           to { background-position: 200% center; }

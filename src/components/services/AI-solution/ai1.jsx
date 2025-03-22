@@ -9,7 +9,7 @@ const FullScreenUI = () => {
         <img
           src={AIsolutionbg}
           alt="AI Background"
-          className="w-full h-full md:w-[50vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow opacity-50"
+          className="w-full h-full sm:w-[80vw] sm:h-[60vh] md:w-[50vw] md:h-[80vh] object-contain animate-zoom-in-out animate-spin-slow opacity-50"
           style={{
             maxWidth: '100%',
             maxHeight: '100%',
@@ -34,20 +34,23 @@ const FullScreenUI = () => {
       </div>
 
       {/* Content */}
-      <div className="relative text-center px-4 space-y-8">
-        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-text-shine">
+      <div className="relative text-center px-4 sm:px-6 md:px-8 space-y-6 sm:space-y-8">
+        <h1 className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-text-shine 
+          text-3xl sm:text-4xl md:text-5xl lg:text-7xl">
           <span className="inline-block">Transform With</span>
           <br />
-          <span className="text-6xl md:text-8xl font-black uppercase tracking-wider text-white/90 drop-shadow-2xl">
+          <span className="font-black uppercase tracking-wider text-white/90 drop-shadow-2xl 
+            text-4xl sm:text-5xl md:text-6xl lg:text-8xl">
             AI Solutions
           </span>
         </h1>
 
-        <p className="text-xl md:text-[17px] font-light max-w-4xl mx-auto leading-relaxed backdrop-blur-sm p-4 rounded-3xl border border-white/20">
+        <p className="font-light max-w-4xl mx-auto leading-relaxed backdrop-blur-sm p-3 sm:p-4 rounded-3xl border border-white/20 
+          text-base sm:text-lg md:text-xl">
           Revolutionize your business with cutting-edge artificial intelligence. From machine learning implementation to predictive analytics, we deliver intelligent solutions that drive innovation. Harness the power of neural networks, automate processes, and unlock data-driven decisions through our bespoke AI strategies and comprehensive development services.
         </p>
 
-        <button className="group relative inline-flex items-center justify-center px-8 py-4 md:px-10 md:py-5 text-lg font-semibold rounded-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 hover:from-purple-600 hover:via-blue-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
+        <button className="group relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 text-base sm:text-lg font-semibold rounded-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 hover:from-purple-600 hover:via-blue-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
           <span className="relative z-10">Start AI Transformation</span>
           <div className="absolute inset-0 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-pink-500/30"></div>
           <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>

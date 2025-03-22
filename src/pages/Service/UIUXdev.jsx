@@ -52,7 +52,7 @@ const UIUXdev = () => {
       </div>
 
       {/* Content layer */}
-      <div className='relative z-10 h-auto mt-15'>
+      <div className='relative z-10 h-auto'>
       <div className='sticky top-0 z-30'>
           <Navbar/>
         </div>
