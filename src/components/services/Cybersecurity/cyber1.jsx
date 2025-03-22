@@ -88,13 +88,6 @@ const FullScreenCyberServices = () => {
         </button>
       </div>
 
-      {/* Responsive Scrolling Indicator */}
-      <div className="absolute bottom-2 sm:bottom-10 animate-cyber-float">
-        <div className="w-10 h-16 sm:w-12 sm:h-18 rounded-3xl border-2 border-pink-400/50 flex items-start justify-center backdrop-blur-sm">
-          <div className="w-1.5 h-4 sm:h-5 bg-pink-300 rounded-full mt-3 animate-scroll-pulse" />
-        </div>
-      </div>
-
       {/* Animation Styles */}
       <style jsx global>{`
         @keyframes float {

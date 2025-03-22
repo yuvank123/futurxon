@@ -46,7 +46,7 @@ const aidev = () => {
       </div>
 
       {/* Content layer */}
-      <div className='relative z-10 h-auto'>
+      <div className='relative z-10 h-auto lg:mt-10'>
       <div className='sticky top-0 z-30'>
           <Navbar/>
         </div>
@@ -85,7 +85,7 @@ const aidev = () => {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-          
+
         @keyframes glow-surge {
           0% { box-shadow: 0 0 80px -30px rgba(139,92,246,0.3); }
           50% { box-shadow: 0 0 120px -15px rgba(192,132,252,0.6); }

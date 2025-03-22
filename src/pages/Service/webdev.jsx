@@ -47,7 +47,7 @@ const webdev = () => {
       </div>
 
       {/* Content layer */}
-      <div className='relative z-10 h-auto'>
+      <div className='relative z-10 h-auto lg:mt-10'>
       <div className='sticky top-0 z-30'>
           <Navbar/>
         </div>
