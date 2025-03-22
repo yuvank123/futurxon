@@ -14,8 +14,6 @@ import Blockchain from './pages/Service/blockchain';
 import Cybersecurity from './pages/Service/cybersecurity';
 import Arvr from './pages/Service/ARVR';
 import Contact from './pages/contact/Contactus';
-<<<<<<< HEAD
-=======
 import Casestudies from './pages/CaseStudies/casestudies';
 import Firstportfolio from './pages/CaseStudies/CaseSections/first'
 import Secondportfolio from './pages/CaseStudies/CaseSections/second'
