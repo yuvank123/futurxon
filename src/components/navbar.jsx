@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
-import One from '../../public/images/6.svg';
+import One from '../../public/images/logo.svg';
 import "../style/navbar.css";
 // import Logo from '../images/logo.png'
 
@@ -311,7 +311,7 @@ const Navbar = () => {
           onClick={handleCtaClick}
           className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
         >
-          Book in 30 min
+          Schedule a Call
         </button>
       </div>
     </div>
@@ -332,7 +332,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 overflow-hidden">
               <a href="/" className="flex items-center">
-                <img src={One} alt="logo" className="w-20 md:w-60 transition-all duration-300" />
+                <img src={One} alt="logo" className="w-20 md:w-60 transition-all duration-300 hover:animate-pulse" />
               </a>
             </div>
             
@@ -438,7 +438,7 @@ const Navbar = () => {
                   onClick={handleCtaClick}
                   className="cta-button bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
                 >
-                  <span className="relative z-10">Book in 30 min</span>
+                  <span className="relative z-10">Schedule a Call</span>
                 </button>
               </div>
   

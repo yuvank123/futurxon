@@ -29,7 +29,7 @@ const BlockchainTechStackUI = () => {
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="group relative p-1 backdrop-blur-xl bg-gradient-to-br from-white/5 to-white/3 border border-white/10 rounded-2xl transition-all duration-500 hover:scale-[1.05] hover:border-yellow-400/30 hover:shadow-2xl hover:shadow-yellow-500/20"
+                className="group relative p-1 backdrop-blur-xl bg-gradient-to-br from-white/5 to-white/3 border border-white/10 rounded-2xl transition-all duration-500 hover:scale-[1.05] hover:border-yellow-400/30 hover:shadow-2xl hover:shadow-yellow-500/20 hover:bg-amber-50"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10 aspect-square flex flex-col items-center justify-center p-4">
@@ -39,7 +39,7 @@ const BlockchainTechStackUI = () => {
                     className="w-full h-auto max-h-32 object-contain grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:drop-shadow-[0_0_25px_rgba(255,165,0,0.3)]"
                     loading="lazy"
                   />
-                  <span className="mt-2 text-lg font-semibold text-gray-300 group-hover:text-white">
+                  <span className="mt-2 text-lg font-semibold text-gray-300 group-hover:text-white hover:text-black">
                     {tech.name}
                   </span>
                 </div>

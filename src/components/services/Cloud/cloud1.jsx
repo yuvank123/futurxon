@@ -55,13 +55,6 @@ const FullScreenUI = () => {
         </button>
       </div>
 
-      {/* Responsive Scrolling Indicator */}
-      <div className="absolute bottom-2 sm:bottom-10 animate-bounce">
-        <div className="w-8 h-14 sm:w-10 sm:h-16 rounded-3xl lg:rounded-3xl border-2 border-white/50 flex items-start justify-center">
-          <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-scroll"></div>
-        </div>
-      </div>
-
       {/* Animation Styles */}
       <style jsx global>{`
         @keyframes float {

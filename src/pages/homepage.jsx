@@ -51,7 +51,7 @@ const homepage = () => {
       <div className='h-auto border-0 border-amber-50'>
         <Accerate />
       </div>
-      <div className='h-[100vh] border-0 border-amber-50'>
+      <div className='h-auto border-0 border-amber-50'>
         <Mapping />
       </div>
       <div className='h-auto border-0 border-white '>

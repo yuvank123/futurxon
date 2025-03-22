@@ -15,20 +15,14 @@ const bcdev = () => {
       <div className='fixed inset-0 z-0 bg-gradient-to-br from-[#0a0618] via-[#130d30] to-[#1a0933]'>
         {/* Galactic core animation */}
         <div className='absolute inset-0 animate-galactic-pulse'>
-          <div className='absolute top-1/3 left-1/3 w-[1000px] h-[1000px] bg-radial-gradient(from_at_50%_50%,#6d28d950_0%,#3b076450_40%,transparent_70%) blur-[150px]'/>
-        </div>
-
-        {/* Dark matter smudges */}
-        <div className='absolute inset-0 opacity-30'>
-          <div className='absolute -top-48 -left-64 w-[900px] h-[900px] bg-radial-gradient(from_at_30%_30%,#1e1b4b50_0%,transparent_70%) blur-[100px]'/>
-          <div className='absolute -bottom-64 -right-64 w-[800px] h-[800px] bg-radial-gradient(from_at_70%_70%,#3b076450_0%,transparent_70%) blur-[120px]'/>
+          <div className='absolute top-1/3 left-1/3 w-[1000px] h-[1000px] bg-radial-gradient(from_at_50%_50%,#6d28d950_0%,#3b076450_40%,transparent_70%) blur-[150px]' />
         </div>
 
         {/* Intense star particles */}
         <div className="absolute inset-0 opacity-70 animate-particles">
           {[...Array(300)].map((_, i) => (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="absolute w-[2px] h-[2px] rounded-full bg-gradient-to-b from-pink-300 via-purple-300 to-blue-300 shadow-[0_0_15px_2px] shadow-purple-400/50"
               style={{
                 left: `${Math.random() * 100}%`,
@@ -41,42 +35,36 @@ const bcdev = () => {
           ))}
         </div>
 
-        {/* Cosmic energy streams */}
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-1/4 -left-20 w-[150%] h-[3px] bg-gradient-to-r from-transparent via-purple-500/70 to-transparent animate-energy-stream"/>
-          <div className="absolute top-1/2 -right-20 w-[150%] h-[3px] bg-gradient-to-l from-transparent via-pink-500/70 to-transparent animate-energy-stream-delayed"/>
-        </div>
-
         {/* Stardust overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=')]"/>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=')]" />
       </div>
 
       {/* Content layer */}
       <div className='relative z-10 h-auto'>
-      <div className='sticky top-0 z-30'>
-          <Navbar/>
+        <div className='sticky top-0 z-30'>
+          <Navbar />
         </div>
         <div className='relative'>
-          <Chain1/>
+          <Chain1 />
         </div>
         <div className='relative'>
-          <Chain2/>
+          <Chain2 />
         </div>
         <div className='relative'>
-          <Chain3/>
+          <Chain3 />
         </div>
         <div className='relative'>
-          <Chain4/>
+          <Chain4 />
         </div>
         <div className='relative'>
-          <Chain5/>
+          <Chain5 />
         </div>
         <div
-         className='relative'>
-          <Contact2/>
+          className='relative'>
+          <Contact2 />
         </div>
         <div className='relative'>
-          <Footer/>
+          <Footer />
         </div>
       </div>
 
@@ -91,13 +79,6 @@ const bcdev = () => {
         @keyframes blackhole-spin {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        @keyframes energy-stream {
-          0% { transform: translateX(-100%) skewX(-25deg); opacity: 0; }
-          20% { opacity: 1; }
-          80% { opacity: 1; }
-          100% { transform: translateX(100%) skewX(25deg); opacity: 0; }
         }
 
         @keyframes glow-surge {
@@ -118,14 +99,6 @@ const bcdev = () => {
 
         .animate-blackhole-spin {
           animation: blackhole-spin 120s linear infinite;
-        }
-
-        .animate-energy-stream {
-          animation: energy-stream 12s linear infinite;
-        }
-
-        .animate-energy-stream-delayed {
-          animation: energy-stream 14s linear infinite 3s;
         }
 
         .animate-glow-surge {

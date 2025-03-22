@@ -40,13 +40,7 @@ const aidev = () => {
             />
           ))}
         </div>
-
-        {/* Cosmic energy streams */}
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute top-1/4 -left-20 w-[150%] h-[3px] bg-gradient-to-r from-transparent via-purple-500/70 to-transparent animate-energy-stream"/>
-          <div className="absolute top-1/2 -right-20 w-[150%] h-[3px] bg-gradient-to-l from-transparent via-pink-500/70 to-transparent animate-energy-stream-delayed"/>
-        </div>
-
+        
         {/* Stardust overlay */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDgiLz48L3N2Zz4=')]"/>
       </div>
@@ -91,14 +85,7 @@ const aidev = () => {
           from { transform: translate(-50%, -50%) rotate(0deg); }
           to { transform: translate(-50%, -50%) rotate(360deg); }
         }
-
-        @keyframes energy-stream {
-          0% { transform: translateX(-100%) skewX(-25deg); opacity: 0; }
-          20% { opacity: 1; }
-          80% { opacity: 1; }
-          100% { transform: translateX(100%) skewX(25deg); opacity: 0; }
-        }
-
+          
         @keyframes glow-surge {
           0% { box-shadow: 0 0 80px -30px rgba(139,92,246,0.3); }
           50% { box-shadow: 0 0 120px -15px rgba(192,132,252,0.6); }
@@ -117,14 +104,6 @@ const aidev = () => {
 
         .animate-blackhole-spin {
           animation: blackhole-spin 120s linear infinite;
-        }
-
-        .animate-energy-stream {
-          animation: energy-stream 12s linear infinite;
-        }
-
-        .animate-energy-stream-delayed {
-          animation: energy-stream 14s linear infinite 3s;
         }
 
         .animate-glow-surge {

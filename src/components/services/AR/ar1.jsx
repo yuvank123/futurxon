@@ -80,8 +80,7 @@ const FullScreenCyberServices = () => {
             <VRIcon className="w-5 h-5 sm:w-6 sm:h-6 text-pink-200 animate-pulse" />
             <span className="text-shadow">Launch Experience</span>
           </span>
-          <div className="absolute inset-0 rounded-full border-2 border-pink-400/30 animate-border-glow" />
-          <div className="absolute -inset-2 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-pink-500/20 backdrop-blur-lg group-hover:backdrop-blur-xl transition-all duration-300" />
+          <div className="absolute inset-0 rounded-full border-2 border-pink-400/20 animate-border-glow" />
         </button>
       </div>
 

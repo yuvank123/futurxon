@@ -29,17 +29,17 @@ import MOB3 from "../../../public/images/mob3.svg";
 
 // Updated categories including the new "Desktop" and renamed "Information Security"
 const categories = [
-  "Web",
-  "Mobile",
-  "DevOps",
-  "Cloud",
-  "Platforms",
-  "Relational Databases",
-  "Big Data",
-  "Machine Learning",
-  "Automation Tools",
-  "Information Security",
-  "Desktop",
+  "Web Solutions",
+  "Mobile Technology",
+  "DevOps & CI/CD",
+  "Cloud Computing",
+  "Digital Platforms",
+  "SQL Databases",
+  "Data Engineering",
+  "AI & ML",
+  "Workflow Automation",
+  "Cybersecurity",
+  "Desktop Solutions",
 ];
 
 // Tech stack data. Each category is rendered as either:
@@ -47,7 +47,7 @@ const categories = [
 // 2) { subcategories: { ... } } (e.g. DevOps, Machine Learning, Automation Tools)
 // 3) { icons: [...] } (e.g. Cloud, Platforms, etc.)
 const techStack = {
-  Web: {
+  "Web Solutions": {
     backend: [
       W1,W2,W3,W4,W5,W6,W7,W8
     ],
@@ -55,12 +55,12 @@ const techStack = {
       WF1,WF2,WF3,WF4,WF5,WF6,WF7
     ],
   },
-  Mobile: {
+  "Mobile Technology": {
     backend: [MOB1,MOB2,MOB3],
     frontend: [MOBF1,MOBF2,MOBF3,MOBF4],
   },
   // DevOps split into multiple subcategories
-  DevOps: {
+  "DevOps & CI/CD": {
     subcategories: {
       CONTAINERIZATION: ["/images/docker.png", "/images/kubernetes.png"],
       AUTOMATION: ["/images/terraform.png", "/images/ansible.png"],
@@ -69,7 +69,7 @@ const techStack = {
     },
   },
   // Cloud, Platforms, Relational Databases, Big Data, etc. will just show icons
-  Cloud: {
+  "Cloud Computing": {
     icons: [
       "/images/aws.png",
       "/images/azure.png",
@@ -77,17 +77,17 @@ const techStack = {
       "/images/digitalocean.png",
     ],
   },
-  Platforms: {
+  "Digital Platforms": {
     icons: ["/images/wordpress.png", "/images/shopify.png", "/images/magento.png"],
   },
-  "Relational Databases": {
+  "SQL Databases": {
     icons: ["/images/mysql.png", "/images/postgresql.png", "/images/sqlserver.png"],
   },
-  "Big Data": {
+  "Data Engineering": {
     icons: ["/images/hadoop.png", "/images/spark.png", "/images/kafka.png"],
   },
   // Machine Learning now split into four subcategories
-  "Machine Learning": {
+  "AI & ML": {
     subcategories: {
       "PROGRAMMING LANGUAGES": ["/images/python.png", "/images/r.png"],
       FRAMEWORKS: ["/images/tensorflow.png", "/images/pytorch.png"],
@@ -96,7 +96,7 @@ const techStack = {
     },
   },
   // Automation Tools now only has TEST AUTOMATION TOOLS subcategory
-  "Automation Tools": {
+  "Workflow Automation": {
     subcategories: {
       "TEST AUTOMATION TOOLS": [
         "/images/selenium.png",
@@ -106,11 +106,11 @@ const techStack = {
     },
   },
   // Renamed Information Security with its own icons
-  "Information Security": {
+  "Cybersecurity": {
     icons: ["/images/firewall.png", "/images/encryption.png", "/images/antivirus.png"],
   },
   // New Desktop category (using direct icons)
-  Desktop: {
+  "Desktop Solutions": {
     icons: ["/images/electron.png", "/images/qt.png", "/images/dotnet-desktop.png"],
   },
 };

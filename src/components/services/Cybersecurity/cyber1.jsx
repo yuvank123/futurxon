@@ -85,12 +85,11 @@ const FullScreenCyberServices = () => {
             <span className="text-shadow">Activate Protection</span>
           </span>
           <div className="absolute inset-0 rounded-full border-2 border-pink-400/30 animate-border-glow" />
-          <div className="absolute -inset-2 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-pink-500/20 backdrop-blur-lg group-hover:backdrop-blur-xl transition-all duration-300" />
         </button>
       </div>
 
       {/* Responsive Scrolling Indicator */}
-      <div className="absolute bottom-8 sm:bottom-10 animate-cyber-float">
+      <div className="absolute bottom-2 sm:bottom-10 animate-cyber-float">
         <div className="w-10 h-16 sm:w-12 sm:h-18 rounded-3xl border-2 border-pink-400/50 flex items-start justify-center backdrop-blur-sm">
           <div className="w-1.5 h-4 sm:h-5 bg-pink-300 rounded-full mt-3 animate-scroll-pulse" />
         </div>

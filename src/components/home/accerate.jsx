@@ -7,7 +7,7 @@ const Accerate = () => {
         {/* Title Section */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Accelerate Digital <span className='text-transparent bg-clip-text text-stroke-blue'>Transformation</span>
+          Transform Your <span className='text-transparent bg-clip-text text-stroke-blue'>Digital Future</span>
           </h1>
           <p className="text-lg text-purple-200/90 font-light max-w-2xl mx-auto">
             Harness next-gen AI capabilities to revolutionize your development workflow
@@ -27,18 +27,18 @@ const Accerate = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {[
-                    'AI-Powered Automation',
-                    'Smart Analytics',
-                    'Cloud Integration',
-                    'Real-time Collaboration'
+                    'AI-Driven Automation',
+                    'Data-Driven Insights',
+                    'Scalable Cloud Solutions',
+                    'Real-Time Team Collaboration'
                   ][item - 1]}
                 </h3>
                 <p className="text-sm text-purple-100/80 font-light">
                   {[
-                    'Automate workflows with intelligent process optimization',
-                    'Advanced predictive analytics for data-driven decisions',
-                    'Seamless integration with cloud infrastructure',
-                    'Collaborate across teams in real-time environments'
+                    'Boost efficiency with intelligent workflow automation and process optimization.',
+                    'Utilize advanced AI-powered analytics for smarter, real-time business decisions.',
+                    'Seamlessly integrate with cloud infrastructure for enhanced flexibility and security.',
+                    'Enhance productivity with seamless, AI-enhanced collaboration across global teams.'
                   ][item - 1]}
                 </p>
               </div>

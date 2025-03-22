@@ -11,7 +11,7 @@ const Background = () => {
             loop 
             muted 
             playsInline
-            className="min-w-full min-h-full w-auto h-auto object-cover"
+            className="min-w-full min-h-full w-auto h-auto object-cover opacity-60"
             style={{
               aspectRatio: '16/9',
               transform: 'scale(1.2)', // Adjust this value as needed

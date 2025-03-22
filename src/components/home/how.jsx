@@ -37,23 +37,31 @@ const How = () => {
 
       <div className='w-full max-w-lg space-y-6 animate-fade-in-right mt-8 lg:mt-0 lg:pl-10 xl:pl-20 text-center lg:text-left'>
         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight'>
-          Bacancy AI Agent: Smarter Coding, Faster Innovation
+        AI-Driven API Development: Smarter Integration, Faster Scalability
         </h2>
         <p className='text-white/80 text-sm sm:text-base md:text-lg leading-relaxed'>
-          Try our AI Agent to complete your project or start from scratch! Get automation, development, and everything in one place.
+        Try our AI-powered API solutions to automate documentation, enhance security, and optimize microservices for seamless scalability.
         </p>
         <div className='flex justify-center lg:justify-start gap-4 mt-6'>
           <div className='h-1 w-10 sm:w-12 md:w-20 bg-purple-400 rounded-full animate-pulse'></div>
           <div className='h-1 w-6 sm:w-8 md:w-10 bg-blue-400 rounded-full animate-pulse delay-100'></div>
           <div className='h-1 w-3 sm:w-4 md:w-5 bg-purple-400 rounded-full animate-pulse delay-200'></div>
         </div>
-        
-        <button className='mt-6 md:mt-8 px-4 sm:px-6 md:px-8 py-2 sm:py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg text-white font-semibold tracking-wide transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 active:scale-95 animate-fade-in flex items-center gap-2 group'>
-          START CODING SMARTER
-          <svg className='w-4 sm:w-5 h-4 sm:h-5 transform transition-transform group-hover:translate-x-1' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7l5 5m0 0l-5 5m5-5H6' />
-          </svg>
-        </button>
+
+        {/* Button Section - Ensuring Proper Positioning */}
+        <div className='flex justify-center lg:justify-start mt-6 md:mt-8'>
+          <button className='px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-500 to-blue-500 
+                             rounded-lg text-white font-semibold tracking-wide 
+                             transform transition-all duration-300 hover:scale-105 
+                             hover:shadow-lg hover:shadow-purple-500/25 active:scale-95 
+                             animate-fade-in flex items-center gap-2 group'>
+            BUILD SMARTER APIs
+            <svg className='w-5 h-5 transform transition-transform group-hover:translate-x-1' 
+                 fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M13 7l5 5m0 0l-5 5m5-5H6' />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );
