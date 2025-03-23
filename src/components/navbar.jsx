@@ -310,7 +310,7 @@ const Navbar = () => {
           href='https://calendly.com/infinoidtech/infinoid-technologies'
           ref={ctaButton}
           onClick={handleCtaClick}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white px-3 sm:px-2 py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
         >
           Schedule a Call
         </a>

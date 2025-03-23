@@ -55,7 +55,7 @@ const App = () => {
         href='https://wa.me/yourwhatsappnumber' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
         target='_blank'
         rel='noopener noreferrer'
-        className='fixed bottom-6 right-6 z-50 p-2 rounded-full shadow-lg transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10'
+        className='fixed bottom-6 right-6 z-50 p-2 rounded-full transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 animate-bounce'
       >
         <img src={Whats} alt='WhatsApp' className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 animate-bounce' />
       </a>
