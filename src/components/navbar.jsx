@@ -3,7 +3,6 @@ import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 import One from '../../public/images/logo.svg';
 import "../style/navbar.css";
-// import Logo from '../images/logo.png'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -39,17 +38,6 @@ const Navbar = () => {
     }, 300);
     setCloseTimeoutId(id);
   };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScroll = window.scrollY;
-  //     setIsVisible(currentScroll < lastScroll || currentScroll === 0);
-  //     setLastScroll(currentScroll);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [lastScroll]);
 
   // Close mobile menu if viewport becomes large (xl and above)
   useEffect(() => {
@@ -229,21 +217,11 @@ const Navbar = () => {
         {/* About Us Accordion */}
         <div>
           <a
-            // onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
             className="w-full flex items-center justify-between text-white text-xl md:text-2xl px-3 py-2.5"
             href='/about-company'
           >
             <span>About Us</span>
-            {/* <FiChevronDown className={`transition-transform duration-300 ${mobileAboutOpen ? 'rotate-180' : ''}`} /> */}
           </a>
-          {/* {mobileAboutOpen && (
-            <div className="mt-2 pl-4 space-y-2 md:space-y-3">
-              <a href="/about-company" className="block text-white text-base md:text-lg">About Company</a>
-              <a href="/customer-reviews" className="block text-white text-base md:text-lg">Customer Reviews</a>
-              <a href="/agile" className="block text-white text-base md:text-lg">Agile Mindset</a>
-              <a href="/values" className="block text-white text-base md:text-lg">Bacancy Values</a>
-            </div>
-          )} */}
         </div>
         {/* Services Accordion */}
         <div>
