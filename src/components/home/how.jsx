@@ -1,5 +1,20 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Bgvideo from '../../../public/video/bgvideo.mp4';
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { staggerChildren: 0.3, delayChildren: 0.3 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 }
+};
 
 const How = () => {
   return (
@@ -29,18 +44,32 @@ const How = () => {
       <div className='absolute top-10 md:top-20 right-10 md:right-20 w-32 md:w-64 h-32 md:h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse'></div>
       <div className='absolute bottom-10 md:bottom-20 left-10 md:left-20 w-24 md:w-48 h-24 md:h-48 bg-blue-500/10 rounded-full blur-2xl animate-pulse delay-1000'></div>
 
-      <div className='relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-64 md:h-80 lg:h-96 transform-gpu translate-z-3 rotate-y-10 lg:rotate-y-20 hover:translate-z-10 transition-all duration-500 rounded-4xl shadow-lg shadow-gray-800/50'>
+      {/* Video Card */}
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className='relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-64 md:h-80 lg:h-96 transform-gpu translate-z-3 rotate-y-10 lg:rotate-y-20 hover:translate-z-10 transition-all duration-500 rounded-4xl shadow-lg shadow-gray-800/50'
+      >
         <video autoPlay loop muted playsInline className='w-full h-full object-cover rounded-4xl contrast-120'>
           <source src={Bgvideo} type='video/mp4' />
         </video>
-      </div>
+      </motion.div>
 
-      <div className='w-full max-w-lg space-y-6 animate-fade-in-right mt-8 lg:mt-0 lg:pl-10 xl:pl-20 text-center lg:text-left'>
+      {/* Text Content */}
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className='w-full max-w-lg space-y-6 animate-fade-in-right mt-8 lg:mt-0 lg:pl-10 xl:pl-20 text-center lg:text-left'
+      >
         <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight'>
-        AI-Driven API Development: Smarter Integration, Faster Scalability
+          AI-Driven API Development: Smarter Integration, Faster Scalability
         </h2>
         <p className='text-white/80 text-sm sm:text-base md:text-lg leading-relaxed'>
-        Try our AI-powered API solutions to automate documentation, enhance security, and optimize microservices for seamless scalability.
+          Try our AI-powered API solutions to automate documentation, enhance security, and optimize microservices for seamless scalability.
         </p>
         <div className='flex justify-center lg:justify-start gap-4 mt-6'>
           <div className='h-1 w-10 sm:w-12 md:w-20 bg-purple-400 rounded-full animate-pulse'></div>
@@ -48,7 +77,7 @@ const How = () => {
           <div className='h-1 w-3 sm:w-4 md:w-5 bg-purple-400 rounded-full animate-pulse delay-200'></div>
         </div>
 
-        {/* Button Section - Ensuring Proper Positioning */}
+        {/* Button Section */}
         <div className='flex justify-center lg:justify-start mt-6 md:mt-8'>
           <button className='px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-500 to-blue-500 
                              rounded-lg text-white font-semibold tracking-wide 
@@ -62,7 +91,7 @@ const How = () => {
             </svg>
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

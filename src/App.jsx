@@ -21,35 +21,45 @@ import Fiveportfolio from './pages/CaseStudies/CaseSections/five'
 import Sixportfolio from './pages/CaseStudies/CaseSections/six'
 import Ourclient from './pages/ourclients/OurClients'
 import Career from './pages/Career/career';
+import Whats from '../public/images/whatsapp.svg'
 
 
 const App = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-black">  
-        <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/about-company' element={<Aboutus/>} />
-          <Route path='/web-dev' element={<Webdevpage/>} />
-          <Route path='/mobile-apps' element={<MobileDev/>} /> 
-          <Route path='/devops' element={<Devops/>} /> 
-          <Route path='/cloud' element={<Cloud/>} />    
-          <Route path='/contact' element={<Contact/>}/> 
-          <Route path='/ui-ux' element={<UIUX/>}/>  
-          <Route path='/ai' element={<AIsolution/>}/> 
-          <Route path='/blockchain' element={<Blockchain/>}/>
-          <Route path='/cybersecurity' element={<Cybersecurity/>}/>    
-          <Route path='/arvr' element={<Arvr/>}/> 
-          <Route path='/case-studies' element={<Casestudies/>}/>  
-          <Route path='/first' element={<Firstportfolio/>}/>  
-          <Route path='/second' element={<Secondportfolio/>}/>  
-          <Route path='/three' element={<Threeportfolio/>}/>  
-          <Route path='/four' element={<Fourportfolio/>}/>  
-          <Route path='/five' element={<Fiveportfolio/>}/>  
-          <Route path='/six' element={<Sixportfolio/>}/>
-          <Route path='/clients' element={<Ourclient/>}/> 
-          <Route path='/career' element={<Career/>}/>          
-          </Routes>
-      </div>
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#181764] via-[#32176F] via-50% to-[#060525]">
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/about-company' element={<Aboutus />} />
+        <Route path='/web-dev' element={<Webdevpage />} />
+        <Route path='/mobile-apps' element={<MobileDev />} />
+        <Route path='/devops' element={<Devops />} />
+        <Route path='/cloud' element={<Cloud />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/ui-ux' element={<UIUX />} />
+        <Route path='/ai' element={<AIsolution />} />
+        <Route path='/blockchain' element={<Blockchain />} />
+        <Route path='/cybersecurity' element={<Cybersecurity />} />
+        <Route path='/arvr' element={<Arvr />} />
+        <Route path='/case-studies' element={<Casestudies />} />
+        <Route path='/first' element={<Firstportfolio />} />
+        <Route path='/second' element={<Secondportfolio />} />
+        <Route path='/three' element={<Threeportfolio />} />
+        <Route path='/four' element={<Fourportfolio />} />
+        <Route path='/five' element={<Fiveportfolio />} />
+        <Route path='/six' element={<Sixportfolio />} />
+        <Route path='/clients' element={<Ourclient />} />
+        <Route path='/career' element={<Career />} />
+      </Routes>
+      {/* WhatsApp Floating Icon */}
+      <a
+        href='https://wa.me/yourwhatsappnumber' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
+        target='_blank'
+        rel='noopener noreferrer'
+        className='fixed bottom-6 right-6 z-50 p-2 rounded-full shadow-lg transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10'
+      >
+        <img src={Whats} alt='WhatsApp' className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 animate-bounce' />
+      </a>
+    </div>
   );
 };
 

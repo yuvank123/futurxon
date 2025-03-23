@@ -5,9 +5,19 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // For stylish icons
+import { motion } from "framer-motion";
 import T1 from "../../../../public/images/david.png";
 import T2 from "../../../../public/images/philip.png";
 import T3 from "../../../../public/images/brett.png";
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
 
 const Testimonials = () => {
   const testimonials = [
@@ -63,21 +73,31 @@ const Testimonials = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center text-white py-20 px-4 sm:px-6 relative overflow-hidden">
-      
-
       <div className="relative z-10 max-w-7xl w-full">
         {/* Header Section */}
-        <div className="text-center mb-16 space-y-4">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-16 space-y-4"
+        >
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
             Trusted By Global Businesses
           </h2>
           <p className="text-lg text-blue-300/70 max-w-2xl mx-auto">
             Leading organizations rely on our expertise for their digital transformation
           </p>
-        </div>
+        </motion.div>
 
         {/* Carousel Container */}
-        <div className="relative group">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative group"
+        >
           <Swiper
             modules={[Pagination, Navigation, Autoplay]}
             slidesPerView={1}
@@ -134,7 +154,7 @@ const Testimonials = () => {
           <button className="hidden md:flex next-btn absolute -right-14 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-xl shadow-blue-500/20 border border-white/10 transition-all duration-300 z-20">
             <ChevronRight size={28} className="text-white" />
           </button>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation */}
         <div className="flex md:hidden justify-center gap-4 mt-8">
@@ -147,12 +167,18 @@ const Testimonials = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="flex justify-center mt-12">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center mt-12"
+        >
           <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden group border border-white/10">
             <span className="relative z-10">CONNECT WITH EXPERTS</span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -116,7 +116,7 @@ const techStack = {
 };
 
 const TechStack = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Web");
+  const [selectedCategory, setSelectedCategory] = useState("Web Solutions");
   const tabsContainerRef = useRef(null);
   const [showArrows, setShowArrows] = useState({ left: false, right: true });
 
@@ -143,13 +143,7 @@ const TechStack = () => {
   const data = techStack[selectedCategory] || {};
 
   return (
-    <div className="w-full text-white py-20 px-4 sm:px-6 relative overflow-hidden backdrop-blur-2xl">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none">
-        <div className="absolute w-[600px] h-[600px] bg-gradient-to-r from-purple-600 to-blue-600 rounded-full blur-3xl -top-40 -left-40 animate-pulse" />
-        <div className="absolute w-[600px] h-[600px] bg-gradient-to-l from-blue-600 to-purple-600 rounded-full blur-3xl -bottom-40 -right-40 animate-pulse delay-1000" />
-      </div>
-
+    <div className="w-full text-white py-20 px-4 sm:px-6 relative overflow-hidden bg-gradient-to-br from-[#0a021a] to-[#020515]">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">

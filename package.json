@@ -13,6 +13,7 @@
     "@react-three/drei": "^10.0.3",
     "@react-three/fiber": "^9.0.4",
     "@tailwindcss/vite": "^4.0.9",
+    "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
     "lucide-react": "^0.483.0",
     "react": "^19.0.0",

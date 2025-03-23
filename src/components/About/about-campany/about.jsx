@@ -1,4 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
 
 const AboutUs = () => {
   return (
@@ -6,7 +16,13 @@ const AboutUs = () => {
       {/* Background elements */}
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-3xl backdrop-blur-lg bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 transition-all hover:bg-white/10">
+      <motion.div
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="relative z-10 text-center max-w-3xl backdrop-blur-lg bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 transition-all hover:bg-white/10"
+      >
         <h3 className="text-lg md:text-xl text-purple-300 font-medium mb-4">
           We drive success for businesses worldwide!
         </h3>
@@ -22,7 +38,7 @@ const AboutUs = () => {
             LET'S TALK
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

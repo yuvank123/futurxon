@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Office0 from "../../../../public/images/office0.jpg";
 import Office1 from "../../../../public/images/office1.jpg";
 import Office2 from "../../../../public/images/office2.jpg"; // Ensure correct path
@@ -28,28 +29,54 @@ const About5 = () => {
   ];
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? sections.length - 1 : prev - 1));
+    setActiveIndex((prev) =>
+      prev === 0 ? sections.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === sections.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) =>
+      prev === sections.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  // Framer Motion variant for fade-up animation
+  const fadeUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 md:py-20 relative overflow-hidden">
       <div className="max-w-6xl w-full relative z-10">
         {/* Header Section */}
-        <div className="text-center mb-8 md:mb-16 space-y-2 md:space-y-4">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-8 md:mb-16 space-y-2 md:space-y-4"
+        >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent px-2 p-4">
             Our Strengths
           </h1>
           <p className="text-base md:text-xl text-gray-300/90 font-light max-w-2xl mx-auto">
             Discover what makes our team truly exceptional
           </p>
-        </div>
+        </motion.div>
 
         {/* Card Container */}
-        <div className="relative group">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative group"
+        >
           {/* Navigation Buttons - Hidden on mobile */}
           <button
             onClick={handlePrev}
@@ -122,7 +149,7 @@ const About5 = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation Buttons */}
         <div className="sm:hidden flex justify-center space-x-6 mt-6">

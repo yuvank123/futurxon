@@ -1,24 +1,47 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
 
 const Accerate = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative z-10 py-24 px-4">
+    <div className="min-h-screen relative z-10 py-24 px-4">
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Title Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Transform Your <span className='text-transparent bg-clip-text text-stroke-blue'>Digital Future</span>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-8"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+            Transform Your <span className='text-transparent bg-clip-text text-stroke-blue'>Digital Future</span>
           </h1>
           <p className="text-lg text-purple-200/90 font-light max-w-2xl mx-auto">
             Harness next-gen AI capabilities to revolutionize your development workflow
           </p>
-        </div>
+        </motion.div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+        >
           {[1, 2, 3, 4].map((item) => (
-            <div 
+            <motion.div 
               key={item}
+              variants={containerVariants}
               className="p-8 bg-white/5 rounded-xl border border-white/10 hover:border-purple-400 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
             >
               <div className="mb-4">
@@ -42,12 +65,18 @@ const Accerate = () => {
                   ][item - 1]}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA Button */}
-        <div className="flex justify-center">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex justify-center"
+        >
           <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-semibold 
             hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/20
             flex items-center gap-2 group">
@@ -66,7 +95,7 @@ const Accerate = () => {
               />
             </svg>
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

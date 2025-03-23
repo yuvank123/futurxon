@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Bgvideo from "../../../public/video/bgvideo.mp4";
 
 const Testimonial = () => {
@@ -117,28 +118,45 @@ const Testimonial = () => {
   // To support snap scrolling without showing scrollbar
   const visibleVideos = videos.slice(currentIndex, currentIndex + itemsPerPage);
 
+  // Framer Motion Variants
+  const fadeUpVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a021a] to-[#020515] py-8 md:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex justify-center items-center">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute -top-20 -right-20 md:-top-40 md:-right-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-purple-600/10 rounded-full blur-xl md:blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 md:-bottom-40 md:-left-40 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-600/10 rounded-full blur-xl md:blur-3xl"></div>
-      </div>
 
       {/* Content */}
       <div className="relative z-10">
         {/* Header */}
-        <div className="max-w-7xl mx-auto text-center mb-8 md:mb-16">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-7xl mx-auto text-center mb-8 md:mb-16"
+        >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent mb-2 md:mb-4 px-4 leading-tight sm:leading-snug transition-all duration-300">
             Client Testimonials
           </h1>
           <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-400 max-w-2xl mx-auto px-2 md:px-4 leading-relaxed md:leading-loose">
             Leading start-ups, SMEs and large-scale organizations have trusted us.
           </p>
-        </div>
+        </motion.div>
 
         {/* Video Carousel */}
-        <div className="relative max-w-6xl mx-auto">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative max-w-6xl mx-auto"
+        >
           <div className="flex items-center justify-center gap-2 md:gap-6">
             {/* Navigation - Previous */}
             <button
@@ -196,19 +214,27 @@ const Testimonial = () => {
               </svg>
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Mobile Navigation Dots */}
-        <div className="md:hidden flex justify-center gap-2 mt-6">
-          {Array(Math.ceil(videos.length / itemsPerPage)).fill().map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrentIndex(i * itemsPerPage)}
-              className={`w-2 h-2 rounded-full transition-all ${currentIndex === i * itemsPerPage ? 'bg-purple-400 scale-150' : 'bg-white/20'
-                }`}
-            />
-          ))}
-        </div>
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="md:hidden flex justify-center gap-2 mt-6"
+        >
+          {Array(Math.ceil(videos.length / itemsPerPage))
+            .fill()
+            .map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrentIndex(i * itemsPerPage)}
+                className={`w-2 h-2 rounded-full transition-all ${currentIndex === i * itemsPerPage ? 'bg-purple-400 scale-150' : 'bg-white/20'
+                  }`}
+              />
+            ))}
+        </motion.div>
 
         {/* Modal for Selected Video */}
         {selectedVideo && (
@@ -272,14 +298,20 @@ const Testimonial = () => {
         )}
 
         {/* CTA Button */}
-        <div className="mt-6 md:mt-8 text-center">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="mt-6 md:mt-8 text-center"
+        >
           <div className="relative inline-block group">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg md:rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-200" />
             <button className="relative px-4 py-2 md:px-8 md:py-4 text-sm md:text-base bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:shadow-md">
               HIRE DEDICATED DEVELOPERS
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
