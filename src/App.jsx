@@ -30,16 +30,16 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/about-company' element={<Aboutus />} />
-        <Route path='/web-dev' element={<Webdevpage />} />
-        <Route path='/mobile-apps' element={<MobileDev />} />
-        <Route path='/devops' element={<Devops />} />
-        <Route path='/cloud' element={<Cloud />} />
+        <Route path='/services/web-dev' element={<Webdevpage />} />
+        <Route path='/services/mobile-apps' element={<MobileDev />} />
+        <Route path='/services/devops' element={<Devops />} />
+        <Route path='/services/cloud' element={<Cloud />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/ui-ux' element={<UIUX />} />
-        <Route path='/ai' element={<AIsolution />} />
-        <Route path='/blockchain' element={<Blockchain />} />
-        <Route path='/cybersecurity' element={<Cybersecurity />} />
-        <Route path='/arvr' element={<Arvr />} />
+        <Route path='/services/ui-ux' element={<UIUX />} />
+        <Route path='/services/ai' element={<AIsolution />} />
+        <Route path='/services/blockchain' element={<Blockchain />} />
+        <Route path='/services/cybersecurity' element={<Cybersecurity />} />
+        <Route path='/services/arvr' element={<Arvr />} />
         <Route path='/case-studies' element={<Casestudies />} />
         <Route path='/first' element={<Firstportfolio />} />
         <Route path='/second' element={<Secondportfolio />} />
@@ -52,7 +52,7 @@ const App = () => {
       </Routes>
       {/* WhatsApp Floating Icon */}
       <a
-        href='https://wa.me/yourwhatsappnumber' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
+        href='https://wa.link/5606l7' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
         target='_blank'
         rel='noopener noreferrer'
         className='fixed bottom-6 right-6 z-50 p-2 rounded-full transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 animate-bounce'

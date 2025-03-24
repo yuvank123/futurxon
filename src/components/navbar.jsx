@@ -348,19 +348,19 @@ const Navbar = () => {
                   </button>
                   {renderserviceDropdown('services',
                     [
-                      { text: 'Web Development', href: '/web-dev' },
-                      { text: 'Mobile Apps', href: '/mobile-apps' },
-                      { text: 'UI/UX Design', href: '/ui-ux' }
+                      { text: 'Web Development', href: '/services/web-dev' },
+                      { text: 'Mobile Apps', href: '/services/mobile-apps' },
+                      { text: 'UI/UX Design', href: '/services/ui-ux' }
                     ],
                     [
-                      { text: 'Cloud Services', href: '/cloud' },
-                      { text: 'AI Solutions', href: '/ai' },
-                      { text: 'Blockchain', href: '/blockchain' }
+                      { text: 'Cloud Services', href: '/services/cloud' },
+                      { text: 'AI Solutions', href: '/services/ai' },
+                      { text: 'Blockchain', href: '/services/blockchain' }
                     ],
                     [
-                      { text: 'Devops', href: '/devops' },
-                      { text: 'AR/VR/3D-modelling', href: '/arvr' },
-                      { text: 'Cybersecurity', href: '/cybersecurity' }
+                      { text: 'Devops', href: '/services/devops' },
+                      { text: 'AR/VR/3D-modelling', href: '/services/arvr' },
+                      { text: 'Cybersecurity', href: '/services/cybersecurity' }
                     ]
                   )}
                   </div>
