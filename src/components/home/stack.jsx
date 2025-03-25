@@ -143,11 +143,13 @@ const TechStack = () => {
   const data = techStack[selectedCategory] || {};
 
   return (
-    <div className="w-full text-white py-20 px-4 sm:px-6 relative overflow-hidden bg-gradient-to-br from-[#0a021a] to-[#020515]">
+    <div className="w-full text-white py-20 px-4 sm:px-6 relative overflow-hidden">
+      <div className="absolute h-full w-full inset-0 z-0 bg-gradient-to-br from-[#0a021a] to-[#020515] blur-[800px]">
+      </div>
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent p-2">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent p-2 font-mono">
             Our Technology Expertise
           </h2>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">

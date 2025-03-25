@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 import Homepage from './pages/homepage';
 import Aboutus from './pages/Aboutus/aboutus';
 import Webdevpage from './pages/Service/webdev';
@@ -22,11 +23,12 @@ import Sixportfolio from './pages/CaseStudies/CaseSections/six'
 import Ourclient from './pages/ourclients/OurClients'
 import Career from './pages/Career/career';
 import Whats from '../public/images/whatsapp.svg'
+import PP from './pages/privacy-policy/policy';
 
 
 const App = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-r from-[#181764] via-[#32176F] via-50% to-[#060525]">
+    <div className="relative min-h-screen overflow-hidden">
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/about-company' element={<Aboutus />} />
@@ -49,15 +51,16 @@ const App = () => {
         <Route path='/six' element={<Sixportfolio />} />
         <Route path='/clients' element={<Ourclient />} />
         <Route path='/career' element={<Career />} />
+        <Route path='/policy' element={<PP />} />
       </Routes>
       {/* WhatsApp Floating Icon */}
       <a
         href='https://wa.link/5606l7' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
         target='_blank'
         rel='noopener noreferrer'
-        className='fixed bottom-6 right-6 z-50 p-2 rounded-full transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10 animate-bounce'
+        className='fixed bottom-6 right-6 z-50 p-2 rounded-full transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10'
       >
-        <img src={Whats} alt='WhatsApp' className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 animate-bounce' />
+        <img src={Whats} alt='WhatsApp' className='w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16' />
       </a>
     </div>
   );

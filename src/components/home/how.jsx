@@ -18,7 +18,7 @@ const itemVariants = {
 
 const How = () => {
   return (
-    <div className='h-full w-full flex flex-col lg:flex-row items-center justify-center perspective-[600px] px-6 md:px-12 lg:px-20 relative'>
+    <div className='h-full w-full flex flex-col lg:flex-row items-center justify-center perspective-[600px] px-6 md:px-10 lg:px-20 relative'>
       {/* Media SVG Background */}
       <div className='absolute inset-0 overflow-hidden -z-10'>
         <svg className='absolute right-0 top-0 h-full w-1/2 opacity-5' viewBox='0 0 100 100'>
@@ -65,7 +65,7 @@ const How = () => {
         viewport={{ once: true, amount: 0.3 }}
         className='w-full max-w-lg space-y-6 animate-fade-in-right mt-8 lg:mt-0 lg:pl-10 xl:pl-20 text-center lg:text-left'
       >
-        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight'>
+        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight font-'>
           AI-Driven API Development: Smarter Integration, Faster Scalability
         </h2>
         <p className='text-white/80 text-sm sm:text-base md:text-lg leading-relaxed'>

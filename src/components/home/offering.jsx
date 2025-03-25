@@ -13,7 +13,7 @@ const fadeUpVariant = {
 const containerVariants = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.2 }
+    transition: { staggerChildren: 0.15 }
   }
 };
 
@@ -22,8 +22,20 @@ const Offering = () => {
     {
       title: "Cloud-Native",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <svg className="feature-icon" viewBox="0 0 100 100">
+          <path 
+            className="icon-path"
+            d="M50 15L15 40L50 65L85 40L50 15Z" 
+            strokeWidth="3"
+            fill="none"
+            strokeLinejoin="round"
+          />
+          <path
+            className="icon-path"
+            d="M50 15V65M15 40H85"
+            strokeWidth="3"
+            fill="none"
+          />
         </svg>
       ),
       description: "Seamless scalability and optimized cloud infrastructure."
@@ -31,8 +43,14 @@ const Offering = () => {
     {
       title: "AI Integration",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+        <svg className="feature-icon" viewBox="0 0 100 100">
+          <circle className="icon-path" cx="50" cy="50" r="30" strokeWidth="3" fill="none" />
+          <path 
+            className="icon-path"
+            d="M35 35L65 65M65 35L35 65"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
         </svg>
       ),
       description: "Effortless artificial intelligence implementation for automation."
@@ -40,8 +58,20 @@ const Offering = () => {
     {
       title: "Data Analytics",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <svg className="feature-icon" viewBox="0 0 100 100">
+          <path 
+            className="icon-path"
+            d="M20 70L20 30L40 50L60 30L80 50L80 70"
+            strokeWidth="3"
+            fill="none"
+            strokeLinejoin="round"
+          />
+          <path
+            className="icon-path"
+            d="M30 70L50 50L70 70"
+            strokeWidth="3"
+            fill="none"
+          />
         </svg>
       ),
       description: "Real-time insights and predictive intelligence for smarter decisions."
@@ -49,8 +79,21 @@ const Offering = () => {
     {
       title: "IoT Ready",
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+        <svg className="feature-icon" viewBox="0 0 100 100">
+          <rect 
+            className="icon-path"
+            x="20" y="30" 
+            width="60" height="40" 
+            rx="5" 
+            strokeWidth="3"
+            fill="none"
+          />
+          <path
+            className="icon-path"
+            d="M35 45H65M35 55H65M35 65H65"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
         </svg>
       ),
       description: "Enterprise-grade device connectivity and management."
@@ -58,7 +101,19 @@ const Offering = () => {
   ];
 
   return (
-    <div className="w-full h-full relative overflow-hidden mt-10 px-4 sm:px-6 lg:px-8 mb-10">
+    <div className="w-full min-h-screen relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8  bg-clip-border border-r-transparent border-t-25 border-purple-300 border-dashed ">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 z-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000" />
+      </div>
+      <div className="absolute inset-0 z-0 opacity-20">
+        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path d="M0 50 Q25 30 50 50 T100 50" stroke="currentColor" strokeWidth="0.5" fill="none" className="text-gray-800"/>
+          <path d="M0 30 Q40 50 80 30 T160 30" stroke="currentColor" strokeWidth="0.5" fill="none" className="text-gray-800" transform="translate(-20 20)"/>
+        </svg>
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
@@ -69,9 +124,9 @@ const Offering = () => {
           className="flex flex-col lg:flex-row justify-between gap-8 mb-12 text-center lg:text-left"
         >
           <div className="lg:w-1/2">
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-purple-200 mb-4">
+            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-purple-300 mb-4">
               Revolutionizing Enterprise
-              <span className="block mt-2 text-transparent bg-clip-text text-stroke-lg">Solutions</span>
+              <span className="block mt-2 text-transparent bg-clip-text text-stroke-lg font-mono">Solutions</span>
             </h2>
             <p className="text-base sm:text-lg text-gray-400">
               Innovative technology solutions designed to address today's business challenges.
@@ -79,29 +134,36 @@ const Offering = () => {
           </div>
         </motion.div>
 
+
         {/* Features Grid */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {features.map((feature, index) => (
             <motion.div 
               key={index}
               variants={fadeUpVariant}
-              className="p-6 bg-gray-900 rounded-xl shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-700"
+              className="group p-8 bg-gradient-to-b from-gray-800/50 to-transparent rounded-2xl border-2 border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-2 relative overflow-hidden"
+              whileHover={{ scale: 1.02 }}
             >
-              <div className="mb-4 text-blue-600 flex justify-center lg:justify-start">
-                {feature.icon}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative z-10">
+                <div className="mb-6 flex justify-center">
+                  <div className="feature-icon-container">
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 text-center">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 text-center leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold text-purple-400 mb-2 text-center lg:text-left">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400 text-center lg:text-left">
-                {feature.description}
-              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -112,18 +174,77 @@ const Offering = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="flex justify-center lg:justify-end mt-12"
+          className="flex justify-center mt-16"
         >
-          <button className="px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg 
-            font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300
-            flex items-center gap-2 shadow-md hover:shadow-lg">
-            Explore Solutions
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
+          <button className="cta-button relative px-8 py-4 text-white rounded-xl font-semibold overflow-hidden">
+            <span className="relative z-10 flex items-center gap-3">
+              Explore Solutions
+              <svg 
+                className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </motion.div>
       </div>
+
+      <style jsx global>{`
+        .feature-icon {
+          width: 80px;
+          height: 80px;
+          stroke-dasharray: 200;
+          stroke-dashoffset: 200;
+          animation: draw 1.5s ease-out forwards;
+        }
+
+        .icon-path {
+          stroke: #818cf8;
+          transition: all 0.3s ease;
+        }
+
+        .feature-icon-container:hover .icon-path {
+          stroke: #a78bfa;
+          filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.3));
+        }
+
+        .cta-button {
+          background: linear-gradient(
+            45deg,
+            rgba(99, 102, 241, 0.9),
+            rgba(168, 85, 247, 0.9)
+          );
+          box-shadow: 0 4px 24px -6px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-button:hover {
+          box-shadow: 0 8px 32px -6px rgba(168, 85, 247, 0.6);
+        }
+
+        @keyframes draw {
+          to {
+            stroke-dashoffset: 0;
+          }
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 0.1; }
+          50% { opacity: 0.2; }
+        }
+
+        .animate-pulse {
+          animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .delay-1000 {
+          animation-delay: 1s;
+        }
+      `}</style>
     </div>
   );
 };

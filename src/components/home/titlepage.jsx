@@ -59,7 +59,7 @@ const titlepage = () => {
         <h1 className='text-4xl md:text-7xl font-bold mb-4 scale-y-110'>
           Agile & Scalable IT Services for{" "}
           <motion.span 
-            className='text-blue-500'
+            className='text-blue-300'
             variants={colorTransition}
           >
             Business{" "}

@@ -25,7 +25,7 @@ const variants = {
 
 const Mapping = () => {
   return (
-    <div className="w-full h-screen bg-gray-900 overflow-hidden flex flex-col items-center justify-center relative px-4 md:px-8">
+    <div className="w-full h-screen overflow-hidden flex flex-col items-center justify-center relative px-4 md:px-8 md:my-25">
       {/* Background Tech SVG Pattern */}
       <div className="absolute inset-0 z-0 opacity-20">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -44,8 +44,8 @@ const Mapping = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col items-center px-4 text-center"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 mb-4 leading-tight">
-            Advanced Network <span className="text-purple-400">Topology Solutions</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 mb-5 leading-tight">
+            Advanced Network <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 font-mono">Topology Solutions</span>
           </h1>
           <p className="text-sm sm:text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl">
             Real-time topology visualization and smart path optimization for scalable distributed systems.
@@ -65,7 +65,7 @@ const Mapping = () => {
               {[...scrollingTerms, ...scrollingTerms].map((term, i) => (
                 <span 
                   key={i} 
-                  className="whitespace-nowrap text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 hover:text-purple-400 transition-colors"
+                  className="whitespace-nowrap text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 hover:text-purple-400 transition-colors font-mono"
                 >
                   {term}
                   <span className="mx-2 sm:mx-4 text-purple-500">◆</span>
@@ -79,7 +79,7 @@ const Mapping = () => {
               {[...scrollingTerms, ...scrollingTerms].map((term, i) => (
                 <span 
                   key={i} 
-                  className="whitespace-nowrap text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 hover:text-purple-400 transition-colors"
+                  className="whitespace-nowrap text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-400 hover:text-purple-400 transition-colors font-mono"
                 >
                   {term}
                   <span className="mx-2 sm:mx-4 text-purple-500">◆</span>
@@ -97,7 +97,7 @@ const Mapping = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex justify-center"
         >
-          <button className="w-11/12 sm:w-2/3 md:w-1/3 px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-gray-800 to-purple-900 rounded-lg text-gray-300 font-semibold hover:from-blue-900 hover:to-gray-800 transition-all hover:scale-105 hover:shadow-xl border border-gray-700/50">
+          <button className="w-11/12 sm:w-2/3 md:w-1/3 px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-800 to-purple-900 rounded-4xl text-gray-300 font-semibold hover:from-blue-900 hover:to-purple-800 transition-all hover:scale-105 hover:shadow-xl border border-gray-700/50">
             Initialize Network Scan
           </button>
         </motion.div>
