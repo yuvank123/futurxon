@@ -124,10 +124,10 @@ const Offering = () => {
           className="flex flex-col lg:flex-row justify-between gap-8 mb-12 text-center lg:text-left"
         >
           <div className="lg:w-1/2">
-            <h2 className="text-4xl sm:text-6xl md:text-8xl font-bold text-purple-300 mb-4">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-purple-300 mb-4">
               Revolutionizing Enterprise
               <span className="block mt-2 text-transparent bg-clip-text text-stroke-lg font-mono">Solutions</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg text-gray-400">
               Innovative technology solutions designed to address today's business challenges.
             </p>

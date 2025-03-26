@@ -97,9 +97,9 @@ const SixDProcess = () => {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
         >
-          <h2 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-white font-mono tracking-tighter">
+          <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-white font-mono tracking-tighter">
             Our 6D Framework
-          </h2>
+          </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
             A systematic approach to digital transformation and sustainable growth
           </p>

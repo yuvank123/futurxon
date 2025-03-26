@@ -65,9 +65,9 @@ const How = () => {
         viewport={{ once: true, amount: 0.3 }}
         className='w-full max-w-lg space-y-6 animate-fade-in-right mt-8 lg:mt-0 lg:pl-10 xl:pl-20 text-center lg:text-left'
       >
-        <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight font-'>
+        <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight font-'>
           AI-Driven API Development: Smarter Integration, Faster Scalability
-        </h2>
+        </h1>
         <p className='text-white/80 text-sm sm:text-base md:text-lg leading-relaxed'>
           Try our AI-powered API solutions to automate documentation, enhance security, and optimize microservices for seamless scalability.
         </p>
