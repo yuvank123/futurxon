@@ -41,7 +41,7 @@ const homepage = () => {
       <div className='h-auto border-0 border-amber-50'>
         <Accerate />
       </div>
-      <div className="h-[100vh] w-full grid place-items-center mb-25">
+      <div className="h-[100vh] w-full grid place-items-center mb-10">
         <div className="h-[100vh] w-[90vw] relative z-20 backdrop-blur-lg bg-white/5 rounded-4xl">
           <How />
         </div>

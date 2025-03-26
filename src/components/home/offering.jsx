@@ -101,7 +101,7 @@ const Offering = () => {
   ];
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8  bg-clip-border border-r-transparent border-t-25 border-purple-300 border-dashed ">
+    <div className="w-full min-h-screen relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />

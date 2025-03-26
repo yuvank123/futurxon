@@ -26,18 +26,66 @@ import MOBF4 from "../../../public/images/mobf4.svg";
 import MOB1 from '../../../public/images/mob1.svg';
 import MOB2 from "../../../public/images/mob2.svg";
 import MOB3 from "../../../public/images/mob3.svg";
-
+//devops
+import Dev11 from '../../../public/images/dev11.svg';
+import Dev12 from '../../../public/images/dev12.svg';
+import Dev13 from '../../../public/images/dev13.svg';
+import Dev14 from '../../../public/images/dev14.svg';
+import Dev21 from '../../../public/images/dev21.svg';
+import Dev22 from '../../../public/images/dev22.svg';
+import Dev23 from '../../../public/images/dev23.svg';
+import Dev24 from '../../../public/images/dev24.svg';
+import Dev25 from '../../../public/images/dev25.svg';
+import Dev26 from '../../../public/images/dev26.svg';
+import Dev31 from '../../../public/images/dev31.svg';
+import Dev32 from '../../../public/images/dev32.svg';
+import Dev33 from '../../../public/images/dev33.svg';
+import Dev34 from '../../../public/images/dev34.svg';
+import Dev35 from '../../../public/images/dev35.svg';
+import Dev36 from '../../../public/images/dev36.svg';
+import Dev41 from '../../../public/images/dev41.svg';
+import Dev42 from '../../../public/images/dev42.svg';
+import Dev43 from '../../../public/images/dev43.svg';
+import Dev44 from '../../../public/images/dev44.svg';
+import Dev45 from '../../../public/images/dev45.svg';
+//cloud
+import Cl11 from '../../../public/images/cl11.svg';
+import Cl12 from '../../../public/images/cl12.svg';
+import Cl13 from '../../../public/images/cl13.svg';
+import Cl14 from '../../../public/images/cl14.svg';
+import Cl15 from '../../../public/images/cl15.svg';
+//databaase
+import Da11 from '../../../public/images/da11.svg';
+import Da12 from '../../../public/images/da12.svg';
+import Da13 from '../../../public/images/da13.svg';
+import Da14 from '../../../public/images/da14.svg';
+import Da15 from '../../../public/images/da15.svg';
+import Da16 from '../../../public/images/da16.svg';
+import Da17 from '../../../public/images/da17.svg';
+import Da18 from '../../../public/images/da18.svg';
+//big data
+import Bd1 from '../../../public/images/bd1.svg';
+import Bd2 from '../../../public/images/bd2.svg';
+import Bd3 from '../../../public/images/bd3.svg';
+import Bd4 from '../../../public/images/bd4.svg';
+import Bd5 from '../../../public/images/bd5.svg';
+import Bd6 from '../../../public/images/bd6.svg';
+import Bd7 from '../../../public/images/bd7.svg';
+import Bd8 from '../../../public/images/bd8.svg';
+import Bd9 from '../../../public/images/bd9.svg';
+import Bd10 from '../../../public/images/bd10.svg';
+import Bd11 from '../../../public/images/bd11.svg';
+import Bd12 from '../../../public/images/bd12.svg';
+import Bd13 from '../../../public/images/bd13.svg';
 // Updated categories including the new "Desktop" and renamed "Information Security"
 const categories = [
   "Web Solutions",
   "Mobile Technology",
   "DevOps & CI/CD",
   "Cloud Computing",
-  "Digital Platforms",
   "SQL Databases",
   "Data Engineering",
   "AI & ML",
-  "Workflow Automation",
   "Cybersecurity",
   "Desktop Solutions",
 ];
@@ -62,29 +110,21 @@ const techStack = {
   // DevOps split into multiple subcategories
   "DevOps & CI/CD": {
     subcategories: {
-      CONTAINERIZATION: ["/images/docker.png", "/images/kubernetes.png"],
-      AUTOMATION: ["/images/terraform.png", "/images/ansible.png"],
-      "CI/CD TOOLS": ["/images/jenkins.png", "/images/gitlab-ci.png"],
-      MONITORING: ["/images/prometheus.png", "/images/grafana.png"],
+      CONTAINERIZATION: [Dev11,Dev12,Dev13,Dev14],
+      AUTOMATION: [Dev21,Dev22,Dev23,Dev24,Dev25,Dev26],
+      "CI/CD TOOLS": [Dev31,Dev32,Dev33,Dev34,Dev35,Dev36],
+      MONITORING: [Dev41,Dev42,Dev43,Dev44,Dev45],
     },
   },
   // Cloud, Platforms, Relational Databases, Big Data, etc. will just show icons
   "Cloud Computing": {
-    icons: [
-      "/images/aws.png",
-      "/images/azure.png",
-      "/images/google-cloud.png",
-      "/images/digitalocean.png",
-    ],
-  },
-  "Digital Platforms": {
-    icons: ["/images/wordpress.png", "/images/shopify.png", "/images/magento.png"],
+    icons: [Cl11,Cl12,Cl13,Cl14,Cl15],
   },
   "SQL Databases": {
-    icons: ["/images/mysql.png", "/images/postgresql.png", "/images/sqlserver.png"],
+    icons: [Da11,Da12,Da13,Da14,Da15,Da16,Da17,Da18],
   },
   "Data Engineering": {
-    icons: ["/images/hadoop.png", "/images/spark.png", "/images/kafka.png"],
+    icons: [Bd1,Bd2,Bd3,Bd4,Bd5,Bd6,Bd7,Bd8,Bd9,Bd10,Bd11,Bd12,Bd13],
   },
   // Machine Learning now split into four subcategories
   "AI & ML": {
@@ -93,16 +133,6 @@ const techStack = {
       FRAMEWORKS: ["/images/tensorflow.png", "/images/pytorch.png"],
       LIBRARIES: ["/images/scikit-learn.png", "/images/keras.png"],
       "CLOUD SERVICES": ["/images/aws-ml.png", "/images/azure-ml.png"],
-    },
-  },
-  // Automation Tools now only has TEST AUTOMATION TOOLS subcategory
-  "Workflow Automation": {
-    subcategories: {
-      "TEST AUTOMATION TOOLS": [
-        "/images/selenium.png",
-        "/images/puppeteer.png",
-        "/images/cypress.png",
-      ],
     },
   },
   // Renamed Information Security with its own icons
@@ -266,8 +296,8 @@ const TechStack = () => {
                 {data.icons.map((icon, idx) => (
                   <div key={idx} className="tech-icon-wrapper">
                     <div className="tech-icon-container">
-                      <img src={icon} alt="Technology Icon" className="tech-icon" />
-                      <div className="tech-icon-overlay" />
+                      <img src={icon} alt="Technology Icon"/>
+                      <div/>
                     </div>
                   </div>
                 ))}
@@ -290,46 +320,6 @@ const TechStack = () => {
         .tech-icon-wrapper {
           position: relative;
           aspect-ratio: 1/1;
-        }
-
-        .tech-icon-container {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          padding: 1rem;
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 0.75rem;
-          transition: all 0.3s ease;
-        }
-
-        .tech-icon-container:hover {
-          transform: translateY(-4px);
-          background: rgba(255, 255, 255, 0.1);
-        }
-
-        .tech-icon {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          filter: grayscale(100%) brightness(0.8);
-          transition: filter 0.3s ease;
-        }
-
-        .tech-icon-container:hover .tech-icon {
-          filter: grayscale(0) brightness(1);
-        }
-
-        .tech-icon-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(45deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.1));
-          border-radius: 0.75rem;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        .tech-icon-container:hover .tech-icon-overlay {
-          opacity: 1;
         }
 
         .hide-scrollbar {

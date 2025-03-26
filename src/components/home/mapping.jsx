@@ -25,7 +25,7 @@ const variants = {
 
 const Mapping = () => {
   return (
-    <div className="w-full h-screen overflow-hidden flex flex-col items-center justify-center relative px-4 md:px-8 md:my-25">
+    <div className="w-full md:h-screen overflow-hidden flex flex-col items-center justify-center relative px-0 md:px-8 h-[70vh] md:my-5">
       {/* Background Tech SVG Pattern */}
       <div className="absolute inset-0 z-0 opacity-20">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
