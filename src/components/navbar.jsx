@@ -203,7 +203,7 @@ const Navbar = () => {
     <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-95 flex flex-col p-6 xl:hidden overflow-y-auto">
       <div className="flex justify-between items-center mb-8">
         <a href="/" className="flex-shrink-0" aria-label='home'>
-          <img src={One} alt="logo" className="w-20 h-10" />
+          <img src={One} alt="logo" className="w-20 md:w-60 transition-all duration-300 hover:animate-pulse" />
         </a>
         <button 
           onClick={() => setMobileMenuOpen(false)}
