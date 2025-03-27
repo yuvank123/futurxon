@@ -3,10 +3,11 @@ import { FaBriefcaseMedical, FaCog, FaTruck, FaBroadcastTower, FaGasPump, FaChar
 
 const industries = [
   { icon: <FaBriefcaseMedical />, label: 'Healthcare' },
-  { icon: <FaCog />, label: 'Manufacturing' },
   { icon: <FaTruck />, label: 'Transportation' },
-  { icon: <FaBroadcastTower />, label: 'Telecom' },
-  { icon: <FaGasPump />, label: 'Oil & Gas' },
+  { icon: <FaShoppingCart />, label: 'E-Commerce' },
+  { icon: <FaStore />, label: 'Retail' },
+  { icon: <FaGraduationCap />, label: 'E-Learning' },
+  { icon: <FaBuilding />, label: 'Real Estate' },
   // { icon: <FaChartPie />, label: 'Fintech' },
   // { icon: <FaUniversity />, label: 'Banking' },
   // { icon: <FaShoppingCart />, label: 'E-Commerce' },
@@ -25,10 +26,10 @@ const About5 = () => {
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-16'>
           <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 via-blue-300 to-cyan-400 bg-clip-text text-transparent mb-4'>
-            Industries We Transform
+          Industries We Transform
           </h2>
           <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
-            Pioneering digital transformation across diverse sectors through cutting-edge solutions and domain expertise
+          Driving digital innovation with cutting-edge technology and deep domain expertise.
           </p>
         </div>
 

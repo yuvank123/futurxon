@@ -9,39 +9,35 @@ const About5 = () => {
 
   const sections = [
     {
-      title: "Top-Tier IT Geniuses",
+      title: "Next-Gen IT Experts",
       content:
-        "Our team is an exclusive hub of top dedicated software developers, UI/UX designers, QA experts, and product managers with rare and hidden talents. We let you access exceptional IT talent globally, from independent developers to fully managed teams.",
+        "Our team is a powerhouse of AI specialists, cloud engineers, web and app developers, and UI/UX designers. We connect you with top-tier IT talent worldwide, from independent innovators to fully managed expert teams, ensuring seamless digital transformation.",
       image: Office0,
     },
     {
-      title: "Time Zone Aligned",
+      title: "Global Time Zone Alignment",
       content:
-        "We ensure seamless collaboration by aligning with your time zone. Work with developers who are available when you need them the most, ensuring efficiency and productivity.",
+        "We provide time zone-aligned developers to ensure real-time collaboration, seamless communication, and maximum productivity. Work with experts who are available when you need them, optimizing efficiency for your projects.",
       image: Office1,
     },
     {
-      title: "Experienced Team",
+      title: "Seasoned Tech Experts",
       content:
-        "With years of experience in various domains, our team is equipped with the skills to deliver high-quality solutions. We bring expertise, innovation, and dedication to every project we undertake.",
+        "Our team of highly skilled professionals brings years of experience in AI, cloud computing, web, and app development. With a proven track record of delivering innovative, high-quality solutions, we ensure expertise and excellence in every project.",
       image: Office2,
     },
   ];
 
   const handlePrev = () => {
-    setActiveIndex((prev) =>
-      prev === 0 ? sections.length - 1 : prev - 1
-    );
+    setActiveIndex((prev) => (prev === 0 ? sections.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) =>
-      prev === sections.length - 1 ? 0 : prev + 1
-    );
+    setActiveIndex((prev) => (prev === sections.length - 1 ? 0 : prev + 1));
   };
 
-  // Framer Motion variant for fade-up animation
-  const fadeUpVariant = {
+   // Framer Motion variant for fade-up animation
+   const fadeUpVariant = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
@@ -52,31 +48,25 @@ const About5 = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-12 md:py-20 relative overflow-hidden">
-      <div className="max-w-6xl w-full relative z-10">
-        {/* Header Section */}
-        <motion.div
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="text-center mb-8 md:mb-16 space-y-2 md:space-y-4"
-        >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent px-2 p-4">
-            Our Strengths
-          </h1>
-          <p className="text-base md:text-xl text-gray-300/90 font-light max-w-2xl mx-auto">
-            Discover what makes our team truly exceptional
-          </p>
-        </motion.div>
+    <div className="max-w-6xl w-full relative z-10">
+      {/* Header Section */}
+      <motion.div
+        variants={fadeUpVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-center mb-8 md:mb-16 space-y-2 md:space-y-4"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent px-2 p-4">
+          Our Strengths
+        </h1>
+        <p className="text-base md:text-xl text-gray-300/90 font-light max-w-2xl mx-auto">
+        Experience the difference with our exceptional team.
+        </p>
+      </motion.div>
 
         {/* Card Container */}
-        <motion.div
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="relative group"
-        >
+        <div className="relative group">
           {/* Navigation Buttons - Hidden on mobile */}
           <button
             onClick={handlePrev}
@@ -149,7 +139,7 @@ const About5 = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Mobile Navigation Buttons */}
         <div className="sm:hidden flex justify-center space-x-6 mt-6">

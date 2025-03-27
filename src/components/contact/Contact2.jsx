@@ -63,8 +63,8 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-200 mb-2">Call Us</h3>
-                  <p className="text-gray-300">USA: +1-855-572-2777</p>
-                  <p className="text-gray-300">IND: +91-858-600-8627</p>
+                  <p className="text-gray-300">IND: +91-9871973348</p>
+                  <p className="text-gray-300">IND: +91-9227088395</p>
                 </div>
               </div>
 
@@ -74,9 +74,9 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-pink-200 mb-2">Emails</h3>
-                  <p className="text-gray-300">business@mobisoftinfotech.com</p>
-                  <p className="text-gray-300">info@mobisoftinfotech.com</p>
-                  <p className="text-gray-300">jobs@mobisoftinfotech.com</p>
+                  <p className="text-gray-300">sales@infinoid.com</p>
+                  <p className="text-gray-300">info@infinoid.com</p>
+                  <p className="text-gray-300">careers@infinoid.com</p>
                 </div>
               </div>
 
@@ -86,8 +86,8 @@ const ContactUs = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-blue-200 mb-2">Locations</h3>
-                  <p className="text-gray-300">5718, Westheimer Rd Suite 1000 Houston, TX 77057</p>
-                  <p className="text-gray-300">Level 2, Trident Business Center, Baner, Pune – 411045</p>
+                  <p className="text-gray-300">C101, Exotica East Square,
+                  Ghaziabad - 201014</p>
                 </div>
               </div>
 

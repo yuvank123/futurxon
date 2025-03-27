@@ -1,117 +1,137 @@
-import React, { useState } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
-const positions = [
-  {
-    title: "Business Analyst",
-    location: "Pune, Maharashtra, India",
-    description:
-      "Demonstrate experience in requirement elicitation, system analysis, and translating business problems to functional specifications. Thorough skills in ...",
-  },
-  {
-    title: "Inside Sales Executive",
-    location: "Pune City, Maharashtra, India",
-    description:
-      "Roles and Responsibilities: Build relationships with prospective clients. Maintain consistent contact with existing clients. Make cold calls for new bus...",
-  },
-  {
-    title: "DevOps Engineer",
-    location: "Pune, Maharashtra, India",
-    description:
-      "Continuous Integration and Continuous Delivery (CI/CD): Establishing and maintaining CI/CD pipelines to automate the build, testing, and deploy...",
-  },
-  {
-    title: "Content Strategist",
-    location: "Pune, Maharashtra, India",
-    description:
-      "We are looking for qualified and ambitious content writing professionals who are resourceful and sharp to deliver interactive content. Someone who bel...",
-  },
-  {
-    title: "Angular Developer",
-    location: "Pune City, Maharashtra, India",
-    description:
-      "We are seeking a skilled Angular Developer with 3–6 years of experience to join our development team. As an Angular Developer, you will be responsib...",
-  },
-  {
-    title: "Project Manager",
-    location: "Pune, Maharashtra, India",
-    description:
-      "Job Responsibilities: To lead a team that comprises project personnel, designers, researchers, and engineers. To act as the first point of...",
-  },
-];
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" }
+  }
+};
 
-const FeaturedPositions = () => {
-  const [selectedPosition, setSelectedPosition] = useState(null);
+const Positions = () => {
+  const positions = [
+    {
+      title: "Salesforce Developer",
+      experience: "Experience: 0-3 Years",
+      openings: "Openings: 5",
+      skills: ["Aura, LWC", "SOQL", "Flow, Apex", "VS Code", "Git"],
+    },
+    {
+      title: "Odoo Developer",
+      experience: "Experience: 1-5 Years",
+      openings: "Openings: 3",
+      skills: ["Git, JavaScript", "SQL", "HTML, CSS", "PHP", "Python"],
+    },
+    {
+      title: "React Developer",
+      experience: "Experience: 2-6 Years",
+      openings: "Openings: 4",
+      skills: ["React.js", "Redux", "JavaScript", "CSS", "Git"],
+    },
+    {
+      title: "Python Developer",
+      experience: "Experience: 1-4 Years",
+      openings: "Openings: 3",
+      skills: ["Django", "Flask", "SQL", "REST API", "Git"],
+    },
+    {
+      title: "Data Scientist",
+      experience: "Experience: 2-5 Years",
+      openings: "Openings: 2",
+      skills: ["Python", "Machine Learning", "Deep Learning", "SQL", "Pandas"],
+    },
+    {
+      title: "Full Stack Developer",
+      experience: "Experience: 3-7 Years",
+      openings: "Openings: 5",
+      skills: ["Node.js", "React.js", "MongoDB", "Express.js", "Docker"],
+    },
+  ];
 
   return (
-    <div className="min-h-screen w-full">
-      <div className="container mx-auto px-4 py-16 max-w-7xl">
-        <div className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
+    <div className="w-full flex flex-col items-center justify-center text-white py-20 px-4 sm:px-6 relative overflow-hidden">
+      <div className="relative z-10 max-w-7xl w-full">
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="text-center mb-16 space-y-4"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
             Featured Positions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover exciting career opportunities that match your aspirations and expertise.
+          </h2>
+          <p className="text-lg text-blue-300/70 max-w-2xl mx-auto">
+            Leading organizations rely on our expertise for their digital transformation
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {positions.map((position, index) => (
-            <div
-              key={index}
-              className={`relative p-6 rounded-2xl transition-all duration-500 cursor-pointer group ${
-                selectedPosition?.title === position.title
-                  ? "bg-gradient-to-br scale-[1.02] shadow-2xl"
-                  : "hover:bg-gray-800/30 shadow-lg bg-gray-900/40"
-              } border border-gray-700/30`}
-              onClick={() =>
-                setSelectedPosition((prev) =>
-                  prev?.title === position.title ? null : position
-                )
-              }
-            >
-              <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between">
-                  <h2
-                    className={`text-lg font-semibold ${
-                      selectedPosition?.title === position.title
-                        ? "text-white"
-                        : "text-blue-400 group-hover:text-white transition-colors"
-                    }`}
-                  >
-                    {position.title}
-                  </h2>
-                </div>
-                <p className="text-sm text-gray-400 mt-1">{position.location}</p>
+        <motion.div
+          variants={fadeUpVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative group"
+        >
+          <Swiper
+            modules={[Pagination, Navigation, Autoplay]}
+            slidesPerView={1}
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            navigation={{ nextEl: ".next-btn", prevEl: ".prev-btn" }}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="!overflow-visible"
+          >
+            {positions.map((position, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/10">
+                  <h1 className="text-xl font-bold text-purple-100/90">{position.title}</h1>
 
-                {selectedPosition?.title === position.title && (
-                  <div className="mt-4 overflow-hidden">
-                    <p className="text-gray-300 text-base leading-relaxed animate-fadeIn">
-                      {position.description}
-                    </p>
+                  <div className="mt-3">
+                    <p className="text-md font-medium text-blue-300/80">{position.experience}</p>
+                    <p className="text-md font-medium text-blue-300/80">{position.openings}</p>
                   </div>
-                )}
 
-                <div className="mt-auto">
-                  <button
-                    className="text-blue-400 group-hover:text-white transition-colors text-sm mt-4"
-                    onClick={() => alert(`More details about ${position.title}`)}
-                  >
-                    Job Details →
+                  <h2 className="mt-4 space-y-2 text-base text-white">
+                    {position.skills.map((skill, i) => (
+                      <h2 key={i} className="flex items-center space-x-2">
+                        <span className="w-2 h-2 rounded-full bg-blue-400"></span>
+                        <span>{skill}</span>
+                      </h2>
+                    ))}
+                  </h2>
+
+                  <button className="mt-6 w-full py-2 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
+                    Apply Now
                   </button>
                 </div>
-              </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-              {selectedPosition?.title === position.title && (
-                <div className="absolute inset-0 -z-10 animate-gradient-rotate opacity-30">
-                  <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full blur-3xl opacity-30" />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+          <button className="hidden md:flex prev-btn absolute -left-14 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 shadow-xl border border-white/10 transition-all duration-300 z-20">
+            <ChevronLeft size={28} className="text-white" />
+          </button>
+          <button className="hidden md:flex next-btn absolute -right-14 top-1/2 -translate-y-1/2 p-3 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 shadow-xl border border-white/10 transition-all duration-300 z-20">
+            <ChevronRight size={28} className="text-white" />
+          </button>
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default FeaturedPositions;
+export default Positions;
