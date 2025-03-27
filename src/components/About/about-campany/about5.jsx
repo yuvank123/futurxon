@@ -68,7 +68,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-7xl w-full">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+          <h2 className="text-6xl md:text-8xl font-bold bg-gradient-to-r  from-purple-800 via-purple-300  to-white bg-clip-text text-transparent font-mono tracking-tighter">
             Trusted By Global Businesses
           </h2>
           <p className="text-lg text-blue-300/70 max-w-2xl mx-auto">

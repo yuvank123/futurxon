@@ -6,11 +6,11 @@ const AboutUs = () => {
       {/* Background elements */}
       
       {/* Content */}
-      <div className="relative z-10 text-center max-w-3xl backdrop-blur-lg bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 transition-all hover:bg-white/10">
-        <h3 className="text-lg md:text-xl text-purple-300 font-medium mb-4">
+      <div className="relative z-10 text-center max-w-3xl backdrop-blur-lg bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 transition-all hover:bg-white/10 ">
+        <h3 className="text-lg md:text-xl text-purple-200 font-medium mb-4">
         Driving Global Success, One Innovation at a Time!
         </h3>
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent mb-6 p-2">
+        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-white bg-clip-text text-transparent mb-6 p-2">
         Transforming the Future with Today's Technology!
         </h1>
         <h2 className="text-lg md:text-xl text-purple-100/80 mb-8 leading-relaxed">

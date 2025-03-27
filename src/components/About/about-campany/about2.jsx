@@ -42,14 +42,14 @@ const About3 = () => {
         <img
           src={Office}
           alt="Team Discussion"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-20 blur-[10px]"
         />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-8xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent font-mono tracking-tighter">
             Why Choose Us?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -66,15 +66,15 @@ const About3 = () => {
               onClick={() => toggleDropdown(index)}
             >
               <div className="flex items-start space-x-4">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center ${
+                <div className={`flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center ${
                   openIndex === index 
-                    ? "bg-purple-400 text-gray-900" 
-                    : "bg-gray-700/50 text-purple-400"
+                    ? "bg-purple-400 text-white" 
+                    : "bg-gradient-to-r from-purple-400 via-purple-300 to-white text-white"
                 }`}>
                   <span className="font-bold">{index + 1}</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className={`text-xl font-semibold mb-3 ${
+                  <h3 className={`text-2xl font-bold mb-3 font-mono tracking-tighter ${
                     openIndex === index ? "text-purple-400" : "text-gray-100"
                   }`}>
                     {section.title}
