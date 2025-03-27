@@ -236,17 +236,17 @@ const Navbar = () => {
           {mobileServicesOpen && (
             <div className="mt-2 pl-4 flex flex-col space-y-2 md:space-y-3">
               <h3 className="text-lg font-semibold text-white md:text-xl">Development</h3>
-              <a href="/web-dev" className="block text-white text-base md:text-lg">Web Development</a>
-              <a href="/mobile-apps" className="block text-white text-base md:text-lg">Mobile Apps</a>
-              <a href="/ui-ux" className="block text-white text-base md:text-lg">UI/UX Design</a>
+              <a href="/services/web-dev" className="block text-white text-base md:text-lg">Web Development</a>
+              <a href="/services/mobile-apps" className="block text-white text-base md:text-lg">Mobile Apps</a>
+              <a href="/services/ui-ux" className="block text-white text-base md:text-lg">UI/UX Design</a>
               <h3 className="text-lg font-semibold text-white mt-2 md:text-xl">Solutions</h3>
-              <a href="/cloud" className="block text-white text-base md:text-lg">Cloud Services</a>
-              <a href="/ai" className="block text-white text-base md:text-lg">AI Solutions</a>
-              <a href="/blockchain" className="block text-white text-base md:text-lg">Blockchain</a>
+              <a href="/services/cloud" className="block text-white text-base md:text-lg">Cloud Services</a>
+              <a href="/services/ai" className="block text-white text-base md:text-lg">AI Solutions</a>
+              <a href="/services/blockchain" className="block text-white text-base md:text-lg">Blockchain</a>
               <h3 className="text-lg font-semibold text-white mt-2 md:text-xl">Emerging Tech</h3>
-              <a href="/devops" className="block text-white text-base md:text-lg">Devops</a>
-              <a href="/arvr" className="block text-white text-base md:text-lg">AR/VR/3D-modelling</a>
-              <a href="/cybersecurity" className="block text-white text-base md:text-lg">Cybersecurity</a>
+              <a href="/services/devops" className="block text-white text-base md:text-lg">Devops</a>
+              <a href="/services/arvr" className="block text-white text-base md:text-lg">AR/VR/3D-modelling</a>
+              <a href="/services/cybersecurity" className="block text-white text-base md:text-lg">Cybersecurity</a>
             </div>
           )}
         </div>
