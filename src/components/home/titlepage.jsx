@@ -44,9 +44,9 @@ const TitlePage = () => {
     <header className="relative top-0 lg:top-20 left-0 w-full h-[80vh] z-20 flex flex-col justify-center items-start p-4 md:pl-20 bg-opacity-50 text-white gap-2">
       {/* First Line - AI-Powered Innovation */}
       <motion.div className="mb-4" variants={slideInLeft}>
-        <h1 className="text-2xl md:text-4xl font-semibold">
+        <h2 className="text-2xl md:text-4xl font-semibold">
           AI-Powered Innovation
-        </h1>
+        </h2>
       </motion.div>
 
       {/* Main Title */}
@@ -62,9 +62,9 @@ const TitlePage = () => {
 
       {/* Subtitle */}
       <motion.section className="mb-4" variants={itemVariants}>
-        <h3 className="text-xl md:text-3xl font-medium">
+        <h2 className="text-xl md:text-3xl font-medium">
           Your Trusted Partner for Innovative Technology Solutions
-        </h3>
+        </h2>
       </motion.section>
 
       {/* Call to Action */}
@@ -75,7 +75,7 @@ const TitlePage = () => {
         whileTap={{ scale: 0.95 }}
       >
         <a href="/contact" aria-label="Contact Us">
-          <button className="px-4 py-2 md:px-6 md:py-3 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors duration-300">
+          <button className="px-4 py-2 md:px-6 md:py-3 font-bold bg-blue-600 text-white rounded hover:bg-blue-800 transition-colors duration-300">
             Get a Free Consultation
           </button>
         </a>

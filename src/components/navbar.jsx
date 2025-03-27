@@ -202,12 +202,13 @@ const Navbar = () => {
   const mobileNav = (
     <div className="fixed inset-0 z-50 bg-gray-900 bg-opacity-95 flex flex-col p-6 xl:hidden overflow-y-auto">
       <div className="flex justify-between items-center mb-8">
-        <a href="/" className="flex-shrink-0">
-          <img src={One} alt="logo" className="w-20 sm:w-32" />
+        <a href="/" className="flex-shrink-0" aria-label='home'>
+          <img src={One} alt="logo" className="w-20 h-10" />
         </a>
         <button 
           onClick={() => setMobileMenuOpen(false)}
           className="p-2 rounded-lg hover:bg-gray-800 transition-colors"
+          aria-label="Close menu"
         >
           <FiX className="text-white text-3xl" />
         </button>
