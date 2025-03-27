@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Office from "../../../../public/images/Office.jpg";
+import Office from "../../../../public/images/office.jpg";
 
 const About3 = () => {
   const [openIndex, setOpenIndex] = useState(null);
