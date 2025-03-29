@@ -147,14 +147,14 @@ const SixDProcess = () => {
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="absolute inset-0 flex flex-col justify-between">
-                    <div 
+                    {/* <div 
                       className="w-full h-4 rounded-full bg-opacity-80"
                       style={{ backgroundColor: step.cylinderTop }}
-                    />
-                    <div 
+                    /> */}
+                    {/* <div 
                       className="w-full h-4 rounded-full bg-opacity-80"
                       style={{ backgroundColor: step.cylinderTop }}
-                    />
+                    /> */}
                   </div>
                   <motion.div
                     className="w-full h-full origin-bottom rounded-4xl"

@@ -23,28 +23,28 @@ const Career2 = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-16 bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 md:px-8 lg:px-16 text-white overflow-hidden">
       {/* Content Section */}
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-300 via-blue-200 to-pink-300 bg-clip-text text-transparent">
-          Shape Your Success
+          <h2 className="text-6xl sm:text-8xl font-bold font-mono tracking-tighter bg-gradient-to-r  from-purple-400 via-purple-300 to-white  bg-clip-text text-transparent">
+            Shape Your Success
           </h2>
-          <p className="text-lg text-gray-300/80">
-          Explore opportunities to grow, innovate, and succeed.
+          <p className="text-base sm:text-lg text-gray-200/80">
+            Explore opportunities to grow, innovate, and succeed.
           </p>
         </div>
 
         {/* Tab Buttons */}
-        <div className="flex justify-center space-x-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
           {Object.keys(tabs).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 text-lg font-medium rounded-lg transition-colors ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-lg font-mono tracking-tight font-bold rounded-lg transition-colors ${
                 activeTab === tab
-                  ? "bg-gradient-to-r from-purple-600/90 to-pink-500/90 text-white shadow-lg"
+                  ? "bg-gradient-to-r from-purple-600/90 to-purple-300/90 text-white shadow-lg"
                   : "bg-gray-300 text-gray-700 hover:bg-gray-400"
               }`}
             >
@@ -56,19 +56,21 @@ const Career2 = () => {
         {/* Tab Content */}
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
           {/* Text Section */}
-          <div className="w-full md:w-1/2 space-y-4">
-            <h3 className="text-2xl font-semibold bg-gradient-to-r from-purple-300 via-blue-200 to-pink-300 bg-clip-text text-transparent">
+          <div className="w-full md:w-1/2 space-y-4 text-center md:text-left px-4 sm:px-0">
+            <h3 className="text-3xl sm:text-5xl font-mono tracking-tighter font-bold bg-gradient-to-r from-purple-300 via-blue-200 to-pink-300 bg-clip-text text-transparent">
               {tabs[activeTab].title}
             </h3>
-            <p className="text-gray-300/80 leading-relaxed">{tabs[activeTab].content}</p>
+            <p className="text-gray-200/80 leading-relaxed text-sm sm:text-base">
+              {tabs[activeTab].content}
+            </p>
           </div>
 
           {/* Image Section */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex justify-center">
             <img
               src={tabs[activeTab].image}
               alt={`${activeTab} Image`}
-              className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"
+              className="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
             />
           </div>
         </div>

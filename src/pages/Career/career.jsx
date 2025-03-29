@@ -10,7 +10,7 @@ import Footer from '../../components/footer';
 const Career = () => {
   return (
     <div className='relative min-h-screen overflow-hidden'>
-      {/* Deep cosmic void background */}
+      Deep cosmic void background
       <div className='fixed inset-0 z-0 bg-gradient-to-br from-[#0a0618] via-[#130d30] to-[#1a0933]'>
         {/* Galactic core animation */}
         <div className='absolute inset-0 animate-galactic-pulse'>

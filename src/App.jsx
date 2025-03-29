@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Link, useLocation } from "react-router-dom";
 import Homepage from './pages/homepage';
 import Aboutus from './pages/Aboutus/aboutus';
 import Webdevpage from './pages/Service/webdev';

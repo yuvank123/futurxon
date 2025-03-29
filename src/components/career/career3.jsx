@@ -66,7 +66,7 @@ const Positions = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-7xl font-mono tracking-tighter font-bold bg-gradient-to-r from-purple-500 via-purple-300 to-white bg-clip-text text-transparent">
             Featured Positions
           </h2>
           <p className="text-lg text-blue-300/70 max-w-2xl mx-auto">
@@ -98,11 +98,11 @@ const Positions = () => {
             {positions.map((position, index) => (
               <SwiperSlide key={index}>
                 <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 p-8 rounded-2xl shadow-xl transition-all duration-300 hover:-translate-y-2 border border-white/10">
-                  <h1 className="text-xl font-bold text-purple-100/90">{position.title}</h1>
+                  <h1 className="text-2xl font-bold font-mono text-purple-100/90">{position.title}</h1>
 
                   <div className="mt-3">
-                    <p className="text-md font-medium text-blue-300/80">{position.experience}</p>
-                    <p className="text-md font-medium text-blue-300/80">{position.openings}</p>
+                    <p className="text-md font-bold text-blue-200/80">{position.experience}</p>
+                    <p className="text-md font-bold text-blue-200/80">{position.openings}</p>
                   </div>
 
                   <h2 className="mt-4 space-y-2 text-base text-white">

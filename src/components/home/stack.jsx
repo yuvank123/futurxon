@@ -77,6 +77,45 @@ import Bd10 from '../../../public/images/bd10.svg';
 import Bd11 from '../../../public/images/bd11.svg';
 import Bd12 from '../../../public/images/bd12.svg';
 import Bd13 from '../../../public/images/bd13.svg';
+//aiml
+import Ai11 from '../../../public/images/ai11.svg';
+import Ai12 from '../../../public/images/ai12.svg';
+import Ai13 from '../../../public/images/ai13.svg';
+import Ai21 from '../../../public/images/ai21.svg';
+import Ai22 from '../../../public/images/ai22.svg';
+import Ai23 from '../../../public/images/ai23.svg';
+import Ai24 from '../../../public/images/ai24.svg';
+import Ai25 from '../../../public/images/ai25.svg';
+import Ai26 from '../../../public/images/ai26.svg';
+import Ai27 from '../../../public/images/ai27.svg';
+import Ai28 from '../../../public/images/ai28.svg';
+import Ai31 from '../../../public/images/ai31.svg';
+import Ai32 from '../../../public/images/ai32.svg';
+import Ai33 from '../../../public/images/ai33.svg';
+import Ai34 from '../../../public/images/ai34.svg';
+import Ai41 from '../../../public/images/ai41.svg';
+import Ai42 from '../../../public/images/ai42.svg';
+import Ai43 from '../../../public/images/ai43.svg';
+import Ai44 from '../../../public/images/ai44.svg';
+//cybersecurity
+import Cy1 from '../../../public/images/cy1.svg';
+import Cy2 from '../../../public/images/cy2.svg';
+import Cy3 from '../../../public/images/cy3.svg';
+import Cy4 from '../../../public/images/cy4.svg';
+import Cy5 from '../../../public/images/cy5.svg';
+import Cy6 from '../../../public/images/cy6.svg';
+import Cy7 from '../../../public/images/cy7.svg';
+import Cy8 from '../../../public/images/cy8.svg';
+import Cy9 from '../../../public/images/cy9.svg';
+import Cy10 from '../../../public/images/cy10.svg';
+import Cy11 from '../../../public/images/cy11.svg';
+//desktop
+import D1 from '../../../public/images/d1.svg';
+import D2 from '../../../public/images/d2.svg';
+import D3 from '../../../public/images/d3.svg';
+import D4 from '../../../public/images/d4.svg';
+import D5 from '../../../public/images/d5.svg';
+import D6 from '../../../public/images/d6.svg';
 // Updated categories including the new "Desktop" and renamed "Information Security"
 const categories = [
   "Web Solutions",
@@ -90,10 +129,6 @@ const categories = [
   "Desktop Solutions",
 ];
 
-// Tech stack data. Each category is rendered as either:
-// 1) { backend: [...], frontend: [...] } (e.g. Web, Mobile)
-// 2) { subcategories: { ... } } (e.g. DevOps, Machine Learning, Automation Tools)
-// 3) { icons: [...] } (e.g. Cloud, Platforms, etc.)
 const techStack = {
   "Web Solutions": {
     backend: [
@@ -129,19 +164,19 @@ const techStack = {
   // Machine Learning now split into four subcategories
   "AI & ML": {
     subcategories: {
-      "PROGRAMMING LANGUAGES": ["/images/python.png", "/images/r.png"],
-      FRAMEWORKS: ["/images/tensorflow.png", "/images/pytorch.png"],
-      LIBRARIES: ["/images/scikit-learn.png", "/images/keras.png"],
-      "CLOUD SERVICES": ["/images/aws-ml.png", "/images/azure-ml.png"],
+      "PROGRAMMING LANGUAGES": [Ai11,Ai12,Ai13],
+      FRAMEWORKS: [Ai21,Ai22,Ai23,Ai24,Ai25,Ai26,Ai27,Ai28],
+      LIBRARIES: [Ai31,Ai32,Ai33,Ai34],
+      "CLOUD SERVICES": [Ai41,Ai42,Ai43,Ai44],
     },
   },
   // Renamed Information Security with its own icons
   "Cybersecurity": {
-    icons: ["/images/firewall.png", "/images/encryption.png", "/images/antivirus.png"],
+    icons: [Cy1,Cy2,Cy3,Cy4,Cy5,Cy6,Cy7,Cy8,Cy9,Cy10,Cy11],
   },
   // New Desktop category (using direct icons)
   "Desktop Solutions": {
-    icons: ["/images/electron.png", "/images/qt.png", "/images/dotnet-desktop.png"],
+    icons: [D1,D2,D3,D4,D5,D6],
   },
 };
 
