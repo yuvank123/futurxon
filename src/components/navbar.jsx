@@ -284,7 +284,7 @@ const Navbar = () => {
       </nav>
       
       {/* Sticky Mobile CTA Button (Visible on mobile and iPad) */}
-      <div className="sticky bottom-6 pt-4 bg-gradient-to-t from-gray-900/80 to-transparent">
+      <div className="sticky -bottom-6 pt-8 pb-8 bg-gray-900 border-0 border-amber-50">
         <a
           href='https://calendly.com/infinoidtech/infinoid-technologies'
           ref={ctaButton}
