@@ -49,7 +49,7 @@ const About3 = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-6">
-          <h2 className="text-8xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent font-mono tracking-tighter">
+          <h2 className="text-7xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent font-mono tracking-tighter">
             Why Choose Us?
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">

@@ -13,13 +13,13 @@ const MobileTechnologyStack = () => {
       title: "Cross-Platform",
       icon: FiTablet,
       items: ["React Native", "Flutter", "Ionic", "Xamarin", "NativeScript", "Kotlin Multiplatform", "SwiftUI", "Jetpack Compose"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Dev Tools",
       icon: FiTool,
       items: ["Android Studio", "Xcode", "AppCode", "Expo", "Firebase Console", "React Native Debugger", "Genymotion", "Charles Proxy"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Backend Services",
@@ -31,29 +31,23 @@ const MobileTechnologyStack = () => {
       title: "State Management",
       icon: FiCodesandbox,
       items: ["Redux", "MobX", "Riverpod", "BLoC", "Provider", "GetX", "ViewModel", "Recoil"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Mobile Databases",
       icon: FiDatabase,
       items: ["Realm", "SQLite", "Room DB", "WatermelonDB", "ObjectBox", "PouchDB", "Couchbase Lite", "Hive"],
-      color: "blue"
+      color: "purple"
     }
   ];
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob animate-delay-2000 filter blur-3xl opacity-30" />
-        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob animate-delay-3000 filter blur-3xl opacity-30" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
-      </div>
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent mb-4 p-1">
             Mobile Tech Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -76,7 +70,7 @@ const MobileTechnologyStack = () => {
                 <div className={`p-3 rounded-xl bg-${category.color}-400/10 backdrop-blur-sm`}>
                   <category.icon className={`text-3xl text-${category.color}-400 animate-icon-hover`} />
                 </div>
-                <h2 className={`text-2xl font-bold bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
+                <h2 className={`text-2xl font-bold font-mono bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
                   {category.title}
                 </h2>
               </div>

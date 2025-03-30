@@ -25,7 +25,7 @@ const About5 = () => {
     <div className='relative py-20 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-16'>
-          <h2 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-600 via-purple-300 to-white bg-clip-text text-transparent mb-4 font-mono tracking-tighter'>
+          <h2 className='text-6xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-purple-300 to-white bg-clip-text text-transparent mb-4 font-mono tracking-tighter'>
           Industries We Transform
           </h2>
           <p className='text-lg text-gray-400 max-w-2xl mx-auto'>

@@ -6,16 +6,16 @@ const MobileProcess = () => {
     <div className="relative w-full min-h-screen flex flex-col items-center px-4 py-20">
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 max-w-4xl px-4">
-        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
           Building Custom Mobile Applications
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
             The Agile Way
           </span>
         </h1>
         <p className="text-xl text-gray-300/90">
           We harness the power of{' '}
-          <span className="bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent font-medium">
+          <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent font-medium">
             agile application development
           </span>{' '}
           for all our Mobile app projects.

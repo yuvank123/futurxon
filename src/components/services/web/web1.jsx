@@ -6,17 +6,17 @@ const EnterpriseWebUI = () => {
     <div className="relative w-full min-h-screen flex flex-col md:flex-row items-center px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-12 md:py-0">
       {/* Left Section */}
       <div className="mt-10 w-full md:w-1/2 pr-0 md:pr-8 lg:pr-12 mb-12 md:mb-0 text-center md:text-left">
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold mb-4 xs:mb-5 sm:mb-6 bg-gradient-to-r from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
+        <h1 className="text-6xl xs:text-6xl sm:text-6xl font-mono tracking-tight font-bold mb-4 xs:mb-5 sm:mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
           Leading Enterprise Web Solutions –
           <br /> 
-          <span className="text-2xl xs:text-3xl sm:text-4xl bg-gradient-to-r from-purple-300 to-blue-200 bg-clip-text text-transparent">
-            Custom Development & Expert Services
+          <span className="text-2xl xs:text-3xl sm:text-4xl bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
+          Custom Web Development & Expert IT Services
           </span>
         </h1>
         <p className="text-base xs:text-lg sm:text-xl text-gray-300/80 mb-6 xs:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
           Custom web technology development services to build secure and scalable web applications.
         </p>
-        <button className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-500 hover:to-blue-400 text-white font-semibold py-4 xs:py-3 px-8 xs:px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg sm:shadow-lg sm:hover:shadow-xl shadow-purple-900/50 hover:shadow-blue-900/40 text-sm xs:text-base">
+        <button className="bg-gradient-to-r from-purple-600 via-purple-500 to-gray-400  hover:from-purple-400 hover:to-purple-400 text-white font-semibold py-4 xs:py-3 px-8 xs:px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg sm:shadow-lg sm:hover:shadow-xl shadow-purple-900/50 hover:shadow-blue-900/40 text-sm xs:text-base">
           Consult Us →
         </button>
       </div>

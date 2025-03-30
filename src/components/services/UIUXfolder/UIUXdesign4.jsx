@@ -13,13 +13,13 @@ const UIUXDesignEcosystem = () => {
       title: "User Research",
       icon: FiUsers,
       items: ["User Interviews", "Surveys", "Personas", "Journey Maps", "Usability Testing", "Card Sorting", "A/B Testing", "Heatmaps"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Prototyping",
       icon: FiSmartphone,
       items: ["Interactive Prototypes", "Microinteractions", "Animations", "Design Handoff", "Responsive Previews", "User Flow Diagrams", "Design Specs", "Version Control"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Design Systems",
@@ -31,29 +31,23 @@ const UIUXDesignEcosystem = () => {
       title: "Collaboration",
       icon: FiSliders,
       items: ["Miro", "Notion", "Zeroheight", "Storybook", "Abstract", "Zeplin", "Avocode", "Lingo"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Analytics",
       icon: FiMonitor,
       items: ["Hotjar", "FullStory", "Mixpanel", "Google Analytics", "Amplitude", "Lucky Orange", "Crazy Egg", "Smartlook"],
-      color: "blue"
+      color: "purple"
     }
   ];
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob animate-delay-2000 filter blur-3xl opacity-30" />
-        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob animate-delay-3000 filter blur-3xl opacity-30" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
-      </div>
-
+      
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className="text-7xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
             UI/UX Design Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

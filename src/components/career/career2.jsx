@@ -28,7 +28,7 @@ const Career2 = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-6xl sm:text-8xl font-bold font-mono tracking-tighter bg-gradient-to-r  from-purple-400 via-purple-300 to-white  bg-clip-text text-transparent">
+          <h2 className="text-5xl sm:text-7xl font-bold font-mono tracking-tighter bg-gradient-to-r  from-purple-400 via-purple-300 to-white  bg-clip-text text-transparent">
             Shape Your Success
           </h2>
           <p className="text-base sm:text-lg text-gray-200/80">
@@ -57,7 +57,7 @@ const Career2 = () => {
         <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-8">
           {/* Text Section */}
           <div className="w-full md:w-1/2 space-y-4 text-center md:text-left px-4 sm:px-0">
-            <h3 className="text-3xl sm:text-5xl font-mono tracking-tighter font-bold bg-gradient-to-r from-purple-300 via-blue-200 to-pink-300 bg-clip-text text-transparent">
+            <h3 className="text-3xl sm:text-4xl font-mono tracking-tighter font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
               {tabs[activeTab].title}
             </h3>
             <p className="text-gray-200/80 leading-relaxed text-sm sm:text-base">

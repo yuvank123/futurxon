@@ -278,7 +278,7 @@ const TechStack = () => {
                 {icons.map((icon, idx) => (
                   <div key={idx} className="tech-icon-wrapper">
                     <div className="tech-icon-container">
-                      <img src={icon} alt="Technology Icon" className="tech-icon" />
+                      <img src={icon} alt="Technology Icon" className="tech-icon h-22 w-22" />
                       <div className="tech-icon-overlay" />
                     </div>
                   </div>
@@ -298,7 +298,7 @@ const TechStack = () => {
                   {data.backend.map((icon, idx) => (
                     <div key={idx} className="tech-icon-wrapper">
                       <div className="tech-icon-container">
-                        <img src={icon} alt="Technology Icon" className="tech-icon" />
+                        <img src={icon} alt="Technology Icon" className="tech-icon h-22 w-22" />
                         <div className="tech-icon-overlay" />
                       </div>
                     </div>
@@ -314,7 +314,7 @@ const TechStack = () => {
                   {data.frontend.map((icon, idx) => (
                     <div key={idx} className="tech-icon-wrapper">
                       <div className="tech-icon-container">
-                        <img src={icon} alt="Technology Icon" className="tech-icon" />
+                        <img src={icon} alt="Technology Icon" className="tech-icon w-22 h-22"/>
                         <div className="tech-icon-overlay" />
                       </div>
                     </div>
@@ -331,7 +331,7 @@ const TechStack = () => {
                 {data.icons.map((icon, idx) => (
                   <div key={idx} className="tech-icon-wrapper">
                     <div className="tech-icon-container">
-                      <img src={icon} alt="Technology Icon"/>
+                      <img src={icon} alt="Technology Icon" className="w-22 h-22"/>
                       <div/>
                     </div>
                   </div>

@@ -56,10 +56,10 @@ const FullScreenUI = () => {
 
       {/* Responsive Content */}
       <div className="relative text-center px-2 sm:px-4 md:px-6 lg:px-8 space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 z-10">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-text-shine">
+        <h1 className="text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 animate-text-shine">
           <span className="inline-block">Elevate Your</span>
           <br />
-          <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-white/90 drop-shadow-2xl">
+          <span className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider text-white/90 drop-shadow-2xl">
             UI-UX Technique
           </span>
         </h1>

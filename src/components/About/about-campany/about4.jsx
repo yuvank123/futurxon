@@ -57,7 +57,7 @@ const About5 = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center mb-8 md:mb-16 space-y-2 md:space-y-4"
       >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold bg-gradient-to-r from-purple-800 via-purple-300  to-gray-200 bg-clip-text text-transparent px-2 p-4 font-mono tracking-tighter">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-800 via-purple-300  to-gray-200 bg-clip-text text-transparent px-2 p-1 font-mono tracking-tighter">
           Our Strengths
         </h1>
         <p className="text-base md:text-xl text-gray-300/90 font-light max-w-2xl mx-auto">

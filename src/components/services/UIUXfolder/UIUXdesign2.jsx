@@ -74,7 +74,7 @@ const UIUXDesignUI = () => {
     <div className="min-h-screen w-full">
       <div className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl p-3 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-6xl md:text-7xl p-3 font-bold bg-gradient-to-r font-mono tracking-tighter from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent mb-4">
             UI/UX Design Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

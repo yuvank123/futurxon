@@ -20,7 +20,7 @@ const UIUXTechStack = () => {
         {/* Left Section - Text Content */}
         <div className="lg:w-1/2 space-y-8 pr-0 lg:pr-12">
           <div className="space-y-6 border-b border-white/10 pb-8">
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-300 to-blue-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl md:text-7xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-pink-300 to-blue-400 bg-clip-text text-transparent leading-tight">
               UI/UX Design Ecosystem
             </h1>
             <p className="text-xl text-gray-300/90 md:text-2xl max-w-2xl leading-relaxed">
