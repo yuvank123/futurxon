@@ -8,16 +8,6 @@ const industries = [
   { icon: <FaStore />, label: 'Retail' },
   { icon: <FaGraduationCap />, label: 'E-Learning' },
   { icon: <FaBuilding />, label: 'Real Estate' },
-  // { icon: <FaChartPie />, label: 'Fintech' },
-  // { icon: <FaUniversity />, label: 'Banking' },
-  // { icon: <FaShoppingCart />, label: 'E-Commerce' },
-  // { icon: <FaCar />, label: 'Automotive' },
-  // { icon: <FaGraduationCap />, label: 'Education' },
-  // { icon: <FaStore />, label: 'Retail' },
-  // { icon: <FaLink />, label: 'Supply Chain' },
-  // { icon: <FaBuilding />, label: 'Real Estate' },
-  // { icon: <FaGamepad />, label: 'Gaming' },
-  // { icon: <FaStore />, label: 'AI & ML' },
 ];
 
 const About5 = () => {

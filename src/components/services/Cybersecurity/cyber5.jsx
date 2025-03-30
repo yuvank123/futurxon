@@ -1,9 +1,5 @@
 import React from "react";
-// import CrowdStrike from "../../../images/crowdstrike.svg";
 import Symantec from "../../../../public/images/symantec.svg";
-// import McAfee from "../../../images/mcafee.svg";
-// import PaloAlto from "../../../images/palo-alto.svg";
-// import FireEye from "../../../images/fireeye.svg";
 
 const CybersecurityTechStackUI = () => {
   const technologies = [

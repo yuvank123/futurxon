@@ -3,7 +3,6 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div className="relative flex items-center justify-center min-h-screen overflow-hidden text-white px-4 md:px-6 pt-24 md:pt-32">
-      {/* Background elements */}
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-3xl backdrop-blur-lg bg-white/5 rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 transition-all hover:bg-white/10 ">

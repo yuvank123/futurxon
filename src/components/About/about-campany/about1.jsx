@@ -14,23 +14,6 @@ const AboutUs = () => {
           Infinoid is one of the leading software development companies. We started with a small team of tech enthusiasts, all having a common purpose - to inject innovation into businesses worldwide and stretch the limits of traditional tech solutions. In our journey, we evolved and embraced the change positively. We are still evolving from initial mobile and web app development to next-gen technologies like AI, ML, Data Science, AR, VR, and more.
         </p>
       </div>
-
-      {/* <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"> */}
-        {/* Info Cards */}
-        {/* {[
-          { icon: "\ud83d\udcbc", label: "13+ Years of Experience" },
-          { icon: "\ud83d\udc65", label: "1050+ IT Professionals" },
-          { icon: "\ud83d\udcd6", label: "2500+ Success Stories" },
-          { icon: "\ud83c\udfe2", label: "14 Industries Served" },
-          { icon: "\ud83c\udf0d", label: "12+ Countries Where We Served" },
-          { icon: "\ud83c\udfe9", label: "06 Worldwide Offices" },
-        ].map((item, index) => (
-          <div key={index} className="bg-gray-900 p-6 rounded-lg flex flex-col items-center text-center shadow-md">
-            <span className="text-4xl mb-3">{item.icon}</span>
-            <p className="text-lg font-semibold text-white">{item.label}</p>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };
