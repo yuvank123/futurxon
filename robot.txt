@@ -1,19 +1,6 @@
-# Allow all search engines to crawl the site
 User-agent: *
-Disallow:
-
-# Block access to sensitive directories
 Disallow: /admin/
 Disallow: /private/
-Disallow: /dashboard/
-Disallow: /user-settings/
+Allow: /
 
-# Allow specific pages
-Allow: /public/
-Allow: /blog/
-
-# Block specific file types (example: .env files)
-Disallow: /*.env$
-
-# Specify the location of the sitemap
-Sitemap: https://yourwebsite.com/sitemap.xml
+Sitemap: https://futurxon-yuvank-s-projects.vercel.app/
