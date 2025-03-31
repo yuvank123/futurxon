@@ -12,7 +12,7 @@ const WebProcess = () => {
 
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 max-w-4xl px-4">
-        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
+        <h1 className=" text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
           Building Custom Web Applications
           <br />
           <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">

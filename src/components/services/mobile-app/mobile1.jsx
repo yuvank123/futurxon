@@ -6,7 +6,7 @@ const MobileAppDev = () => {
     <div className="min-h-screen w-full flex flex-col md:flex-row items-center justify-center px-4 xs:px-6 sm:px-8 md:px-16">
       {/* Left Content Section */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left py-8 xs:py-10 sm:py-12 md:py-0 space-y-4 xs:space-y-5 sm:space-y-6 md:space-y-8 md:pr-5 lg:pr-10 ml-0 xs:ml-2 sm:ml-5 md:ml-9">
-        <h1 className="text-5xl xs:text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
+        <h1 className="text-4xl xs:text-5xl sm:text-5xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-white font-mono tracking-tighter bg-clip-text text-transparent">
           Enterprise Mobile Excellence
           <br />
           <span className="bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">

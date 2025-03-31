@@ -47,7 +47,7 @@ const UIUXDesignEcosystem = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-7xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
             UI/UX Design Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -70,7 +70,7 @@ const UIUXDesignEcosystem = () => {
                 <div className={`p-3 rounded-xl bg-${category.color}-400/10 backdrop-blur-sm`}>
                   <category.icon className={`text-3xl text-${category.color}-400 animate-icon-hover`} />
                 </div>
-                <h2 className={`text-2xl font-bold bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
+                <h2 className={`text-2xl font-bold font-mono bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
                   {category.title}
                 </h2>
               </div>
