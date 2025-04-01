@@ -88,8 +88,8 @@ const Background = () => {
       {/* 3D Canvas with interactive wireframe globes, sparkles, and stars */}
       <div className="absolute inset-0">
         <Canvas camera={{ position: [0, 0, 7] }}>
-          <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={200} color="#7B3FE4" />
+          <ambientLight intensity={0.4} />
+          <pointLight position={[10, 10, 10]} intensity={400} color="#7B3FE4" />
 
           {/* Render the outer globe only if not on mobile */}
           {!isMobile && <OuterWireframeGlobe rotationSpeed={rotationSpeed} />}
@@ -127,23 +127,6 @@ const Background = () => {
             color="#00B0FF"
           />
         </Canvas>
-      </div>
-
-      {/* UI Control for rotation speed */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 bg-black bg-opacity-50 p-2 rounded text-xs sm:text-base">
-        <label htmlFor="speed" className="text-white mr-2">
-          Rotation Speed:
-        </label>
-        <input
-          id="speed"
-          type="range"
-          min="0.001"
-          max="0.01"
-          step="0.001"
-          value={rotationSpeed}
-          onChange={handleSpeedChange}
-          className="accent-purple-700"
-        />
       </div>
     </div>
   );
