@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "@react-three/drei": "^10.0.3",
-    "@react-three/fiber": "^9.0.4",
+    "@react-three/drei": "^10.0.5",
+    "@react-three/fiber": "^9.1.1",
+    "@react-three/postprocessing": "^3.0.4",
     "@tailwindcss/vite": "^4.0.9",
     "framer-motion": "^12.5.0",
     "gsap": "^3.12.7",
