@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Sparkles, Stars } from "@react-three/drei";
 import * as THREE from "three";
@@ -9,7 +9,7 @@ const OuterWireframeGlobe = ({ rotationSpeed }) => {
   // Continuous rotation using the provided rotationSpeed.
   useFrame(() => {
     if (globeRef.current) {
-      globeRef.current.rotation.y += rotationSpeed/2;
+      globeRef.current.rotation.y += rotationSpeed / 2;
     }
   });
 
@@ -28,7 +28,7 @@ const OuterWireframeGlobe = ({ rotationSpeed }) => {
   );
 };
 
-const InnerWireframeGlobe = ({ rotationSpeed }) => {
+const InnerWireframeGlobe = ({ rotationSpeed, isMobile }) => {
   const globeRef = useRef();
 
   // Continuous rotation in the opposite direction using the provided rotationSpeed.
@@ -38,10 +38,13 @@ const InnerWireframeGlobe = ({ rotationSpeed }) => {
     }
   });
 
+  // Use a smaller radius for mobile devices.
+  const radius = isMobile ? 2 : 3;
+
   return (
     <mesh ref={globeRef}>
       {/* Inner globe geometry (smaller than outer) */}
-      <sphereGeometry args={[3, 60, 60]} />
+      <sphereGeometry args={[radius, 60, 60]} />
       <meshStandardMaterial
         color="#7B3FE4"       // Same purple tone.
         metalness={4}         // Highly metallic look.
@@ -55,13 +58,24 @@ const InnerWireframeGlobe = ({ rotationSpeed }) => {
 
 const Background = () => {
   const [rotationSpeed, setRotationSpeed] = useState(0.002);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check viewport width and update isMobile state.
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleSpeedChange = (e) => {
     setRotationSpeed(parseFloat(e.target.value));
   };
 
   return (
-    <div className="absolute top-0 left-0 w-full h-[100vh] z-0 overflow-hidden">
+    <div className="absolute top-0 left-0 w-full h-screen z-0 overflow-hidden">
       {/* Background gradient and decorative layers */}
       <div className="fixed inset-0 z-0 bg-gradient-to-br from-black via-[#0F0A2E] to-[#1A0933]">
         <div className="absolute inset-0 overflow-hidden">
@@ -77,8 +91,9 @@ const Background = () => {
           <ambientLight intensity={0.5} />
           <pointLight position={[10, 10, 10]} intensity={200} color="#7B3FE4" />
 
-          <OuterWireframeGlobe rotationSpeed={rotationSpeed} />
-          <InnerWireframeGlobe rotationSpeed={rotationSpeed} />
+          {/* Render the outer globe only if not on mobile */}
+          {!isMobile && <OuterWireframeGlobe rotationSpeed={rotationSpeed} />}
+          <InnerWireframeGlobe rotationSpeed={rotationSpeed} isMobile={isMobile} />
 
           {/* OrbitControls with autoRotate enabled */}
           <OrbitControls
@@ -86,11 +101,11 @@ const Background = () => {
             enablePan
             enableRotate
             autoRotate
-            autoRotateSpeed={rotationSpeed * 300} // Scale auto-rotate speed for better control.
+            autoRotateSpeed={rotationSpeed * 300} // Scale auto-rotate speed.
           />
 
           {/* Sparkles add shiny background elements */}
-          <Sparkles count={500} scale={5} size={3} speed={0.5} color="#ffffff" />
+          <Sparkles count={300} scale={5} size={3} speed={0.5} color="#ffffff" />
 
           {/* Additional stars layers with purple and blue hues */}
           <Stars
@@ -115,7 +130,7 @@ const Background = () => {
       </div>
 
       {/* UI Control for rotation speed */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 bg-black bg-opacity-50 p-2 rounded">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 bg-black bg-opacity-50 p-2 rounded text-xs sm:text-base">
         <label htmlFor="speed" className="text-white mr-2">
           Rotation Speed:
         </label>
