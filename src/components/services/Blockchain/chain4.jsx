@@ -13,13 +13,13 @@ const BlockchainTechnologyStack = () => {
       title: "Blockchain Networks",
       icon: FiGlobe,
       items: ["Ethereum", "Binance Smart Chain", "Hyperledger Fabric", "Polkadot", "Cardano", "Avalanche", "Solana"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Decentralized Storage",
       icon: FiDatabase,
       items: ["IPFS", "Filecoin", "Arweave", "Storj", "Sia", "Swarm", "BigchainDB"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Security & Encryption",
@@ -31,27 +31,22 @@ const BlockchainTechnologyStack = () => {
       title: "Consensus Mechanisms",
       icon: FiActivity,
       items: ["Proof of Work (PoW)", "Proof of Stake (PoS)", "Delegated PoS (DPoS)", "Proof of Authority (PoA)", "Byzantine Fault Tolerance (BFT)", "Hashgraph Consensus"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Identity & Authentication",
       icon: FiLock,
       items: ["Decentralized Identifiers (DIDs)", "Self-Sovereign Identity (SSI)", "OAuth on Blockchain", "Zero-Knowledge Identity Proofs", "Biometric Blockchain Authentication"],
-      color: "pink"
+      color: "purple"
     }
   ];
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
-        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob filter blur-3xl opacity-30" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
-      </div>
 
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
             Blockchain Technology Stack
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

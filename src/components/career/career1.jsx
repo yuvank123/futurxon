@@ -6,8 +6,8 @@ const Career = () => {
 
       {/* Left Content Section */}
       <div className="relative z-10 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left py-0 space-y-6 md:space-y-8 md:pr-5 lg:pr-10">
-        <h1 className="text-6xl md:text-6xl lg:text-8xl font-bold  font-mono tracking-tight lg:leading-20 bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
-          Shape the Future at<br className="hidden md:block"/> Infinoid
+        <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold p-1.5 tracking-tight lg:leading-20 bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
+          Jobs <h1>At Infinoid Technologies</h1>
         </h1>
         <p className="text-base md:text-xl text-gray-200/80 max-w-2xl leading-relaxed">
           Join our constellation of innovators where quantum computing meets AI frontiers. Craft solutions that redefine reality while orbiting in a culture of relentless curiosity.

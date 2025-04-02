@@ -7,13 +7,13 @@ const AiSolutionsStack = () => {
       title: "Machine Learning Models",
       icon: FiCpu,
       items: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras", "Hugging Face Transformers", "ONNX", "AutoML", "DeepMind AlphaFold"],
-      color: "green"
+      color: "purple"
     },
     {
       title: "Data Processing",
       icon: FiDatabase,
       items: ["Apache Spark", "Hadoop", "BigQuery", "Redshift", "Dataflow", "Azure Data Lake", "Snowflake", "Presto"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "AI Infrastructure",
@@ -25,13 +25,13 @@ const AiSolutionsStack = () => {
       title: "AI Security & Ethics",
       icon: FiSettings,
       items: ["AI Governance", "Explainable AI", "Bias Detection", "Privacy-Preserving AI", "Secure AI Models", "Model Interpretability", "Adversarial ML", "AI Compliance"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "AI-Powered Development",
       icon: FiCode,
       items: ["OpenAI Codex", "GitHub Copilot", "ChatGPT API", "LangChain", "Meta Llama", "Google Bard", "Prompt Engineering", "AI Debugging"],
-      color: "green"
+      color: "purple"
     },
     {
       title: "AI Analytics & Insights",
@@ -45,7 +45,7 @@ const AiSolutionsStack = () => {
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className=" text-4xl md:text-6xl font-bold font-mono tracking-tighter bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 p-1">
             AI Solutions Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">

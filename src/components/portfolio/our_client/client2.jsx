@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import C1 from '../../../../public/images/c-1.svg';
-import C2 from '../../../../public/images/c-2.svg';
-import C3 from '../../../../public/images/c-3.svg';
-import C4 from '../../../../public/images/c-4.svg';
-import C5 from '../../../../public/images/c-5.svg';
+import C1 from '../../../../public/images/360.png';
+import C2 from '../../../../public/images/ARD.svg';
+import C3 from '../../../../public/images/Mahi.png';
+import C4 from '../../../../public/images/SSOS.png';
+import C5 from '../../../../public/images/montorx.png';
+import C6 from '../../../../public/images/fmpg.png';
+import C7 from '../../../../public/images/revol.jpg';
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -20,10 +22,12 @@ const ImageCarousel = () => {
     { id: 3, imageUrl: C3 },
     { id: 4, imageUrl: C4 },
     { id: 5, imageUrl: C5 },
+    { id: 6, imageUrl: C6 },
+    { id: 7, imageUrl: C7 },
   ];
 
   //Clone of Images
-  const clonedImages = [C1,C2,C3,C4,C5];
+  const clonedImages = [C1,C2,C3,C4,C5,C6,C7];
 
   // Auto-scroll functionality
   useEffect(() => {
@@ -142,14 +146,14 @@ const ImageCarousel = () => {
             className="flex transition-transform duration-1000"
             style={{ 
               transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
-              width: `${(images.length * 100) / itemsPerPage}%`,
+              width: `${(images.length * 60) / itemsPerPage}%`,
               transitionTimingFunction: transitionType
             }}
           >
             {images.map((image, index) => (
               <div
                 key={image.id}
-                className="w-full flex-shrink-0 p-2 md:p-3"
+                className="w-full flex-shrink-0"
                 style={{ width: `${100 / itemsPerPage}%` }}
               >
                 <div className="relative aspect-square bg-white/5 backdrop-blur-lg rounded-lg md:rounded-xl border border-white/10 overflow-hidden hover:scale-105 transition-transform duration-300 mx-auto max-w-[200px]">
@@ -171,7 +175,7 @@ const ImageCarousel = () => {
             <div
               key={index}
               className={`h-1 rounded-full transition-all duration-300 ${
-                index === currentIndex % images.length 
+                index === (currentIndex % images.length)
                   ? 'w-8 bg-purple-400' 
                   : 'w-4 bg-white/20'
               }`}

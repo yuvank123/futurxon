@@ -9,6 +9,7 @@ const Testimonial = () => {
     const [itemsPerPage, setItemsPerPage] = useState(3);
     const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
     const [videoQuality, setVideoQuality] = useState("high"); // Placeholder state
+    const [showArrows, setShowArrows] = useState({ left: false, right: true });
     const videoRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -92,8 +93,8 @@ const Testimonial = () => {
     // Responsive items per page
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 640) setItemsPerPage(1);
-            else if (window.innerWidth < 1024) setItemsPerPage(2);
+            if (window.innerWidth < 480) setItemsPerPage(1);
+            else if (window.innerWidth < 768) setItemsPerPage(2);
             else setItemsPerPage(3);
         };
 
@@ -103,42 +104,92 @@ const Testimonial = () => {
     }, []);
 
     const nextSlide = () => {
-        setCurrentIndex(prev =>
-            prev + itemsPerPage >= videos.length ? 0 : prev + itemsPerPage
-        );
+        if (containerRef.current) {
+            const scrollWidth = containerRef.current.scrollWidth;
+            const containerWidth = containerRef.current.clientWidth;
+            const maxScroll = scrollWidth - containerWidth;
+            
+            const newScrollPosition = Math.min(
+                containerRef.current.scrollLeft + containerWidth,
+                maxScroll
+            );
+            
+            containerRef.current.scrollTo({
+                left: newScrollPosition,
+                behavior: 'smooth'
+            });
+
+            // Update current index for dots
+            const newIndex = Math.floor(newScrollPosition / (containerWidth / itemsPerPage));
+            setCurrentIndex(newIndex);
+        }
     };
 
     const prevSlide = () => {
-        setCurrentIndex(prev =>
-            prev === 0 ? videos.length - itemsPerPage : prev - itemsPerPage
-        );
+        if (containerRef.current) {
+            const containerWidth = containerRef.current.clientWidth;
+            const newScrollPosition = Math.max(
+                containerRef.current.scrollLeft - containerWidth,
+                0
+            );
+            
+            containerRef.current.scrollTo({
+                left: newScrollPosition,
+                behavior: 'smooth'
+            });
+
+            // Update current index for dots
+            const newIndex = Math.floor(newScrollPosition / (containerWidth / itemsPerPage));
+            setCurrentIndex(newIndex);
+        }
     };
+
+    // Add scroll event listener to update arrows visibility
+    useEffect(() => {
+        const handleScroll = () => {
+            if (containerRef.current) {
+                const { scrollLeft, scrollWidth, clientWidth } = containerRef.current;
+                setShowArrows({
+                    left: scrollLeft > 0,
+                    right: scrollLeft < scrollWidth - clientWidth - 1
+                });
+            }
+        };
+
+        containerRef.current?.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial check
+
+        return () => containerRef.current?.removeEventListener('scroll', handleScroll);
+    }, []);
 
     // To support snap scrolling without showing scrollbar
     const visibleVideos = videos.slice(currentIndex, currentIndex + itemsPerPage);
 
     return (
-        <div className="min-h-screen  py-8 md:py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex justify-center items-center">
+        <div className="min-h-screen py-4 sm:py-8 md:py-16 px-2 sm:px-4 md:px-6 lg:px-8 relative overflow-hidden flex justify-center items-center bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
             {/* Background Effects */}
 
             {/* Content */}
-            <div className="relative z-10">
+            <div className="relative z-10 w-full">
                 {/* Header */}
-                <div className="max-w-7xl mx-auto text-center mb-8 md:mb-16">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent mb-2 md:mb-4 px-4 leading-tight sm:leading-snug transition-all duration-300">
+                <div className="max-w-7xl mx-auto text-center mb-4 sm:mb-8 md:mb-16">
+                    <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent mb-2 md:mb-4 px-2 sm:px-4">
                         Client Testimonials
                     </h1>
-                    <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-400 max-w-2xl mx-auto px-2 md:px-4 leading-relaxed md:leading-loose">
+                    <p className="text-xs sm:text-sm md:text-base text-gray-400 max-w-2xl mx-auto px-2">
                         Leading start-ups, SMEs and large-scale organizations have trusted us.
                     </p>
                 </div>
                 {/* Video Carousel */}
-                <div className="relative max-w-6xl mx-auto">
-                    <div className="flex items-center justify-center gap-2 md:gap-6">
-                        {/* Navigation - Previous */}
+                <div className="relative max-w-6xl mx-auto px-2 sm:px-4">
+                    <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6">
+                        {/* Updated Previous button */}
                         <button
                             onClick={prevSlide}
-                            className="hidden md:flex p-2 md:p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                            className={`hidden sm:flex p-2 md:p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 ${
+                                !showArrows.left ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'
+                            }`}
+                            disabled={!showArrows.left}
                         >
                             <svg
                                 className="w-4 h-4 md:w-6 md:h-6 text-purple-300"
@@ -153,33 +204,40 @@ const Testimonial = () => {
                         {/* Videos Container - Scrollbar Hidden */}
                         <div
                             ref={containerRef}
-                            className="flex gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory w-full max-w-4xl"
-                            style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
+                            className="flex gap-2 sm:gap-4 md:gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth"
+                            style={{
+                                msOverflowStyle: 'none',  /* IE and Edge */
+                                scrollbarWidth: 'none',   /* Firefox */
+                                WebkitOverflowScrolling: 'touch'
+                            }}
                         >
                             {videos.map((video) => (
                                 <div
                                     key={video.title}
                                     onClick={() => handleVideoSelect(video)}
-                                    className="w-[80vw] md:w-1/2 lg:w-1/3 flex-shrink-0 snap-center bg-white/5 backdrop-blur-lg rounded-xl md:rounded-2xl border border-white/10 p-2 md:p-4 transition-all duration-300 cursor-pointer hover:scale-95 md:hover:scale-105 hover:bg-white/10"
+                                    className="w-[85vw] sm:w-[45vw] md:w-[30vw] flex-shrink-0 snap-center bg-white/5 backdrop-blur-lg rounded-lg sm:rounded-xl border border-white/10 p-2 sm:p-3 md:p-4 transition-all duration-300 hover:bg-white/10"
                                 >
-                                    <div className="relative aspect-video mb-2 md:mb-4 rounded-lg overflow-hidden group">
+                                    <div className="relative aspect-video rounded-md overflow-hidden">
                                         {/* Video thumbnail or preview */}
                                         <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                                             <source src={video.videoUrl} type="video/mp4" />
                                         </video>
                                     </div>
-                                    <h3 className="text-sm md:text-base lg:text-lg font-semibold text-white/90 mb-1 md:mb-2">
+                                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white/90 mt-2">
                                         {video.title}
                                     </h3>
-                                    <p className="text-xs md:text-sm text-gray-400">{video.comment}</p>
+                                    <p className="text-xs sm:text-sm text-gray-400 mt-1">{video.comment}</p>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Navigation - Next */}
+                        {/* Updated Next button */}
                         <button
                             onClick={nextSlide}
-                            className="hidden md:flex p-2 md:p-4 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                            className={`hidden sm:flex p-2 md:p-3 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 ${
+                                !showArrows.right ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'
+                            }`}
+                            disabled={!showArrows.right}
                         >
                             <svg
                                 className="w-4 h-4 md:w-6 md:h-6 text-purple-300"
@@ -207,75 +265,84 @@ const Testimonial = () => {
 
                 {/* Modal for Selected Video */}
                 {selectedVideo && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-                        <div className="bg-white p-2 md:p-4 rounded-lg relative w-full max-w-3xl">
-                            <div className="relative aspect-video">
+                    <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-2 sm:p-4">
+                        <div className="bg-gray-900 p-2 sm:p-4 rounded-lg relative w-full max-w-3xl">
+                            <div className="relative aspect-video rounded-lg overflow-hidden">
                                 <video
                                     ref={videoRef}
                                     src={selectedVideo.videoUrl}
-                                    className="absolute inset-0 w-full h-full object-contain rounded-lg"
+                                    className="w-full h-full object-contain"
                                     muted={isMuted}
                                     controls
                                 />
                             </div>
-                            <div className="flex flex-col md:flex-row justify-center gap-2 mt-2">
-                                <button
-                                    onClick={handlePlayPause}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-blue-600 text-white rounded"
-                                >
-                                    {isPlaying ? "Pause" : "Play"}
-                                </button>
-                                <button
-                                    onClick={handleMuteUnmute}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-blue-600 text-white rounded"
-                                >
-                                    {isMuted ? "Unmute" : "Mute"}
-                                </button>
-                                <button
-                                    onClick={decreaseSpeed}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-green-600 text-white rounded"
-                                >
-                                    - Speed
-                                </button>
-                                <button
-                                    onClick={increaseSpeed}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-green-600 text-white rounded"
-                                >
-                                    + Speed
-                                </button>
-                                <select
-                                    value={videoQuality}
-                                    onChange={handleQualityChange}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-gray-200 text-black rounded"
-                                >
-                                    <option value="low">Low Quality</option>
-                                    <option value="medium">Medium Quality</option>
-                                    <option value="high">High Quality</option>
-                                </select>
+                            <div className="flex flex-wrap justify-center gap-2 mt-2 sm:mt-4">
+                                <div className="flex gap-1 sm:gap-2">
+                                    <button
+                                        onClick={handlePlayPause}
+                                        className="px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm bg-blue-600 text-white rounded"
+                                    >
+                                        {isPlaying ? "Pause" : "Play"}
+                                    </button>
+                                    <button
+                                        onClick={handleMuteUnmute}
+                                        className="px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm bg-blue-600 text-white rounded"
+                                    >
+                                        {isMuted ? "Unmute" : "Mute"}
+                                    </button>
+                                </div>
+                                <div className="flex gap-1 sm:gap-2">
+                                    <button
+                                        onClick={decreaseSpeed}
+                                        className="px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm bg-green-600 text-white rounded"
+                                    >
+                                        -
+                                    </button>
+                                    <span className="px-2 py-1 text-xs sm:text-sm text-white">
+                                        {playbackSpeed.toFixed(2)}x
+                                    </span>
+                                    <button
+                                        onClick={increaseSpeed}
+                                        className="px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm bg-green-600 text-white rounded"
+                                    >
+                                        +
+                                    </button>
+                                </div>
                                 <button
                                     onClick={() => setSelectedVideo(null)}
-                                    className="px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-base bg-gray-600 text-white rounded"
+                                    className="px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm bg-red-600 text-white rounded"
                                 >
                                     Close
                                 </button>
-                            </div>
-                            <div className="mt-1 text-center text-xs text-gray-500">
-                                Playback Speed: {playbackSpeed.toFixed(2)}x
                             </div>
                         </div>
                     </div>
                 )}
 
                 {/* CTA Button */}
-                <div className="mt-6 md:mt-8 text-center">
+                <div className="mt-4 sm:mt-6 md:mt-8 text-center">
                     <div className="relative inline-block group">
-                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg md:rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-200" />
-                        <button className="relative px-4 py-2 md:px-8 md:py-4 text-sm md:text-base bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg md:rounded-xl font-semibold transition-all duration-300 hover:shadow-md">
+                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200" />
+                        <button className="relative px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 text-xs sm:text-sm md:text-base bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-lg font-medium transition-all duration-300">
                             HIRE DEDICATED DEVELOPERS
                         </button>
                     </div>
                 </div>
             </div>
+
+            {/* Add this style block at the end of your component */}
+            <style jsx>{`
+                /* Hide scrollbar for Chrome, Safari and Opera */
+                .no-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+
+                /* Hide scrollbar for IE, Edge and Firefox */
+                .no-scrollbar {
+                    -ms-overflow-style: none;  /* IE and Edge */
+                    scrollbar-width: none;  /* Firefox */
+                }
+            `}</style>
         </div>
     );
 };

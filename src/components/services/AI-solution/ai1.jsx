@@ -4,7 +4,7 @@ import AIsolutionbg from "../../../../public/images/aisolutionbg.svg";
 const FullScreenUI = () => {
   return (
     <div className="h-screen w-full flex flex-col items-center justify-center text-white relative overflow-hidden">
-      {/* Animated Background */}
+     
       <div className="absolute inset-0 w-full h-full overflow-hidden flex justify-center items-center">
         <img
           src={AIsolutionbg}

@@ -74,7 +74,7 @@ const EnterpriseBlockchainUI = () => {
     <div className="min-h-screen w-full">
       <div className="container mx-auto px-4 py-16 max-w-7xl">
         <div className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
             Enterprise Blockchain Solutions
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">

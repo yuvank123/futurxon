@@ -6,12 +6,8 @@ const BlockchainProcess = () => {
     <div className="relative w-full min-h-screen flex flex-col items-center px-4 py-20">
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 max-w-4xl px-4">
-        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent">
-          Building Secure & Scalable
-          <br />
-          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Blockchain Solutions
-          </span>
+        <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-red-400 bg-clip-text text-transparent">
+          Building Scalable Blockchain Solutions
         </h1>
         <p className="text-xl text-gray-300/90">
           We leverage the power of{' '}

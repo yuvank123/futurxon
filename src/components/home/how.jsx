@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Bgvideo from "../../../public/video/bgvideo.mp4";
+import AiImage from "../../../public/images/aiimage.jpg";
 
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -34,7 +34,7 @@ const How = () => {
         </svg>
       </div>
 
-      {/* Video Card */}
+      {/* Image Card */}
       <motion.div
         variants={itemVariants}
         initial="hidden"
@@ -42,9 +42,7 @@ const How = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-64 md:h-80 lg:h-96 transform-gpu translate-z-3 rotate-y-10 lg:rotate-y-20 hover:translate-z-10 transition-all duration-500 rounded-4xl shadow-lg shadow-gray-800/50"
       >
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover rounded-4xl contrast-120">
-          <source src={Bgvideo} type="video/mp4" />
-        </video>
+        <img src={AiImage} alt="Background" className="w-full h-full object-cover rounded-4xl contrast-120" />
       </motion.div>
 
       {/* Text Content */}

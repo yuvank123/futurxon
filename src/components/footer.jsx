@@ -156,7 +156,7 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="text-xl text-purple-400" />
             <p className="text-sm">
-            C101, Exotica East Square,
+            Unit No. C-101, Exotica East Square,
             Ghaziabad - 201014
             </p>
           </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Office0 from "../../../../public/images/office0.jpg";
 import Office1 from "../../../../public/images/office1.jpg";
-import Office2 from "../../../../public/images/office2.jpg"; // Ensure correct path
+import Office2 from "../../../../public/images/office2.jpeg"; // Ensure correct path
 
 const About5 = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -115,7 +115,7 @@ const About5 = () => {
               {/* Text Section */}
               <div className="md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600" />
-                <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-gradient-to-r  from-purple-400 via-purple-300  to-gray-200 bg-clip-text text-transparent mb-4 md:mb- font-mono tracking-tighter">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r  from-purple-400 via-purple-300  to-gray-200 bg-clip-text text-transparent mb-4 md:mb- font-mono tracking-tighter">
                   {sections[activeIndex].title}
                 </h2>
                 <p className="text-gray-300/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8">

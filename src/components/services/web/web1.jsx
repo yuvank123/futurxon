@@ -6,11 +6,11 @@ const EnterpriseWebUI = () => {
     <div className="relative w-full min-h-screen flex flex-col md:flex-row items-center px-4 xs:px-6 sm:px-8 md:px-12 lg:px-16 py-12 md:py-0">
       {/* Left Section */}
       <div className="mt-10 w-full md:w-1/2 pr-0 md:pr-8 lg:pr-12 mb-12 md:mb-0 text-center md:text-left">
-        <h1 className="text-5xl xs:text-6xl sm:text-6xl font-mono tracking-tight font-bold mb-4 xs:mb-5 sm:mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
+        <h1 className="text-5xl xs:text-6xl sm:text-6xl tracking-tight font-bold mb-4 xs:mb-5 sm:mb-6 bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
           Leading Enterprise Web Solutions
           <br /> 
           <span className="text-2xl xs:text-3xl sm:text-6xl bg-gradient-to-r from-purple-400 via-purple-300 to-white bg-clip-text text-transparent">
-          Custom Web Development & Expert IT Services
+          Expert IT Services
           </span>
         </h1>
         <p className="text-base xs:text-lg sm:text-xl text-gray-300/80 mb-6 xs:mb-8 leading-relaxed max-w-xl mx-auto md:mx-0">
