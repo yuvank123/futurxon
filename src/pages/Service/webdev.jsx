@@ -5,7 +5,7 @@ import Web2 from '../../components/services/web/web2';
 import Web3 from '../../components/services/web/web3';
 import Web4 from '../../components/services/web/web4';
 import Web5 from '../../components/services/web/web5';
-import Web6 from '../../components/services/web/web6';
+import Contact2 from '../../components/contact/Contact2';
 import Footer from '../../components/footer';
 
 const webdev = () => {
@@ -67,7 +67,7 @@ const webdev = () => {
           <Web5/>
         </div>
         <div className='relative'>
-          <Web6/>
+          <Contact2/>
         </div>
         <div className='relative'>
           <Footer/>

@@ -209,8 +209,6 @@ const TechStack = () => {
 
   return (
     <div className="w-full text-white py-20 px-4 sm:px-6 relative overflow-hidden">
-      <div className="absolute h-full w-full inset-0 z-0 bg-gradient-to-br from-[#0a021a] to-[#020515] blur-[800px]">
-      </div>
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">

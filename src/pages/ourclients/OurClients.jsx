@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/navbar'
-// import Client1 from '../../components/portfolio/our_client/client1'
-import Client2 from '../../components/portfolio/our_client/client2'
-import Client3 from '../../components/portfolio/our_client/client3'
+import Client1 from '../../components/portfolio/our_client/client1'
+import About5 from '../../components/About/about-campany/about5'; 
 import Footer from '../../components/footer';
 
 const aboutus = () => {
@@ -27,10 +26,10 @@ const aboutus = () => {
           <Client1/>
         </div> */}
         <div className='relative border-0 border-amber-100'>
-          <Client2/>
+          <Client1/>
         </div>
         <div className='relative border-0 border-amber-100'>
-          <Client3/>
+          <About5/>
         </div>
         <div>
           <Footer/>

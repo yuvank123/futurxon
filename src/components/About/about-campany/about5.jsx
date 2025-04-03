@@ -63,8 +63,6 @@ const Testimonials = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center text-white py-20 px-4 sm:px-6 relative overflow-hidden">
-      
-
       <div className="relative z-10 max-w-7xl w-full">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">

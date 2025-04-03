@@ -8,9 +8,10 @@ import How from '../components/home/how';
 import Accerate from '../components/home/accerate';
 import Mapping from '../components/home/mapping';
 import Offering from '../components/home/offering';
-import Testinomial from '../components/home/testinomial';
+// import Testinomial from '../components/home/testinomial';
 import Stack from '../components/home/stack';
 import Footer from '../components/footer';
+import About5 from '../components/About/about-campany/about5';
 
 const homepage = () => {
   return (
@@ -59,7 +60,7 @@ const homepage = () => {
         <Stack />
       </div>
       <div className='h-auto border-0 border-white'>
-        <Testinomial />
+        <About5 />
       </div>
       <div className='h-auto relative'>
         <Footer />
