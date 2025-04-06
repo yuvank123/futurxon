@@ -1,7 +1,12 @@
 import React from "react";
-import { FaLinkedin, FaTwitter, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Logo from '../../public/images/logo.svg'
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+import Logo from "../../public/images/logo.svg";
 
 const Footer = () => {
   return (
@@ -33,83 +38,101 @@ const Footer = () => {
               <FaTwitter className="text-xl hover:text-blue-400 transition-transform transform hover:scale-110" />
             </a>
           </div>
-        </div>  
+        </div>
 
         {/* Services */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold">Services</h3>
           <ul className="text-sm space-y-2">
             <li>
-              <Link
-                to="/services/web-dev"
+              <a
+                href="/services/web-dev"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 Web Development
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/mobile-apps"
+              <a
+                href="/services/mobile-apps"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 Mobile Apps
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/ui-ux"
+              <a
+                href="/services/ui-ux"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 UI/UX Design
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/cloud"
+              <a
+                href="/services/cloud"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 Cloud Services
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/ai"
+              <a
+                href="/services/ai"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 AI Solutions
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/blockchain"
+              <a
+                href="/services/blockchain"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 Blockchain
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/devops"
+              <a
+                href="/services/devops"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 DevOps
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/arvr"
+              <a
+                href="/services/arvr"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 AR/VR/3D Modelling
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/services/cybersecurity"
+              <a
+                href="/services/cybersecurity"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-400 transition-colors"
               >
                 Cybersecurity
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -119,33 +142,44 @@ const Footer = () => {
           <h3 className="text-lg font-semibold">Quick Links</h3>
           <ul className="text-sm space-y-2">
             <li>
-              <Link
-                to="/about-company"
+              <a
+                href="/about-company"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-purple-400 transition"
               >
                 About Us
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/career"
+              <a
+                href="/career"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-purple-400 transition"
               >
                 Careers
-              </Link>
+              </a>
             </li>
             <li>
-              <Link to="/policy" className="hover:text-purple-400 transition">
+              <a
+                href="/policy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-purple-400 transition"
+              >
                 Privacy Policy
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/contact"
+              <a
+                href="/contact"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-purple-400 transition"
               >
                 Contact Us
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -156,8 +190,8 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="text-xl text-purple-400" />
             <p className="text-sm">
-            Unit No. C-101, Exotica East Square,
-            Ghaziabad - 201014
+              Unit No. C-101, Exotica East Square,
+              Ghaziabad - 201014
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -193,26 +227,24 @@ const Footer = () => {
         <p className="hover:tracking-wide transition-all duration-500">
           Copyright © 2025 Infinoid Technologies. All Rights Reserved.
         </p>
-        <div className="flex justify-center gap-4 mt-2">
-          <Link
-            to="/policy"
-            className="hover:text-blue-400 hover:underline transition"
-          >
-          </Link>
-        </div>
       </div>
+
       <style jsx>{`
         @keyframes border-shine {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
         }
-        
+
         .animate-border-shine {
           animation: border-shine 2s infinite linear;
           mask-image: linear-gradient(
             90deg,
             transparent 0%,
-            rgba(255,255,255,0.8) 50%,
+            rgba(255, 255, 255, 0.8) 50%,
             transparent 100%
           );
         }

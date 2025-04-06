@@ -5,60 +5,49 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // For stylish icons
-import T1 from "../../../../public/images/david.png";
-import T2 from "../../../../public/images/philip.png";
-import T3 from "../../../../public/images/brett.png";
+import T1 from "../../../../public/images/t1.png";
+import T2 from "../../../../public/images/t2.png";
+import T3 from "../../../../public/images/t3.png";
+import T4 from "../../../../public/images/t4.png";
+import T5 from "../../../../public/images/t5.png";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "David Carta",
-      title: "CEO/President of Telaeris, Inc.",
-      heading: "Timezone is Not a Boundary",
+      name: "Barbra Mwendwa",
       quote:
-        "The communication is brilliant and they stayed very consistent. The coder puts in a phenomenal amount of effort to ensure he is available given the time difference between India and the USA.",
+        "Working with Infinoid Technologies felt like having an in-house team. Despite the time zone difference, their engineers were always responsive, and we never had to wait for updates. The project delivery was spot-on, and the support team is incredibly proactive.",
       img: T1,
     },
     {
-      name: "Philip Gomez",
-      title: "Co-owner of Patty’s Cakes & Desserts",
-      heading: "Interview Before Hiring Developers",
+      name: "Dr.Munish Jindal",
       quote:
-        "The team at Bacancy is reliable and accommodating to my business needs. We had the option to Interview Before Hiring. Their account management is a pleasant experience and I highly recommend them.",
+        "Infinoid brought our creative concepts to life with amazing UI/UX and seamless backend support. They managed everything from wireframes to launch. Super impressed by their dedication and communication!",
       img: T2,
     },
     {
-      name: "Brett Williams",
-      title: "Founder of Aegis",
-      heading: "Quick-Onboarding",
-      quote:
-        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
+      name: "Vivek Kumar ",
+      title: "Founder & CTO, FMPG ",
+      quote:"We went to Infinoid mainly because of the pricing, but stayed because of their work. The output was solid and didn’t feel like 'budget work'. Great value for startups like ours.",
       img: T3,
     },
     {
-      name: "Brett Williams",
-      title: "Founder of Aegis",
-      heading: "Quick-Onboarding",
-      quote:
-        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
-      img: T3,
+      name: "Dr.Nancy Juneja ",
+      title: "Founder : Revup Skills & Mentor of Change- Niti Aayog, Government of India ",
+      quote:"Honestly, I wasn’t expecting such professionalism from such a young team. They know their stuff, especially in design and frontend dev. Very open to feedback and super quick to respond.",
+      img: T4,
     },
     {
-      name: "Brett Williams",
-      title: "Founder of Aegis",
-      heading: "Quick-Onboarding",
-      quote:
-        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
-      img: T3,
+      name: "Kapil Jain ",
+      title: "Founder & Ceo  ",
+      quote:"The team was always a WhatsApp or email away. Even on weekends, if something critical came up, they were on it. That kind of responsiveness really helped during our launch week.",
+      img: T5,
     },
     {
-      name: "Brett Williams",
-      title: "Founder of Aegis",
-      heading: "Quick-Onboarding",
-      quote:
-        "Bacancy's expertise shines in seamlessly transitioning software to a SaaS. Their responsive team maintains excellent communication with daily reports and regular project update calls.",
-      img: T3,
-    },
+      name: "Abhishek Khanna ",
+      quote:"From day one, I liked how clear and transparent the team was. No beating around the bush — they told us what’s possible, gave timelines, and stuck to them. Our Shopify site turned out even better than we imagined.",
+      img: T1,
+    }
   ];
 
   return (

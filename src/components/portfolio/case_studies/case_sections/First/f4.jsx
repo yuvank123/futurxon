@@ -1,81 +1,60 @@
 import React from 'react';
-import { FiServer, FiCpu, FiWifi, FiCloud, FiTool } from 'react-icons/fi';
+import { FiServer, FiCpu, FiCloud, FiTool } from 'react-icons/fi';
 
-const CaseStudy = () => {
+const PayrollManagementCaseStudy = () => {
   return (
     <div className="min-h-screen text-gray-100 mt-25">
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-24">
+      <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent mb-8">
-            IoT-Enabled Bio-Science Monitoring System
+          <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-blue-400 via-purple-300 to-red-400 bg-clip-text text-transparent">
+            Payroll Management System – Case Study by Infinoid
           </h1>
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiServer className="text-4xl text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Real-time Data</h3>
-              <p className="text-gray-400">50+ parameters monitored</p>
-            </div>
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiCpu className="text-4xl text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Device Integration</h3>
-              <p className="text-gray-400">15+ legacy systems connected</p>
-            </div>
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiWifi className="text-4xl text-red-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Wireless Protocols</h3>
-              <p className="text-gray-400">3 communication standards</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 px-6 lg:px-24">
+      <section className="py-5 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-blue-200 bg-clip-text text-transparent mb-8">
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent mb-8">
             Overview
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12">
-          Developed an integrated IoT solution for bio-science research.
-Enabled real-time data collection and analysis with connected devices.
-Monitored research equipment for enhanced efficiency and accuracy.
-Reduced operational errors by 42%, improving reliability.
-Enhanced research productivity by 35% through automation.
-Provided seamless data access for informed decision-making.
-Optimized workflow by integrating smart monitoring solutions.
-Revolutionized bio-science research with modern IoT technology.
+          <p className="text-xl text-gray-300 leading-relaxed mb-4">
+            Infinoid Technology developed a comprehensive Payroll Management System that automates payroll processing, ensures compliance with local regulations, and provides real-time financial insights. Designed for businesses of all sizes, this solution streamlines payroll operations while reducing errors and administrative overhead.
+          </p>
+          <p className="text-xl italic text-purple-300">
+            "Automate your payroll and empower your HR — Infinoid transforms payroll processing into a seamless experience."
           </p>
         </div>
       </section>
 
-      {/* Problem Statement */}
+      {/* Challenges Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-red-400 to-purple-300 bg-clip-text text-transparent mb-8">
-            Challenges Faced
+            ❌ Challenges Faced
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
-                title: "Interoperability",
-                content: "Integration challenges between modern IoT devices and legacy scientific instruments",
-                icon: <FiServer className="text-2xl text-red-400" />
+                title: "Manual Data Processing",
+                content: "Relying on spreadsheets led to frequent errors and time-consuming payroll calculations.",
+                icon: <FiTool className="text-2xl text-red-400" />
               },
               {
-                title: "Firmware Optimization",
-                content: "Outdated firmware incompatible with modern sensor requirements",
-                icon: <FiTool className="text-2xl text-purple-400" />
+                title: "Regulatory Compliance",
+                content: "Keeping up with evolving tax laws and labor regulations was a constant challenge.",
+                icon: <FiCloud className="text-2xl text-purple-400" />
               },
               {
-                title: "Real-Time Monitoring",
-                content: "Lack of remote monitoring capabilities for critical parameters",
-                icon: <FiCloud className="text-2xl text-blue-400" />
-              },
-              {
-                title: "Cost Efficiency",
-                content: "Budget constraints requiring cost-effective scalable solutions",
+                title: "Data Security Risks",
+                content: "Sensitive payroll data required robust security measures to prevent breaches and fraud.",
                 icon: <FiCpu className="text-2xl text-red-400" />
+              },
+              {
+                title: "Integration Issues",
+                content: "Integrating payroll with existing HR and accounting systems was complex and error-prone.",
+                icon: <FiServer className="text-2xl text-purple-400" />
               }
             ].map((item, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
@@ -90,55 +69,35 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Our Solution */}
+      {/* Implemented Solutions Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent mb-8">
-            Implemented Solutions
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-blue-200 bg-clip-text text-transparent mb-8">
+            ✅ Implemented Solutions
           </h2>
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               {[
-                {
-                  title: "Legacy System Integration",
-                  content: "Custom integration layer for seamless data transfer between old and new systems"
-                },
-                {
-                  title: "Firmware Modernization",
-                  content: "FreeRTOS implementation for real-time synchronization"
-                },
-                {
-                  title: "Monitoring Algorithms",
-                  content: "Advanced protocols for immediate parameter feedback"
-                }
+                "Automated payroll calculations with rule-based engines",
+                "Real-time compliance monitoring and tax updates",
+                "Robust data encryption and access control measures"
               ].map((item, index) => (
                 <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
                   <div className="border-l-4 border-purple-400 pl-4">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-300">{item.content}</p>
+                    <p className="text-gray-300">{item}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="space-y-8">
               {[
-                {
-                  title: "Rapid Prototyping",
-                  content: "Arduino/Raspberry Pi testing platforms for fast iteration"
-                },
-                {
-                  title: "Cost Optimization",
-                  content: "Component selection balancing reliability and affordability"
-                },
-                {
-                  title: "Cloud Integration",
-                  content: "AWS IoT implementation for remote monitoring"
-                }
+                "Seamless integration with HR and accounting systems",
+                "Intuitive dashboard for real-time financial insights",
+                "Cloud-based deployment ensuring scalability and uptime"
               ].map((item, index) => (
                 <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
                   <div className="border-l-4 border-blue-400 pl-4">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-300">{item.content}</p>
+                    <p className="text-gray-300">{item}</p>
                   </div>
                 </div>
               ))}
@@ -147,34 +106,40 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Technology Stack Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-red-200 bg-clip-text text-transparent mb-8">
-            Technology Stack
+          <h2 className="text-3xl font-bold bg-gradient-to-r p-2 from-purple-300 to-purple-200 bg-clip-text text-transparent mb-8">
+            💻 Technology Stack
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                category: "Firmware Development",
-                items: ["C/Python/Assembly", "FreeRTOS", "STM32CubeMX", "IAR Embedded Workbench"],
+                items: [
+                  "React.js + Next.js (App Router), Tailwind CSS",
+                  "Redux for state management",
+                  "SASS/Styled Components for modular styling"
+                ],
                 color: "purple"
               },
               {
-                category: "Hardware Design",
-                items: ["Altium Designer", "ESP32/nRF52840", "Bluetooth/Wi-Fi/Zigbee", "Advanced Sensors"],
-                color: "blue"
+                items: [
+                  "Node.js, Express.js for backend services",
+                  "PostgreSQL for secure data storage",
+                  "GraphQL for efficient API interactions"
+                ],
+                color: "purple"
               },
               {
-                category: "Cloud & Networking",
-                items: ["AWS IoT Core", "MQTT/HTTP", "Raspberry Pi", "LTSpice/TINA-TI"],
-                color: "red"
+                items: [
+                  "Docker for containerization",
+                  "AWS/Azure for cloud hosting",
+                  "Jest and Cypress for testing"
+                ],
+                color: "purple"
               }
             ].map((section, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
-                <h3 className={`text-xl font-semibold mb-4 text-${section.color}-300`}>
-                  {section.category}
-                </h3>
                 <ul className="space-y-3 text-gray-300">
                   {section.items.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2">
@@ -189,36 +154,32 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Why Choose Techrover */}
-      <section className="py-16 px-6 lg:px-24">
+      {/* Why Choose Infinoid Section */}
+      <section className="py-16 px-6 lg:px-24 mb-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent mb-12">
-            Why Techrover™?
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent mb-12">
+            🌟 Why Infinoid?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "IoT Expertise",
-                content: "150+ successful deployments",
-                color: "from-purple-500 to-blue-500"
+                title: "Seamless Integration",
+                content: "Our solution integrates effortlessly with your existing systems, ensuring a smooth transition."
               },
               {
-                title: "Rapid Development",
-                content: "40% faster time-to-market",
-                color: "from-blue-500 to-red-500"
+                title: "Enhanced Security",
+                content: "State-of-the-art encryption and compliance monitoring safeguard sensitive payroll data."
               },
               {
-                title: "Cost Efficiency",
-                content: "30% reduced development costs",
-                color: "from-red-500 to-purple-500"
+                title: "Scalability",
+                content: "Built to grow with your business, our system handles increased load without compromising performance."
               },
               {
-                title: "Cross-Disciplinary",
-                content: "Full-stack hardware/software solutions",
-                color: "from-purple-500 to-red-500"
+                title: "User-Friendly Interface",
+                content: "An intuitive dashboard delivers real-time insights and simplifies complex payroll processes."
               }
             ].map((item, index) => (
-              <div key={index} className={`bg-gradient-to-br ${item.color} p-px rounded-2xl`}>
+              <div key={index} className="bg-gradient-to-br from-purple-500 to-blue-500 p-px rounded-2xl">
                 <div className="bg-gray-900 rounded-2xl p-6 h-full">
                   <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                   <p className="text-gray-300">{item.content}</p>
@@ -232,4 +193,4 @@ Revolutionized bio-science research with modern IoT technology.
   );
 };
 
-export default CaseStudy;
+export default PayrollManagementCaseStudy;

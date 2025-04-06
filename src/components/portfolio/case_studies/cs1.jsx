@@ -1,54 +1,51 @@
 import React from "react";
-import Csbg from "../../../../public/images/csbg.jpg"
+import Csbg1 from "../../../../public/images/case1.jpg";
+import Csbg2 from "../../../../public/images/case2.jpg";
+import Csbg3 from "../../../../public/images/case3.jpg";
+import Csbg4 from "../../../../public/images/case4.jpg";
+import Csbg5 from "../../../../public/images/case5.jpg";
 
 const AboutUs = () => {
     const sections = [
         {
-            title: "Revolutionizing Bio-Science with IoT for Smarter Monitoring",
+            title: "Immersive AR/VR Experience Platform",
             link: "/first",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
+            bgImage: Csbg1,
+            subtitle: "Transforming Immersive Experiences",
+            description: "Discover our next-generation AR/VR platform that delivers real-time 3D visualization, AR integration, and VR-enabled simulations for a truly immersive digital experience."
         },
         {
-            title: "Personal Assistant using LLM implementation",
-            link: "second",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
+            title: "Online Pet Shop",
+            link: "/three",
+            bgImage: Csbg2,
+            subtitle: "Revolutionizing Pet Care Shopping",
+            description: "Explore our robust online pet shop platform offering personalized recommendations, secure transactions, and efficient inventory management for pet lovers."
         },
         {
-            title: "High-Tech Risk Compliance Management Software",
-            link: "three",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
+            title: "Business Analytical Dashboard",
+            link: "/second",
+            bgImage: Csbg3,
+            subtitle: "Turning Data into Insights",
+            description: "Experience our dynamic analytical dashboard that transforms raw data into actionable insights, enabling businesses to drive revenue and growth."
         },
         {
-            title: "IoT-Enabled Flame Detector Control Portfolio",
-            link: "four",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
+            title: "Payroll Management System",
+            link: "/four",
+            bgImage: Csbg4,
+            subtitle: "Streamlining Payroll Processes",
+            description: "Learn how our automated payroll system ensures compliance, enhances data security, and provides real-time financial insights for businesses of all sizes."
         },
         {
-            title: "Community and Reputation Platform",
-            link: "five",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
-        },
-        {
-            title: "Social Connectivity",
-            link: "six",
-            bgImage: Csbg,
-            subtitle: "We drive success for businesses worldwide!",
-            description: "Our mission is to empower digital disruptors to see the invisible and achieve the impossible with cutting-edge digital solutions."
+            title: "Inventory Management System",
+            link: "/five",
+            bgImage: Csbg5,
+            subtitle: "Optimizing Supply Chain Operations",
+            description: "See how our inventory management solution provides real-time tracking, automated restocking, and data-driven analytics to optimize supply chain efficiency."
         }
     ];
 
     return (
-        <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-white px-4 md:px-6 pt-24 md:pt-32 gap-8">
+        <div className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-white px-4 md:px-6 pt-24 md:pt-32 gap-8 mb-5">
             {sections.map((section, index) => (
                 <div 
                     key={index}
@@ -61,7 +58,7 @@ const AboutUs = () => {
                             backgroundImage: `url(${section.bgImage}), linear-gradient(45deg, rgba(17, 24, 39, 0.9) 30%, rgba(76, 29, 149, 0.3))`,
                             backgroundSize: "cover",
                             backgroundPosition: "center",
-                            opacity: "100%"
+                            opacity: "30%"
                         }}
                     ></div>
                     
@@ -78,8 +75,12 @@ const AboutUs = () => {
                         </h2>
                         <div className="group relative inline-block">
                             <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-50 transition duration-1000" />
-                            <a href={section.link} className="relative bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
-                                LET'S VISIT
+                            <a 
+                                href={section.link} 
+                                className="relative bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
+                                title={`Explore our ${section.title} case study`}
+                            >
+                                Explore Case Study
                             </a>
                         </div>
                     </div>

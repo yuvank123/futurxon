@@ -13,13 +13,13 @@ const DevOpsTechnologyStack = () => {
       title: "CI/CD",
       icon: FiRepeat,
       items: ["Jenkins", "GitHub Actions", "CircleCI", "GitLab CI", "Argo CD", "Spinnaker", "Travis CI", "Azure DevOps"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "IaC & Config",
       icon: FiServer,
       items: ["Terraform", "Ansible", "Pulumi", "CloudFormation", "Chef", "Puppet", "SaltStack", "Crossplane"],
-      color: "blue"
+      color: "purple"
     },
     {
       title: "Containerization",
@@ -31,29 +31,23 @@ const DevOpsTechnologyStack = () => {
       title: "Monitoring",
       icon: FiActivity,
       items: ["Prometheus", "Grafana", "New Relic", "Datadog", "Splunk", "Elastic Stack", "Nagios", "Zabbix"],
-      color: "pink"
+      color: "purple"
     },
     {
       title: "Collaboration",
       icon: FiUsers,
       items: ["Slack", "Jira", "Confluence", "Notion", "Discord", "Microsoft Teams", "Trello", "Asana"],
-      color: "blue"
+      color: "purple"
     }
   ];
 
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-500/20 rounded-full animate-blob animate-delay-2000 filter blur-3xl opacity-30" />
-        <div className="absolute -top-48 -right-32 w-96 h-96 bg-blue-500/30 rounded-full animate-blob animate-delay-3000 filter blur-3xl opacity-30" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full animate-blob filter blur-3xl opacity-30" />
-      </div>
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
+          <h1 className="text-4xl md:text-6xl font-bold font-mono tracking-tighter bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 bg-clip-text text-transparent mb-4 p-1">
             DevOps Ecosystem
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -76,7 +70,7 @@ const DevOpsTechnologyStack = () => {
                 <div className={`p-3 rounded-xl bg-${category.color}-400/10 backdrop-blur-sm`}>
                   <category.icon className={`text-3xl text-${category.color}-400 animate-icon-hover`} />
                 </div>
-                <h2 className={`text-2xl font-bold bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
+                <h2 className={`text-2xl font-bold font-mono bg-gradient-to-r from-${category.color}-300 to-${category.color}-300 bg-clip-text text-transparent`}>
                   {category.title}
                 </h2>
               </div>

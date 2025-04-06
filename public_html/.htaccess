@@ -1,0 +1,29 @@
+RewriteEngine On
+
+# Redirect non-www to www (optional but recommended for consistency)
+RewriteCond %{HTTP_HOST} ^infinoid\.com [NC]
+RewriteRule ^(.*)$ https://www.infinoid.com/$1 [L,R=301]
+
+# Handle CORS
+<IfModule mod_headers.c>
+    SetEnvIf Origin "^https://(.+\.)?infinoid\.com$" ORIGIN_DOMAIN=$0
+    Header always set Access-Control-Allow-Origin "%{ORIGIN_DOMAIN}e" env=ORIGIN_DOMAIN
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Accept, Origin, X-Requested-With"
+    Header always set Access-Control-Allow-Credentials true
+</IfModule>
+
+# Handle React routing
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
+
+# PHP settings
+php_value display_errors On
+php_value upload_max_filesize 64M
+php_value post_max_size 64M
+php_value max_execution_time 300
+php_value max_input_time 300

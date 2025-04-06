@@ -1,5 +1,5 @@
 import React from "react";
-import Trackpng from "../../../../public/images/screen.png"
+import Trackpng from "../../../../public/images/9.svg"
 
 const MobileProcess = () => {
   return (

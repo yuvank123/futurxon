@@ -30,7 +30,7 @@ const EnterpriseWebUI = () => {
               <img 
                 src={Screenpng} 
                 alt="Background UI" 
-                className="w-full h-full object-cover brightness-75 contrast-125 saturate-110"
+                className="w-full h-auto max-h-screen object-contain brightness-80 contrast-90 saturate-90"
               />
             </div>
           </div>
@@ -41,7 +41,7 @@ const EnterpriseWebUI = () => {
               <img 
                 src={Screenpng} 
                 alt="Middle UI" 
-                className="w-full h-full object-cover brightness-90 contrast-110 saturate-110"
+                className="w-full h-full object-contain brightness-90 contrast-110 saturate-110"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@ const EnterpriseWebUI = () => {
               <img 
                 src={Screenpng} 
                 alt="Main UI" 
-                className="w-full h-full object-cover brightness-100 contrast-105 saturate-100 md:hover:scale-[1.02] transition-transform duration-500"
+                className="w-full h-full object-contain brightness-100 contrast-105 saturate-100 md:hover:scale-[1.02] transition-transform duration-500"
               />
               {/* Glow effect */}
               <div className="absolute inset-0 rounded-lg md:rounded-xl shadow-[inset_0_0_15px_rgba(139,92,246,0.2)] md:shadow-[inset_0_0_30px_rgba(139,92,246,0.2)] pointer-events-none" />

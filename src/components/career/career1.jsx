@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigation } from '../../utils/navigation';
 
 const Career = () => {
+  const { navigateToContact } = useNavigation();
+
   return (
     <div className="relative h-[80vh] md:min-h-screen flex flex-col md:flex-row items-center justify-center px-4 md:px-16 text-white overflow-hidden">
 
@@ -12,7 +15,10 @@ const Career = () => {
         <p className="text-base md:text-xl text-gray-200/80 max-w-2xl leading-relaxed">
           Join our constellation of innovators where quantum computing meets AI frontiers. Craft solutions that redefine reality while orbiting in a culture of relentless curiosity.
         </p>
-        <button className="group relative px-6 py-3 md:px-8 md:py-4 text-base md:text-lg font-semibold bg-gradient-to-r from-purple-600/90 to-purple-300/90 hover:from-purple-500 transition-all duration-300 rounded-xl md:rounded-2xl shadow-xl hover:shadow-2xl shadow-purple-900/50 hover:shadow-blue-900/50 transform hover:scale-[1.02] active:scale-95 overflow-hidden">
+        <button 
+          onClick={navigateToContact}
+          className="group relative px-6 py-3 md:px-8 md:py-4 text-base md:text-lg font-semibold bg-gradient-to-r from-purple-600/90 to-purple-300/90 hover:from-purple-500 transition-all duration-300 rounded-xl md:rounded-2xl shadow-xl hover:shadow-2xl shadow-purple-900/50 hover:shadow-blue-900/50 transform hover:scale-[1.02] active:scale-95 overflow-hidden"
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Launch Your Odyssey →

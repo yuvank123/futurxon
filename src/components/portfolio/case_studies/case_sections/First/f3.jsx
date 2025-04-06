@@ -1,81 +1,60 @@
 import React from 'react';
-import { FiServer, FiCpu, FiWifi, FiCloud, FiTool } from 'react-icons/fi';
+import { FiShoppingCart, FiTool, FiCloud, FiCpu } from 'react-icons/fi';
 
-const CaseStudy = () => {
+const OnlinePetShopCaseStudy = () => {
   return (
     <div className="min-h-screen text-gray-100 mt-25">
       {/* Hero Section */}
-      <section className="relative py-24 px-6 lg:px-24">
+      <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent mb-8">
-            IoT-Enabled Bio-Science Monitoring System
+          <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
+            Online Pet Shop – Case Study by Infinoid
           </h1>
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiServer className="text-4xl text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Real-time Data</h3>
-              <p className="text-gray-400">50+ parameters monitored</p>
-            </div>
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiCpu className="text-4xl text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Device Integration</h3>
-              <p className="text-gray-400">15+ legacy systems connected</p>
-            </div>
-            <div className="backdrop-blur-lg bg-white/5 p-6 rounded-xl border border-white/10">
-              <FiWifi className="text-4xl text-red-400 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Wireless Protocols</h3>
-              <p className="text-gray-400">3 communication standards</p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 px-6 lg:px-24">
+      <section className="py-5 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-blue-200 bg-clip-text text-transparent mb-8">
             Overview
           </h2>
-          <p className="text-xl text-gray-300 leading-relaxed mb-12">
-          Developed an integrated IoT solution for bio-science research.
-Enabled real-time data collection and analysis with connected devices.
-Monitored research equipment for enhanced efficiency and accuracy.
-Reduced operational errors by 42%, improving reliability.
-Enhanced research productivity by 35% through automation.
-Provided seamless data access for informed decision-making.
-Optimized workflow by integrating smart monitoring solutions.
-Revolutionized bio-science research with modern IoT technology.
+          <p className="text-xl text-gray-300 leading-relaxed mb-4">
+            Infinoid Technology developed a robust online pet shop platform that brings pet lovers closer to quality pet products and services. This solution offers a seamless shopping experience with personalized recommendations, secure transactions, and efficient inventory management.
+          </p>
+          <p className="text-xl italic text-purple-300">
+            "Where pet care meets convenience — transforming the online pet shopping experience."
           </p>
         </div>
       </section>
 
-      {/* Problem Statement */}
+      {/* Challenges Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-red-400 to-purple-300 bg-clip-text text-transparent mb-8">
-            Challenges Faced
+            ❌ Challenges Faced
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             {[
               {
-                title: "Interoperability",
-                content: "Integration challenges between modern IoT devices and legacy scientific instruments",
-                icon: <FiServer className="text-2xl text-red-400" />
+                title: "Inconsistent User Experience",
+                content: "Users experienced varying performance and layout issues across devices and browsers.",
+                icon: <FiTool className="text-2xl text-red-400" />
               },
               {
-                title: "Firmware Optimization",
-                content: "Outdated firmware incompatible with modern sensor requirements",
-                icon: <FiTool className="text-2xl text-purple-400" />
+                title: "Slow Page Loads",
+                content: "Heavy images and unoptimized content led to slow loading times and frustrated shoppers.",
+                icon: <FiCloud className="text-2xl text-purple-400" />
               },
               {
-                title: "Real-Time Monitoring",
-                content: "Lack of remote monitoring capabilities for critical parameters",
-                icon: <FiCloud className="text-2xl text-blue-400" />
+                title: "Complex Inventory Management",
+                content: "Keeping track of a large catalog of pet products required a dynamic and scalable solution.",
+                icon: <FiShoppingCart className="text-2xl text-red-400" />
               },
               {
-                title: "Cost Efficiency",
-                content: "Budget constraints requiring cost-effective scalable solutions",
-                icon: <FiCpu className="text-2xl text-red-400" />
+                title: "Limited Payment Integration",
+                content: "Multiple payment gateways were needed to accommodate diverse customer preferences.",
+                icon: <FiCpu className="text-2xl text-purple-400" />
               }
             ].map((item, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
@@ -90,55 +69,35 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Our Solution */}
+      {/* Implemented Solutions Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-purple-200 bg-clip-text text-transparent mb-8">
-            Implemented Solutions
+            ✅ Implemented Solutions
           </h2>
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="space-y-8">
               {[
-                {
-                  title: "Legacy System Integration",
-                  content: "Custom integration layer for seamless data transfer between old and new systems"
-                },
-                {
-                  title: "Firmware Modernization",
-                  content: "FreeRTOS implementation for real-time synchronization"
-                },
-                {
-                  title: "Monitoring Algorithms",
-                  content: "Advanced protocols for immediate parameter feedback"
-                }
+                "Responsive design for seamless multi-device experience",
+                "Optimized image loading and caching strategies",
+                "Dynamic inventory management system for real-time updates"
               ].map((item, index) => (
                 <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
                   <div className="border-l-4 border-purple-400 pl-4">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-300">{item.content}</p>
+                    <p className="text-gray-300">{item}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="space-y-8">
               {[
-                {
-                  title: "Rapid Prototyping",
-                  content: "Arduino/Raspberry Pi testing platforms for fast iteration"
-                },
-                {
-                  title: "Cost Optimization",
-                  content: "Component selection balancing reliability and affordability"
-                },
-                {
-                  title: "Cloud Integration",
-                  content: "AWS IoT implementation for remote monitoring"
-                }
+                "Integrated multiple secure payment gateways",
+                "User review and rating system for enhanced trust",
+                "SEO-optimized storefront to drive organic traffic"
               ].map((item, index) => (
                 <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
-                  <div className="border-l-4 border-blue-400 pl-4">
-                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-gray-300">{item.content}</p>
+                  <div className="border-l-4 border-purple-400 pl-4">
+                    <p className="text-gray-300">{item}</p>
                   </div>
                 </div>
               ))}
@@ -147,34 +106,43 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Tech Stack */}
+      {/* Technology Stack Section */}
       <section className="py-16 px-6 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-300 to-red-200 bg-clip-text text-transparent mb-8">
-            Technology Stack
+          <h2 className="text-3xl font-bold bg-gradient-to-r p-2 from-purple-300 to-blue-200 bg-clip-text text-transparent mb-8">
+            💻 Technology Stack
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                category: "Firmware Development",
-                items: ["C/Python/Assembly", "FreeRTOS", "STM32CubeMX", "IAR Embedded Workbench"],
+                items: [
+                  "React.js + Next.js (App Router), Tailwind CSS",
+                  "Gatsby/Next.js for SEO optimization",
+                  "RESTful APIs for dynamic content",
+                  "Redux for state management"
+                ],
                 color: "purple"
               },
               {
-                category: "Hardware Design",
-                items: ["Altium Designer", "ESP32/nRF52840", "Bluetooth/Wi-Fi/Zigbee", "Advanced Sensors"],
-                color: "blue"
+                items: [
+                  "Node.js, Express.js",
+                  "MongoDB for inventory and user data",
+                  "Stripe, PayPal for payment integration",
+                  "AWS for hosting and storage"
+                ],
+                color: "purple"
               },
               {
-                category: "Cloud & Networking",
-                items: ["AWS IoT Core", "MQTT/HTTP", "Raspberry Pi", "LTSpice/TINA-TI"],
-                color: "red"
+                items: [
+                  "Google Analytics for performance tracking",
+                  "Contentful or Strapi for CMS",
+                  "Firebase for real-time updates",
+                  "Vercel for fast deployment"
+                ],
+                color: "purple"
               }
             ].map((section, index) => (
               <div key={index} className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl border border-white/10">
-                <h3 className={`text-xl font-semibold mb-4 text-${section.color}-300`}>
-                  {section.category}
-                </h3>
                 <ul className="space-y-3 text-gray-300">
                   {section.items.map((item, idx) => (
                     <li key={idx} className="flex items-center gap-2">
@@ -189,36 +157,32 @@ Revolutionized bio-science research with modern IoT technology.
         </div>
       </section>
 
-      {/* Why Choose Techrover */}
-      <section className="py-16 px-6 lg:px-24">
+      {/* Why Choose infinoid Section */}
+      <section className="py-16 px-6 lg:px-24 mb-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-red-200 bg-clip-text text-transparent mb-12">
-            Why Techrover™?
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-300 to-orange-200 bg-clip-text text-transparent mb-12">
+            🌟 Why Infinoid?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                title: "IoT Expertise",
-                content: "150+ successful deployments",
-                color: "from-purple-500 to-blue-500"
+                title: "Personalized Shopping Experience",
+                content: "Tailored recommendations and a user-friendly interface ensure each pet owner finds what they need."
               },
               {
-                title: "Rapid Development",
-                content: "40% faster time-to-market",
-                color: "from-blue-500 to-red-500"
+                title: "Seamless Multi-Device Integration",
+                content: "Optimized for both mobile and desktop, ensuring a consistent experience across platforms."
               },
               {
-                title: "Cost Efficiency",
-                content: "30% reduced development costs",
-                color: "from-red-500 to-purple-500"
+                title: "Secure & Scalable Architecture",
+                content: "Built to handle high traffic and secure transactions, ensuring trust and reliability."
               },
               {
-                title: "Cross-Disciplinary",
-                content: "Full-stack hardware/software solutions",
-                color: "from-purple-500 to-red-500"
+                title: "Comprehensive Product Catalog",
+                content: "From pet food to accessories, our platform offers an extensive range of quality products."
               }
             ].map((item, index) => (
-              <div key={index} className={`bg-gradient-to-br ${item.color} p-px rounded-2xl`}>
+              <div key={index} className="bg-gradient-to-br from-purple-500 to-blue-500 p-px rounded-2xl">
                 <div className="bg-gray-900 rounded-2xl p-6 h-full">
                   <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                   <p className="text-gray-300">{item.content}</p>
@@ -232,4 +196,4 @@ Revolutionized bio-science research with modern IoT technology.
   );
 };
 
-export default CaseStudy;
+export default OnlinePetShopCaseStudy;

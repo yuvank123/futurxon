@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const fadeUpVariant = {
@@ -17,41 +17,128 @@ const fadeUpVariant = {
 };
 
 const Positions = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedRole, setSelectedRole] = useState("");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState({
+    loading: false,
+    success: false,
+    error: null
+  });
+
+  const openModal = (role) => {
+    setSelectedRole(role);
+    setShowModal(true);
+    setFormData({ name: '', email: '', message: '' });
+    setStatus({ loading: false, success: false, error: null });
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedRole("");
+    setFormData({ name: '', email: '', message: '' });
+    setStatus({ loading: false, success: false, error: null });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ loading: true, success: false, error: null });
+
+    try {
+      console.log('Submitting application:', {
+        position: selectedRole,
+        ...formData
+      });
+
+      const response = await fetch('https://infinoid.com/backend/process_application.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        mode: 'cors',
+        body: JSON.stringify({
+          position: selectedRole,
+          ...formData
+        })
+      });
+
+      // First try to get the response as text
+      const responseText = await response.text();
+      console.log('Raw response:', responseText);
+
+      // Try to parse it as JSON
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (error) {
+        console.error('Failed to parse response:', responseText);
+        throw new Error('Invalid server response');
+      }
+
+      if (!response.ok) {
+        throw new Error(data.message || `Server error: ${response.status}`);
+      }
+
+      if (data.success) {
+        setStatus({ loading: false, success: true, error: null });
+        // Show success message for 2 seconds before closing
+        setTimeout(closeModal, 2000);
+      } else {
+        throw new Error(data.message || 'Application submission failed');
+      }
+
+    } catch (error) {
+      console.error('Application submission error:', error);
+      setStatus({
+        loading: false,
+        success: false,
+        error: error.message || 'Failed to submit application. Please try again.'
+      });
+    }
+  };
+
   const positions = [
     {
       title: "Salesforce Developer",
       experience: "Experience: 0-3 Years",
-      openings: "Openings: 5",
       skills: ["Aura, LWC", "SOQL", "Flow, Apex", "VS Code", "Git"],
     },
     {
       title: "Odoo Developer",
       experience: "Experience: 1-5 Years",
-      openings: "Openings: 3",
       skills: ["Git, JavaScript", "SQL", "HTML, CSS", "PHP", "Python"],
     },
     {
       title: "React Developer",
       experience: "Experience: 2-6 Years",
-      openings: "Openings: 4",
       skills: ["React.js", "Redux", "JavaScript", "CSS", "Git"],
     },
     {
       title: "Python Developer",
       experience: "Experience: 1-4 Years",
-      openings: "Openings: 3",
       skills: ["Django", "Flask", "SQL", "REST API", "Git"],
     },
     {
       title: "Data Scientist",
       experience: "Experience: 2-5 Years",
-      openings: "Openings: 2",
       skills: ["Python", "Machine Learning", "Deep Learning", "SQL", "Pandas"],
     },
     {
       title: "Full Stack Developer",
       experience: "Experience: 3-7 Years",
-      openings: "Openings: 5",
       skills: ["Node.js", "React.js", "MongoDB", "Express.js", "Docker"],
     },
   ];
@@ -102,19 +189,21 @@ const Positions = () => {
 
                   <div className="mt-3">
                     <p className="text-md font-bold text-blue-200/80">{position.experience}</p>
-                    <p className="text-md font-bold text-blue-200/80">{position.openings}</p>
                   </div>
 
-                  <h2 className="mt-4 space-y-2 text-base text-white">
+                  <div className="mt-4 space-y-2 text-base text-white">
                     {position.skills.map((skill, i) => (
-                      <h2 key={i} className="flex items-center space-x-2">
+                      <div key={i} className="flex items-center space-x-2">
                         <span className="w-2 h-2 rounded-full bg-blue-400"></span>
                         <span>{skill}</span>
-                      </h2>
+                      </div>
                     ))}
-                  </h2>
+                  </div>
 
-                  <button className="mt-6 w-full py-2 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg">
+                  <button
+                    onClick={() => openModal(position.title)}
+                    className="mt-6 w-full py-2 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:scale-105 transition-all duration-300 shadow-lg"
+                  >
                     Apply Now
                   </button>
                 </div>
@@ -130,6 +219,62 @@ const Positions = () => {
           </button>
         </motion.div>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+          <div className="bg-white text-black rounded-2xl w-full max-w-md p-8 relative shadow-2xl">
+            <button onClick={closeModal} className="absolute top-4 right-4 text-gray-600 hover:text-red-600">
+              <X size={24} />
+            </button>
+            <h2 className="text-2xl font-bold mb-4">Apply for {selectedRole}</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                required
+                className="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                required
+                className="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Why are you a good fit?"
+                rows="4"
+                required
+                className="w-full border px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              ></textarea>
+              
+              {status.error && (
+                <div className="text-red-500 text-sm">{status.error}</div>
+              )}
+              {status.success && (
+                <div className="text-green-500 text-sm">Application submitted successfully!</div>
+              )}
+
+              <button
+                type="submit"
+                disabled={status.loading}
+                className="w-full py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:scale-105 transition-all duration-300 disabled:opacity-50"
+              >
+                {status.loading ? 'Submitting...' : 'Submit Application'}
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

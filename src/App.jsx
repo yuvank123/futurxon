@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/homepage';
 import Aboutus from './pages/Aboutus/aboutus';
@@ -18,14 +18,30 @@ import Secondportfolio from './pages/CaseStudies/CaseSections/second'
 import Threeportfolio from './pages/CaseStudies/CaseSections/three'
 import Fourportfolio from './pages/CaseStudies/CaseSections/four'
 import Fiveportfolio from './pages/CaseStudies/CaseSections/five'
-import Sixportfolio from './pages/CaseStudies/CaseSections/six'
 import Ourclient from './pages/ourclients/OurClients'
 import Career from './pages/Career/career';
 import Whats from '../public/images/whatsapp.svg'
 import PP from './pages/privacy-policy/policy';
-
+import Loader from './Loader';
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500); // simulate load time
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+        <Loader />
+      </div>
+    );
+  }
   return (
     <div className="relative min-h-screen overflow-hidden">
       <Routes>
@@ -47,7 +63,6 @@ const App = () => {
         <Route path='/three' element={<Threeportfolio />} />
         <Route path='/four' element={<Fourportfolio />} />
         <Route path='/five' element={<Fiveportfolio />} />
-        <Route path='/six' element={<Sixportfolio />} />
         <Route path='/clients' element={<Ourclient />} />
         <Route path='/career' element={<Career />} />
         <Route path='/policy' element={<PP />} />
