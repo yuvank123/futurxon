@@ -1,10 +1,13 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import Loader from './Loader';
+import Loader from './Loader';
 import Whats from '../public/images/whatsapp.svg';
 
-// Lazy load all components
-const Homepage = lazy(() => import('./pages/homepage'));
+// Priority routes loaded with higher priority
+const Homepage = lazy(() => import(/* webpackPreload: true */ './pages/homepage'));
+const Navbar = lazy(() => import(/* webpackPreload: true */ './components/navbar'));
+
+// Other routes with standard loading
 const Aboutus = lazy(() => import('./pages/Aboutus/aboutus'));
 const Webdevpage = lazy(() => import('./pages/Service/webdev'));
 const MobileDev = lazy(() => import('./pages/Service/mobiledev'));
@@ -26,59 +29,130 @@ const Ourclient = lazy(() => import('./pages/ourclients/OurClients'));
 const Career = lazy(() => import('./pages/Career/career'));
 const PP = lazy(() => import('./pages/privacy-policy/policy'));
 
+const RouteWrapper = ({ children }) => (
+  <Suspense fallback={
+    <div className="min-h-screen flex justify-center items-center">
+      <Loader />
+    </div>
+  }>
+    {children}
+  </Suspense>
+);
+
 const App = () => {
-  // const [isLoading, setIsLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1500); // simulate load time
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
-  // if (isLoading) {
-  //   return (
-  //     <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
-  //       <Loader />
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="relative min-h-screen overflow-hidden">
-      {/* <Suspense fallback={
-        <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
-          <Loader />
-        </div>
-      }> */}
-        <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/about-company' element={<Aboutus />} />
-          <Route path='/services/web-dev' element={<Webdevpage />} />
-          <Route path='/services/mobile-apps' element={<MobileDev />} />
-          <Route path='/services/devops' element={<Devops />} />
-          <Route path='/services/cloud' element={<Cloud />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/services/ui-ux' element={<UIUX />} />
-          <Route path='/services/ai' element={<AIsolution />} />
-          <Route path='/services/blockchain' element={<Blockchain />} />
-          <Route path='/services/cybersecurity' element={<Cybersecurity />} />
-          <Route path='/services/arvr' element={<Arvr />} />
-          <Route path='/case-studies' element={<Casestudies />} />
-          <Route path='/first' element={<Firstportfolio />} />
-          <Route path='/second' element={<Secondportfolio />} />
-          <Route path='/three' element={<Threeportfolio />} />
-          <Route path='/four' element={<Fourportfolio />} />
-          <Route path='/five' element={<Fiveportfolio />} />
-          <Route path='/clients' element={<Ourclient />} />
-          <Route path='/career' element={<Career />} />
-          <Route path='/policy' element={<PP />} />
-        </Routes>
-      {/* </Suspense> */}
-      {/* WhatsApp Floating Icon */}
+      <Routes>
+        <Route path='/' element={
+          <RouteWrapper>
+            <Homepage />
+          </RouteWrapper>
+        } />
+        <Route path='/about-company' element={
+          <RouteWrapper>
+            <Aboutus />
+          </RouteWrapper>
+        } />
+        <Route path='/services/web-dev' element={
+          <RouteWrapper>
+            <Webdevpage />
+          </RouteWrapper>
+        } />
+        <Route path='/services/mobile-apps' element={
+          <RouteWrapper>
+            <MobileDev />
+          </RouteWrapper>
+        } />
+        <Route path='/services/devops' element={
+          <RouteWrapper>
+            <Devops />
+          </RouteWrapper>
+        } />
+        <Route path='/services/cloud' element={
+          <RouteWrapper>
+            <Cloud />
+          </RouteWrapper>
+        } />
+        <Route path='/contact' element={
+          <RouteWrapper>
+            <Contact />
+          </RouteWrapper>
+        } />
+        <Route path='/services/ui-ux' element={
+          <RouteWrapper>
+            <UIUX />
+          </RouteWrapper>
+        } />
+        <Route path='/services/ai' element={
+          <RouteWrapper>
+            <AIsolution />
+          </RouteWrapper>
+        } />
+        <Route path='/services/blockchain' element={
+          <RouteWrapper>
+            <Blockchain />
+          </RouteWrapper>
+        } />
+        <Route path='/services/cybersecurity' element={
+          <RouteWrapper>
+            <Cybersecurity />
+          </RouteWrapper>
+        } />
+        <Route path='/services/arvr' element={
+          <RouteWrapper>
+            <Arvr />
+          </RouteWrapper>
+        } />
+        <Route path='/case-studies' element={
+          <RouteWrapper>
+            <Casestudies />
+          </RouteWrapper>
+        } />
+        <Route path='/first' element={
+          <RouteWrapper>
+            <Firstportfolio />
+          </RouteWrapper>
+        } />
+        <Route path='/second' element={
+          <RouteWrapper>
+            <Secondportfolio />
+          </RouteWrapper>
+        } />
+        <Route path='/three' element={
+          <RouteWrapper>
+            <Threeportfolio />
+          </RouteWrapper>
+        } />
+        <Route path='/four' element={
+          <RouteWrapper>
+            <Fourportfolio />
+          </RouteWrapper>
+        } />
+        <Route path='/five' element={
+          <RouteWrapper>
+            <Fiveportfolio />
+          </RouteWrapper>
+        } />
+        <Route path='/clients' element={
+          <RouteWrapper>
+            <Ourclient />
+          </RouteWrapper>
+        } />
+        <Route path='/career' element={
+          <RouteWrapper>
+            <Career />
+          </RouteWrapper>
+        } />
+        <Route path='/policy' element={
+          <RouteWrapper>
+            <PP />
+          </RouteWrapper>
+        } />
+      </Routes>
+
+      {/* WhatsApp Icon - Keep outside Suspense for immediate visibility */}
       <a
-        href='https://wa.link/5606l7' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
+        href='https://wa.link/5606l7'
         target='_blank'
         rel='noopener noreferrer'
         className='fixed bottom-6 right-6 z-50 p-2 rounded-full transition-all lg:hover:scale-110 hover:scale-95 md:bottom-8 md:right-8 lg:bottom-10 lg:right-10'
