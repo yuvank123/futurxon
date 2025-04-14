@@ -1,72 +1,81 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Homepage from './pages/homepage';
-import Aboutus from './pages/Aboutus/aboutus';
-import Webdevpage from './pages/Service/webdev';
-import MobileDev from './pages/Service/mobiledev';
-import Devops from './pages/Service/devops';
-import Cloud from './pages/Service/clouddev';
-import UIUX from './pages/Service/UIUXdev';
-import AIsolution from './pages/Service/AIsolution';
-import Blockchain from './pages/Service/blockchain';
-import Cybersecurity from './pages/Service/cybersecurity';
-import Arvr from './pages/Service/ARVR';
-import Contact from './pages/contact/Contactus';
-import Casestudies from './pages/CaseStudies/casestudies';
-import Firstportfolio from './pages/CaseStudies/CaseSections/first'
-import Secondportfolio from './pages/CaseStudies/CaseSections/second'
-import Threeportfolio from './pages/CaseStudies/CaseSections/three'
-import Fourportfolio from './pages/CaseStudies/CaseSections/four'
-import Fiveportfolio from './pages/CaseStudies/CaseSections/five'
-import Ourclient from './pages/ourclients/OurClients'
-import Career from './pages/Career/career';
-import Whats from '../public/images/whatsapp.svg'
-import PP from './pages/privacy-policy/policy';
-import Loader from './Loader';
+// import Loader from './Loader';
+import Whats from '../public/images/whatsapp.svg';
+
+// Lazy load all components
+const Homepage = lazy(() => import('./pages/homepage'));
+const Aboutus = lazy(() => import('./pages/Aboutus/aboutus'));
+const Webdevpage = lazy(() => import('./pages/Service/webdev'));
+const MobileDev = lazy(() => import('./pages/Service/mobiledev'));
+const Devops = lazy(() => import('./pages/Service/devops'));
+const Cloud = lazy(() => import('./pages/Service/clouddev'));
+const UIUX = lazy(() => import('./pages/Service/UIUXdev'));
+const AIsolution = lazy(() => import('./pages/Service/AIsolution'));
+const Blockchain = lazy(() => import('./pages/Service/blockchain'));
+const Cybersecurity = lazy(() => import('./pages/Service/cybersecurity'));
+const Arvr = lazy(() => import('./pages/Service/ARVR'));
+const Contact = lazy(() => import('./pages/contact/Contactus'));
+const Casestudies = lazy(() => import('./pages/CaseStudies/casestudies'));
+const Firstportfolio = lazy(() => import('./pages/CaseStudies/CaseSections/first'));
+const Secondportfolio = lazy(() => import('./pages/CaseStudies/CaseSections/second'));
+const Threeportfolio = lazy(() => import('./pages/CaseStudies/CaseSections/three'));
+const Fourportfolio = lazy(() => import('./pages/CaseStudies/CaseSections/four'));
+const Fiveportfolio = lazy(() => import('./pages/CaseStudies/CaseSections/five'));
+const Ourclient = lazy(() => import('./pages/ourclients/OurClients'));
+const Career = lazy(() => import('./pages/Career/career'));
+const PP = lazy(() => import('./pages/privacy-policy/policy'));
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // simulate load time
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1500); // simulate load time
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
-        <Loader />
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+  //       <Loader />
+  //     </div>
+  //   );
+  // }
+
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <Routes>
-        <Route path='/' element={<Homepage />} />
-        <Route path='/about-company' element={<Aboutus />} />
-        <Route path='/services/web-dev' element={<Webdevpage />} />
-        <Route path='/services/mobile-apps' element={<MobileDev />} />
-        <Route path='/services/devops' element={<Devops />} />
-        <Route path='/services/cloud' element={<Cloud />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/services/ui-ux' element={<UIUX />} />
-        <Route path='/services/ai' element={<AIsolution />} />
-        <Route path='/services/blockchain' element={<Blockchain />} />
-        <Route path='/services/cybersecurity' element={<Cybersecurity />} />
-        <Route path='/services/arvr' element={<Arvr />} />
-        <Route path='/case-studies' element={<Casestudies />} />
-        <Route path='/first' element={<Firstportfolio />} />
-        <Route path='/second' element={<Secondportfolio />} />
-        <Route path='/three' element={<Threeportfolio />} />
-        <Route path='/four' element={<Fourportfolio />} />
-        <Route path='/five' element={<Fiveportfolio />} />
-        <Route path='/clients' element={<Ourclient />} />
-        <Route path='/career' element={<Career />} />
-        <Route path='/policy' element={<PP />} />
-      </Routes>
+      {/* <Suspense fallback={
+        <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+          <Loader />
+        </div>
+      }> */}
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/about-company' element={<Aboutus />} />
+          <Route path='/services/web-dev' element={<Webdevpage />} />
+          <Route path='/services/mobile-apps' element={<MobileDev />} />
+          <Route path='/services/devops' element={<Devops />} />
+          <Route path='/services/cloud' element={<Cloud />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/services/ui-ux' element={<UIUX />} />
+          <Route path='/services/ai' element={<AIsolution />} />
+          <Route path='/services/blockchain' element={<Blockchain />} />
+          <Route path='/services/cybersecurity' element={<Cybersecurity />} />
+          <Route path='/services/arvr' element={<Arvr />} />
+          <Route path='/case-studies' element={<Casestudies />} />
+          <Route path='/first' element={<Firstportfolio />} />
+          <Route path='/second' element={<Secondportfolio />} />
+          <Route path='/three' element={<Threeportfolio />} />
+          <Route path='/four' element={<Fourportfolio />} />
+          <Route path='/five' element={<Fiveportfolio />} />
+          <Route path='/clients' element={<Ourclient />} />
+          <Route path='/career' element={<Career />} />
+          <Route path='/policy' element={<PP />} />
+        </Routes>
+      {/* </Suspense> */}
       {/* WhatsApp Floating Icon */}
       <a
         href='https://wa.link/5606l7' // Replace 'yourwhatsappnumber' with your actual WhatsApp number
