@@ -83,16 +83,33 @@ const Mapping = () => {
 
         {/* CTA Button */}
         <motion.div
-          variants={variants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex justify-center mt-6"
-        >
-          <button className="w-11/12 sm:w-2/3 md:w-1/3 px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-800 to-purple-900 rounded-4xl text-gray-300 font-semibold hover:from-blue-900 hover:to-purple-800 transition-all hover:scale-105 hover:shadow-xl border border-gray-700/50">
-            Initialize Network Scan
-          </button>
-        </motion.div>
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-center flex justify-center items-center"
+                >
+                  <a href="/contact" aria-label="Start Free Trial">
+                    <button className="relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white font-semibold 
+                    hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300
+                    flex items-center gap-3 group overflow-hidden ">
+                      <span className="relative z-10">Instialize Network Scan</span>
+                      <svg
+                        className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+        
+                      {/* Button Hover Effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 animate-shine" />
+                      </div>
+                    </button>
+                  </a>
+                </motion.div>
       </div>
 
       {/* Custom Animations */}

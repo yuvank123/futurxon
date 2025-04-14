@@ -24,7 +24,7 @@ const Footer = () => {
           <p className="text-gray-400">Innovating the Future</p>
           <div className="flex gap-4 mt-2">
             <a
-              href="https://www.linkedin.com/company/infinoid/"
+              href="https://www.linkedin.com/company/infinoid-technologies/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
             >

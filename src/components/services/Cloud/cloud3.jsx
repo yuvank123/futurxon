@@ -1,5 +1,5 @@
 import React from "react";
-import Trackpng from "../../../../public/images/screen.png"
+import Trackpng from "../../../../public/images/8.svg"
 
 const devopsProcess = () => {
   return (

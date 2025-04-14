@@ -1,5 +1,5 @@
 import React from "react";
-import Screenpng from '../../../../public/images/screen.png';
+import Screenpng from '../../../../public/images/mobile.png';
 
 const MobileAppDev = () => {
   return (
@@ -19,11 +19,11 @@ const MobileAppDev = () => {
           pixel-perfect design for iOS & Android platforms
         </p>
         
-        <button className="group px-5 py-2 xs:px-6 xs:py-3 sm:px-8 sm:py-4 md:px-8 md:py-4 text-base xs:text-lg sm:text-lg font-semibold bg-gradient-to-r from-purple-600 to-purple-400 hover:from-purple-500/80 hover:to-pink-400/80 transition-all duration-300 rounded-lg sm:rounded-xl shadow-md hover:shadow-lg sm:shadow-lg sm:hover:shadow-xl shadow-purple-900/30 hover:shadow-pink-900/30 transform hover:scale-[1.02] active:scale-95">
+        <a href="/contact" className="group px-5 py-2 xs:px-6 xs:py-3 sm:px-8 sm:py-4 md:px-8 md:py-4 text-base xs:text-lg sm:text-lg font-semibold bg-gradient-to-r from-purple-600 to-purple-400 hover:from-purple-500/80 hover:to-pink-400/80 transition-all duration-300 rounded-lg sm:rounded-xl shadow-md hover:shadow-lg sm:shadow-lg sm:hover:shadow-xl shadow-purple-900/30 hover:shadow-pink-900/30 transform hover:scale-[1.02] active:scale-95">
           <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
             Start Your Journey →
           </span>
-        </button>
+        </a>
       </div>
 
       {/* Mobile Mockup Section */}

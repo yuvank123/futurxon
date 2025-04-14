@@ -79,13 +79,13 @@ const FullScreenCyberServices = () => {
           <span className="text-purple-300"> neural network monitoring</span> in a seamless digital armor.
         </p>
 
-        <button className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-4 md:px-12 md:py-5 text-lg sm:text-xl font-semibold rounded-full lg:rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
+        <a href="/contact" className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-10 sm:py-4 md:px-12 md:py-5 text-lg sm:text-xl font-semibold rounded-full lg:rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
           <span className="relative z-10 flex items-center gap-3">
             <ShieldIcon className="w-6 h-6 sm:w-7 sm:h-7 text-pink-200 animate-pulse" />
             <span className="text-shadow">Activate Protection</span>
           </span>
           <div className="absolute inset-0 rounded-full border-2 border-pink-400/30 animate-border-glow" />
-        </button>
+        </a>
       </div>
 
       {/* Animation Styles */}

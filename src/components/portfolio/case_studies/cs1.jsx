@@ -15,7 +15,7 @@ const AboutUs = () => {
             description: "Discover our next-generation AR/VR platform that delivers real-time 3D visualization, AR integration, and VR-enabled simulations for a truly immersive digital experience."
         },
         {
-            title: "Online Pet Shop",
+            title: " FurryCart: E-Commerce for Pets",
             link: "/three",
             bgImage: Csbg2,
             subtitle: "Revolutionizing Pet Care Shopping",

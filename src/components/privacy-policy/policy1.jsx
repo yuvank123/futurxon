@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
         
         {/* Content */}
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-center bg-gradient-to-r from-purple-400 via-blue-300 to-indigo-300 bg-clip-text text-transparent mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-center p-2 bg-gradient-to-r from-purple-400 via-blue-300 to-indigo-300 bg-clip-text text-transparent mb-8">
             Infinoid Technologies Privacy Policy
           </h1>
           

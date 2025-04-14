@@ -5,49 +5,54 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // For stylish icons
+import { motion } from "framer-motion"; // <-- Added import for motion
 import T1 from "../../../../public/images/t1.png";
 import T2 from "../../../../public/images/t2.png";
 import T3 from "../../../../public/images/t3.png";
 import T4 from "../../../../public/images/t4.png";
 import T5 from "../../../../public/images/t5.png";
+import T6 from "../../../../public/images/t6.png";
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Barbra Mwendwa",
-      quote:
-        "Working with Infinoid Technologies felt like having an in-house team. Despite the time zone difference, their engineers were always responsive, and we never had to wait for updates. The project delivery was spot-on, and the support team is incredibly proactive.",
-      img: T1,
-    },
-    {
       name: "Dr.Munish Jindal",
+      title: "Founding President : MentorX",
       quote:
-        "Infinoid brought our creative concepts to life with amazing UI/UX and seamless backend support. They managed everything from wireframes to launch. Super impressed by their dedication and communication!",
+        "Infinoid transformed our rough idea into an outstanding digital experience with clear communication and exceptional UI/UX.Their team's responsiveness and genuine commitment to quality made the entire process smooth and enjoyable.",
       img: T2,
     },
     {
       name: "Vivek Kumar ",
       title: "Founder & CTO, FMPG ",
-      quote:"We went to Infinoid mainly because of the pricing, but stayed because of their work. The output was solid and didn’t feel like 'budget work'. Great value for startups like ours.",
+      quote: "We went to Infinoid mainly because of the pricing, but stayed because of their work. The output was solid and didn’t feel like 'budget work'. Great value for startups like ours.",
       img: T3,
     },
     {
+      name: "Rajeev Kumar",
+      title: "ARD Secure Facility Management LLP",
+      quote:
+        "Working with Infinoid Technologies felt like having an in-house team. Despite the time zone difference, their engineers were always responsive, and we never had to wait for updates. The project delivery was spot-on, and the support team is incredibly proactive.",
+      img: T1,
+    },
+    {
       name: "Dr.Nancy Juneja ",
-      title: "Founder : Revup Skills & Mentor of Change- Niti Aayog, Government of India ",
-      quote:"Honestly, I wasn’t expecting such professionalism from such a young team. They know their stuff, especially in design and frontend dev. Very open to feedback and super quick to respond.",
+      title: "Founder : Revup Skills",
+      quote: "Honestly, I wasn’t expecting such professionalism from such a young team. They know their stuff, especially in design and frontend dev. Very open to feedback and super quick to respond.",
       img: T4,
     },
     {
       name: "Kapil Jain ",
-      title: "Founder & Ceo  ",
-      quote:"The team was always a WhatsApp or email away. Even on weekends, if something critical came up, they were on it. That kind of responsiveness really helped during our launch week.",
+      title: "Founder & Ceo k.sjain & co.",
+      quote: "The team was always a WhatsApp or email away. Even on weekends, if something critical came up, they were on it. That kind of responsiveness really helped during our launch week.",
       img: T5,
     },
     {
-      name: "Abhishek Khanna ",
-      quote:"From day one, I liked how clear and transparent the team was. No beating around the bush — they told us what’s possible, gave timelines, and stuck to them. Our Shopify site turned out even better than we imagined.",
-      img: T1,
-    }
+      name: "Vishnu Chandran CS",
+      title: "Managing-Director:360 DEGREE SIMS PRIVATE LIMITED",
+      quote: "Infinoid Technologies exceeded our expectations by designing modern websites and streamlining our internal operations with smart automation.Their clear communication, timely delivery, and professional approach made the entire experience smooth and highly recommended.",
+      img: T6,
+    },
   ];
 
   return (
@@ -55,7 +60,7 @@ const Testimonials = () => {
       <div className="relative z-10 max-w-7xl w-full">
         {/* Header Section */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-6xl md:text-8xl font-bold bg-gradient-to-r  from-purple-800 via-purple-300  to-white bg-clip-text text-transparent font-mono tracking-tighter">
+          <h2 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-800 via-purple-300 to-white bg-clip-text text-transparent font-mono tracking-tighter">
             Trusted By Global Businesses
           </h2>
           <p className="text-lg text-blue-300/70 max-w-2xl mx-auto">
@@ -104,7 +109,12 @@ const Testimonials = () => {
                         <p className="text-sm text-blue-300/70">{testimonial.title}</p>
                       </div>
                     </div>
-                    <h4 className="text-blue-200/90 font-medium mt-6 mb-3">{testimonial.heading}</h4>
+                    {/* Optional Heading - Remove or add as needed */}
+                    {testimonial.heading && (
+                      <h4 className="text-blue-200/90 font-medium mt-6 mb-3">
+                        {testimonial.heading}
+                      </h4>
+                    )}
                     <p className="text-purple-100/80 leading-relaxed italic relative pl-4 before:absolute before:left-0 before:top-0 before:h-full before:w-1 before:bg-gradient-to-b from-purple-600 to-blue-600">
                       "{testimonial.quote}"
                     </p>
@@ -133,16 +143,37 @@ const Testimonials = () => {
           </button>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex justify-center mt-12">
-          <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 relative overflow-hidden group border border-white/10">
-            <span className="relative z-10">CONNECT WITH EXPERTS</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
-        </div>
+        {/* Button Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center flex justify-center items-center mt-10"
+        >
+          <a href="/contact" aria-label="Start Free Trial">
+            <button className="relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white font-semibold 
+                    hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300
+                    flex items-center gap-3 group overflow-hidden">
+              <span className="relative z-10">Connect With Us</span>
+              <svg
+                className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+              {/* Button Hover Effect */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20" />
+              </div>
+            </button>
+          </a>
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default Testimonials
+export default Testimonials;

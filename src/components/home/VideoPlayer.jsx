@@ -3,10 +3,9 @@ import AboutVideo from '../../../public/video/aboutvideo.mp4';
 
 const VideoPlayer = () => {
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(true); // Initially muted for autoplay compatibility
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [quality, setQuality] = useState('720p'); // UI only
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [showControls, setShowControls] = useState(false);
@@ -75,11 +74,13 @@ const VideoPlayer = () => {
     }
     hideTimeoutRef.current = setTimeout(() => {
       setShowControls(false);
-    }, 3000); // 3 seconds
+    }, 3000);
   };
 
   useEffect(() => {
     const video = videoRef.current;
+    // Autoplay video on mount
+    video.play();
     video.addEventListener('timeupdate', handleTimeUpdate);
     video.addEventListener('loadedmetadata', handleLoadedMetadata);
     return () => {
@@ -90,11 +91,10 @@ const VideoPlayer = () => {
   }, []);
 
   return (
-    <div
-      className="w-full md:w-[90%] xl:w-[80%] aspect-video relative overflow-hidden rounded-xl md:rounded-3xl shadow-2xl group"
-    >
+    <div className="w-full md:w-[90%] xl:w-[80%] aspect-video relative overflow-hidden rounded-xl md:rounded-3xl shadow-2xl group">
       <video
         ref={videoRef}
+        autoPlay
         loop
         playsInline
         onClick={togglePlay}
@@ -112,7 +112,6 @@ const VideoPlayer = () => {
           md:opacity-0 md:scale-100 md:group-hover:opacity-100 md:group-hover:scale-105`}
       >
         <div className="flex flex-col items-center bg-black/40 backdrop-blur-xl px-8 py-2 rounded-full shadow-xl border border-purple-500/20 space-y-1 w-[85vw] md:w-[60vw] max-w-[700px]">
-
           {/* Top row */}
           <div className="flex justify-between items-center w-full space-x-3 px-2">
             <button onClick={togglePlay} title="Play/Pause" className="text-purple-400 hover:text-purple-300">
@@ -126,20 +125,21 @@ const VideoPlayer = () => {
                 </svg>
               )}
             </button>
-
             <button onClick={toggleMute} title="Mute/Unmute" className="text-purple-400 hover:text-purple-300">
               {isMuted ? (
+                // New muted icon: crossed-out speaker
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9v6h4l5 5V4l-5 5H9z" />
+                  <line x1="3" y1="3" x2="21" y2="21" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
                 </svg>
               ) : (
+                // New unmuted icon: speaker with sound wave
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 9v6h4l5 5V4l-5 5H9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 9.354a4 4 0 010 5.292" />
                 </svg>
               )}
             </button>
-
             <button onClick={toggleFullscreen} title="Fullscreen" className="text-purple-400 hover:text-purple-300">
               {isFullscreen ? (
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -151,22 +151,10 @@ const VideoPlayer = () => {
                 </svg>
               )}
             </button>
-
-            <select
-              value={quality}
-              onChange={(e) => setQuality(e.target.value)}
-              className="bg-purple-900/50 text-purple-100 text-xs border border-purple-500/30 rounded px-2 py-1"
-            >
-              <option value="480p">480p</option>
-              <option value="720p">720p</option>
-              <option value="1080p">1080p</option>
-            </select>
-
             <span className="text-purple-200 text-xs md:text-sm font-mono">
               {formatTime(currentTime)} / {formatTime(duration)}
             </span>
           </div>
-
           {/* Progress Bar */}
           <div
             className="w-full h-1.5 bg-purple-900/30 rounded-full overflow-hidden cursor-pointer"

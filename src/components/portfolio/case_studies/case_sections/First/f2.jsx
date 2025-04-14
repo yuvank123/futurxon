@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiServer, FiCpu, FiWifi, FiCloud, FiTool } from 'react-icons/fi';
+import OverviewImg2 from '../../../../../../public/images/1.png'
 
 const BusinessDashboardCaseStudy = () => {
   return (
@@ -8,7 +9,7 @@ const BusinessDashboardCaseStudy = () => {
       <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
-            Business Analytical Dashboard – Case Study by Infinoid
+            Business Analytical Dashboard
           </h1>
         </div>
       </section>
@@ -25,6 +26,14 @@ const BusinessDashboardCaseStudy = () => {
           <p className="text-xl italic text-purple-300">
             "From scattered data to streamlined intelligence — infinoid turns insights into impact."
           </p>
+        </div>
+        {/* Overview Image */}
+        <div className="flex justify-center mt-20">
+          <img
+            src={OverviewImg2}
+            alt="AR/VR Overview"
+            className="rounded-2xl w-full max-w-4xl"
+          />
         </div>
       </section>
 

@@ -1,18 +1,18 @@
 import React from "react";
+import Contactus from "../../../public/images/contactus.jpeg";
 
 const Contact1 = () => {
     return (
       <div className="relative h-[80vh] flex items-center justify-center text-white">
         {/* Background Image */}
         <img
-          data-src="https://assets.bacancytechnology.com/main-boot-5/images/contact-us/banner.jpg?v-1"
-          src="https://assets.bacancytechnology.com/main-boot-5/images/contact-us/banner.jpg?v-1"
+          src={Contactus}
           alt="Let us know what's on your mind"
           title="We would love to hear from you."
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         {/* Text Content */}
         <div className="relative text-center leading-1">
           <h1 className="text-5xl font-bold">Let us hear your ideas and insights.</h1>

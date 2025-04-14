@@ -170,29 +170,34 @@ const Offering = () => {
 
         {/* CTA Section */}
         <motion.div
-          variants={fadeUpVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex justify-center mt-16"
-        >
-          <button className="cta-button relative px-8 py-4 text-white rounded-xl font-semibold overflow-hidden">
-            <span className="relative z-10 flex items-center gap-3">
-              Explore Solutions
-              <svg 
-                className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-100 group-hover:opacity-0 transition-opacity duration-300" />
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
-        </motion.div>
-      </div>
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="text-center flex justify-center items-center mt-10"
+                >
+                  <a href="/contact" aria-label="Start Free Trial">
+                    <button className="relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white font-semibold 
+                    hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300
+                    flex items-center gap-3 group overflow-hidden ">
+                      <span className="relative z-10">Explore Solutions</span>
+                      <svg
+                        className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+        
+                      {/* Button Hover Effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 animate-shine" />
+                      </div>
+                    </button>
+                  </a>
+                </motion.div>      
+                </div>
 
       <style jsx global>{`
         .feature-icon {

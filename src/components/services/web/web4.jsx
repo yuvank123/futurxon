@@ -36,7 +36,7 @@ const WebTechnologyStack = () => {
   ];
 
   return (
-    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       
       <div className="max-w-7xl mx-auto">
         {/* Header */}

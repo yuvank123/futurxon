@@ -74,9 +74,9 @@ const TitlePage = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <a href="/contact" aria-label="Contact Us">
+        <a href="/contact" aria-label="Contact-us">
           <button className="px-4 py-2 md:px-6 md:py-3 font-bold bg-blue-600 text-white rounded hover:bg-blue-800 transition-colors duration-300">
-            Get a Free Consultation
+            Get Started
           </button>
         </a>
       </motion.div>

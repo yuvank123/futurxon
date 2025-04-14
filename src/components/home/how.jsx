@@ -125,7 +125,7 @@ const How = () => {
           id="ai-api-heading"
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight"
         >
-          AI-Driven API Development: Smarter Integration, Faster Scalability
+          Scalable AI API Development
         </motion.h1>
 
         <motion.p
@@ -149,7 +149,9 @@ const How = () => {
           variants={itemVariants}
           className="flex justify-center lg:justify-start mt-6 md:mt-8"
         >
-          <button
+          <a
+            href="/contact"
+            aria-label="Start Free Trial"
             className="px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-500 to-blue-500 
                       rounded-lg text-white font-semibold tracking-wide 
                       transform transition-all duration-300 hover:scale-105 
@@ -170,7 +172,7 @@ const How = () => {
                 d="M13 7l5 5m0 0l-5 5m5-5H6"
               />
             </svg>
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </motion.section>

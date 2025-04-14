@@ -1,15 +1,15 @@
 import React from "react";
-import CyberImage from "../../../../public/images/screen.png";
+import CyberImage from "../../../../public/images/7.svg";
 
 const cybersecurityProcess = () => {
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center px-4 py-20">
       {/* Header Section */}
       <div className="relative z-10 text-center mb-16 max-w-4xl px-4">
-        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Safeguarding Your Digital World
+        <h1 className="text-4xl sm:text-5xl font-mono tracking-tight md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Safeguarding Digital World
           <br />
-          <span className="bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
             Secure and Resilient
           </span>
         </h1>

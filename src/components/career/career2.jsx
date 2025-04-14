@@ -8,17 +8,17 @@ const Career2 = () => {
     "Discover Technology": {
       title: "Explore Tech Frontiers",
       content: "At Infinoid, we foster a culture of innovation, collaboration, and growth. Our experts lead the way in AI, cloud computing, and software development, delivering cutting-edge digital solutions. We hire top tech talent and provide unparalleled opportunities to shape the future of technology. If you're passionate about transforming industries and making an impact, this is your place to thrive. Join us to work on pioneering projects and accelerate your professional growth in a dynamic, future-ready environment.",
-      image: "/images/Discover-Technology.png",
+      image: "/images/career1.jpg",
     },
     "Ace Your Career": {
       title: "Accelerate Your Growth",
       content: ` If you're driven by innovation and excellence in technology, Infinoid offers the perfect platform to elevate your career. We provide top-tier full-time job opportunities that propel your professional journey forward. Join us to collaborate with industry leaders, work on groundbreaking projects, and make a lasting impact on global businesses. Explore high-growth career paths and unlock your potential in a dynamic, future-focused environment.`,
-      image: "/images/Ace-your-career.png",
+      image: "/images/career2.jpg",
     },
     "Train with Professionals": {
       title: "Learn from Industry Leaders",
       content: "Gain hands-on experience and mentorship from top professionals in AI, cloud computing, and software development. Our expert-led training programs, internships, and skill development initiatives equip you with the latest tools and techniques to excel in your career. Elevate your expertise with real-world projects and immersive learning opportunities, preparing you to lead and innovate in the ever-evolving tech industry.",
-      image: "/images/Train-with-professionals.png",
+      image: "/images/career3.jpg",
     },
   };
 

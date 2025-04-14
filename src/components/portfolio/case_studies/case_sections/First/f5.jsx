@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiServer, FiCpu, FiCloud, FiTool, FiShoppingCart } from 'react-icons/fi';
+import OverviewImg5 from '../../../../../../public/images/5.png'
 
 const InventoryManagementCaseStudy = () => {
   return (
@@ -8,7 +9,7 @@ const InventoryManagementCaseStudy = () => {
       <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-blue-400 via-purple-300 to-red-400 bg-clip-text text-transparent">
-            Inventory Management System – Case Study by Infinoid
+            Inventory Management System
           </h1>
         </div>
       </section>
@@ -25,6 +26,14 @@ const InventoryManagementCaseStudy = () => {
           <p className="text-xl italic text-purple-300">
             "Transform your inventory into a strategic asset — Infinoid redefines supply chain management."
           </p>
+        </div>
+        {/* Overview Image */}
+        <div className="flex justify-center mt-20">
+          <img
+            src={OverviewImg5}
+            alt="AR/VR Overview"
+            className="rounded-2xl w-full max-w-4xl"
+          />
         </div>
       </section>
 

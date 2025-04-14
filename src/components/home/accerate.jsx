@@ -93,11 +93,11 @@ const Accerate = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center flex justify-center items-center"
         >
-          <a href="/get-started" aria-label="Start Free Trial">
+          <a href="/contact" aria-label="Start Free Trial">
             <button className="relative px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white font-semibold 
             hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300
             flex items-center gap-3 group overflow-hidden ">
-              <span className="relative z-10">Get Started for Free</span>
+              <span className="relative z-10">Schedule A Call</span>
               <svg
                 className="w-5 h-5 transition-transform group-hover:translate-x-1 relative z-10"
                 fill="none"

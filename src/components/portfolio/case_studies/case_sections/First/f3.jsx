@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiShoppingCart, FiTool, FiCloud, FiCpu } from 'react-icons/fi';
+import OverviewImg3 from '../../../../../../public/images/2.png'
 
 const OnlinePetShopCaseStudy = () => {
   return (
@@ -8,7 +9,7 @@ const OnlinePetShopCaseStudy = () => {
       <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
-            Online Pet Shop – Case Study by Infinoid
+            FurryCart: E-Commerce for Pets
           </h1>
         </div>
       </section>
@@ -25,6 +26,14 @@ const OnlinePetShopCaseStudy = () => {
           <p className="text-xl italic text-purple-300">
             "Where pet care meets convenience — transforming the online pet shopping experience."
           </p>
+        </div>
+        {/* Overview Image */}
+        <div className="flex justify-center mt-20">
+          <img
+            src={OverviewImg3}
+            alt="AR/VR Overview"
+            className="rounded-2xl w-full max-w-4xl"
+          />
         </div>
       </section>
 

@@ -15,8 +15,11 @@ import VideoPlayer from '../components/home/VideoPlayer'; // ✅ import the new 
 const homepage = () => {
   return (
     <div className='h-auto relative'>
+      
       <div><Background /></div>
+      
       <div className='relative z-30'><Navbar /></div>
+      
       <div className='relative z-20 min-h-screen'>
         <Titlepage />
         <div className='relative w-full lg:h-auto flex justify-center items-center pt-[8%] pb-[12%] md:pt-[0%] md:pb-[0%] backdrop-blur-lg md:mt-20'>

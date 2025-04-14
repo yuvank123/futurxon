@@ -1,5 +1,5 @@
 import React from "react";
-import Trackpng from "../../../../public/images/screen.png"
+import Trackpng from "../../../../public/images/5.svg"
 
 const BlockchainProcess = () => {
   return (
@@ -17,7 +17,7 @@ const BlockchainProcess = () => {
           to build next-gen blockchain applications.
         </p>
       </div>
-
+      
       {/* Process Steps - Simplified */}
       <div className="relative z-10 w-full px-4 flex justify-center items-center border-0 border-amber-50">
         <img src={Trackpng} alt="Blockchain Process" className="rounded-4xl"/>

@@ -29,7 +29,7 @@ function sendEmail($to, $subject, $message, $headers) {
         
         return true;
     } catch (Exception $e) {
-        error_log("Email sending error: " . $e->getMessage());
+        error_log("Email sending error: " . $e->getMessage());   
         return false;
     }
 }

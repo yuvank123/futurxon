@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiServer, FiCpu, FiCloud, FiTool } from 'react-icons/fi';
+import OverviewImg1 from '../../../../../../public/images/3.png';
 
 const ARVRCaseStudy = () => {
   return (
@@ -8,7 +9,7 @@ const ARVRCaseStudy = () => {
       <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-purple-400 via-blue-300 to-red-400 bg-clip-text text-transparent">
-            AR/VR Experience Platform – Case Study by Infinoid
+            AR/VR Experience Platform
           </h1>
         </div>
       </section>
@@ -26,6 +27,14 @@ const ARVRCaseStudy = () => {
             "Enter a world beyond reality — with Infinoid's immersive AR/VR solutions."
           </p>
         </div>
+        {/* Overview Image */}
+        <div className="flex justify-center mt-20">
+            <img
+              src={OverviewImg1}
+              alt="AR/VR Overview"
+              className="rounded-2xl w-full max-w-4xl"
+            />
+          </div>
       </section>
 
       {/* Challenges Section */}

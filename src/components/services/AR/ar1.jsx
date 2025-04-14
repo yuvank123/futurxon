@@ -75,13 +75,13 @@ const FullScreenCyberServices = () => {
           empowering you to build, explore, and collaborate in a truly interactive digital space.
         </p>
 
-        <button className="group relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 md:px-12 md:py-5 text-base sm:text-lg font-semibold rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
+        <a href="/contact" className="group relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 md:px-12 md:py-5 text-base sm:text-lg font-semibold rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-pink-400/30">
           <span className="relative z-10 flex items-center gap-3">
             <VRIcon className="w-5 h-5 sm:w-6 sm:h-6 text-pink-200 animate-pulse" />
             <span className="text-shadow">Launch Experience</span>
           </span>
           <div className="absolute inset-0 rounded-full border-2 border-pink-400/20 animate-border-glow" />
-        </button>
+        </a>
       </div>
 
 

@@ -291,7 +291,7 @@ const Navbar = () => {
           onClick={handleCtaClick}
           className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white px-3 sm:px-2 py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
         >
-          Schedule a Call
+          Schedule A Call
         </a>
       </div>
     </div>
@@ -419,7 +419,7 @@ const Navbar = () => {
                   onClick={handleCtaClick}
                   className="cta-button bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
                 >
-                  <span className="relative z-10">Schedule a Call</span>
+                  <span className="relative z-10">Schedule A Call</span>
                 </a>
               </div>
   

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiServer, FiCpu, FiCloud, FiTool } from 'react-icons/fi';
+import OverviewImg4 from '../../../../../../public/images/4.png'
 
 const PayrollManagementCaseStudy = () => {
   return (
@@ -8,7 +9,7 @@ const PayrollManagementCaseStudy = () => {
       <section className="relative py-15 px-6 lg:px-24 border-t border-gray-700">
         <div className="max-w-7xl mx-auto">
           <h1 className="mt-12 text-6xl md:text-7xl font-bold bg-gradient-to-r p-2 from-blue-400 via-purple-300 to-red-400 bg-clip-text text-transparent">
-            Payroll Management System – Case Study by Infinoid
+            Payroll Management System
           </h1>
         </div>
       </section>
@@ -25,6 +26,14 @@ const PayrollManagementCaseStudy = () => {
           <p className="text-xl italic text-purple-300">
             "Automate your payroll and empower your HR — Infinoid transforms payroll processing into a seamless experience."
           </p>
+        </div>
+        {/* Overview Image */}
+        <div className="flex justify-center mt-20">
+          <img
+            src={OverviewImg4}
+            alt="AR/VR Overview"
+            className="rounded-2xl w-full max-w-4xl"
+          />
         </div>
       </section>
 

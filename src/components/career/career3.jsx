@@ -62,7 +62,7 @@ const Positions = () => {
         ...formData
       });
 
-      const response = await fetch('https://infinoid.com/backend/process_application.php', {
+      const response = await fetch('https://www.infinoid.com/backend/process_application.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -114,12 +114,12 @@ const Positions = () => {
     {
       title: "Salesforce Developer",
       experience: "Experience: 0-3 Years",
-      skills: ["Aura, LWC", "SOQL", "Flow, Apex", "VS Code", "Git"],
+      skills: ["Aura", "LWC", "SQL", "Flow", "Apex", "VSCode", "Git"],
     },
     {
-      title: "Odoo Developer",
+      title: "Project Cordinator",
       experience: "Experience: 1-5 Years",
-      skills: ["Git, JavaScript", "SQL", "HTML, CSS", "PHP", "Python"],
+      skills: ["Project Management", "Communication", "Problem-Solving", "Documentation Tools", "Conflict Resolution", "Adaptability"],
     },
     {
       title: "React Developer",
@@ -137,8 +137,8 @@ const Positions = () => {
       skills: ["Python", "Machine Learning", "Deep Learning", "SQL", "Pandas"],
     },
     {
-      title: "Full Stack Developer",
-      experience: "Experience: 3-7 Years",
+      title: "Full Stack Developer Intern",
+      experience: "Experience: Fresher",
       skills: ["Node.js", "React.js", "MongoDB", "Express.js", "Docker"],
     },
   ];
