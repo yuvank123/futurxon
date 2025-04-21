@@ -108,27 +108,27 @@ const App = () => {
             <Casestudies />
           </RouteWrapper>
         } />
-        <Route path='/first' element={
+        <Route path='/case-studies/portfolio1' element={
           <RouteWrapper>
             <Firstportfolio />
           </RouteWrapper>
         } />
-        <Route path='/second' element={
+        <Route path='/case-studies/portfolio2' element={
           <RouteWrapper>
             <Secondportfolio />
           </RouteWrapper>
         } />
-        <Route path='/three' element={
+        <Route path='/case-studies/portfolio3' element={
           <RouteWrapper>
             <Threeportfolio />
           </RouteWrapper>
         } />
-        <Route path='/four' element={
+        <Route path='/case-studies/portfolio4' element={
           <RouteWrapper>
             <Fourportfolio />
           </RouteWrapper>
         } />
-        <Route path='/five' element={
+        <Route path='/case-studies/portfolio5' element={
           <RouteWrapper>
             <Fiveportfolio />
           </RouteWrapper>

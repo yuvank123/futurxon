@@ -19,42 +19,47 @@ const Testimonials = () => {
       name: "Dr.Munish Jindal",
       title: "Founding President : MentorX",
       quote:
-        "Infinoid transformed our rough idea into an outstanding digital experience with clear communication and exceptional UI/UX.Their team's responsiveness and genuine commitment to quality made the entire process smooth and enjoyable.",
+        "Infinoid turned our concept into a polished digital experience with exceptional UI/UX design. They maintained excellent communication and handled every detail with care. Their responsiveness and commitment stood out. From idea to execution, it truly felt like a seamless, collaborative partnership.",
       img: T2,
     },
     {
-      name: "Vivek Kumar ",
-      title: "Founder & CTO, FMPG ",
-      quote: "We went to Infinoid mainly because of the pricing, but stayed because of their work. The output was solid and didn’t feel like 'budget work'. Great value for startups like ours.",
+      name: "Vivek Kumar",
+      title: "Founder & CTO, FMPG",
+      quote:
+        "We initially approached Infinoid for their competitive pricing, but the quality of their work is what made us stay. They never compromised on creativity or timelines. The team's dedication, clean design choices, and proactive suggestions made our startup journey smooth and successful.",
       img: T3,
     },
     {
       name: "Rajeev Kumar",
       title: "ARD Secure Facility Management LLP",
       quote:
-        "Working with Infinoid Technologies felt like having an in-house team. Despite the time zone difference, their engineers were always responsive, and we never had to wait for updates. The project delivery was spot-on, and the support team is incredibly proactive.",
+        "Working with Infinoid felt like having an in-house tech team. Their ability to adapt quickly, handle changes on the fly, and maintain quality was outstanding. The development cycle was smooth, the communication clear, and the final product exceeded our expectations in every way.",
       img: T1,
     },
     {
-      name: "Dr.Nancy Juneja ",
+      name: "Dr.Nancy Juneja",
       title: "Founder : Revup Skills",
-      quote: "Honestly, I wasn’t expecting such professionalism from such a young team. They know their stuff, especially in design and frontend dev. Very open to feedback and super quick to respond.",
+      quote:
+        "The team at Infinoid truly exceeded expectations. Their sense of design, fast turnaround, and openness to ideas made the entire process enjoyable. Their professionalism and creativity came through in every discussion. It was a pleasure to collaborate with such a skilled group.",
       img: T4,
     },
     {
-      name: "Kapil Jain ",
-      title: "Founder & Ceo k.sjain & co.",
-      quote: "The team was always a WhatsApp or email away. Even on weekends, if something critical came up, they were on it. That kind of responsiveness really helped during our launch week.",
+      name: "Kapil Jain",
+      title: "Founder & CEO, K.S.Jain & Co.",
+      quote:
+        "Infinoid’s team was always available, even on short notice. Their consistent support, attention to detail, and patience stood out. From initial discussions to final deployment, they ensured everything was smooth, stress-free, and built exactly as envisioned. We couldn't ask for more.",
       img: T5,
     },
     {
       name: "Vishnu Chandran CS",
-      title: "Managing-Director:360 DEGREE SIMS PRIVATE LIMITED",
-      quote: "Infinoid Technologies exceeded our expectations by designing modern websites and streamlining our internal operations with smart automation.Their clear communication, timely delivery, and professional approach made the entire experience smooth and highly recommended.",
+      title: "Managing Director, 360 DEGREE SIMS PVT. LTD.",
+      quote:
+        "We trusted Infinoid with our Payroll Management System and were impressed with their professionalism. They delivered a modern UI and automated features that worked flawlessly. Their team was detail-oriented, responsive, and added real value to our operations from day one.",
       img: T6,
     },
   ];
-
+  
+  
   return (
     <div className="w-full flex flex-col items-center justify-center text-white py-20 px-4 sm:px-6 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl w-full">

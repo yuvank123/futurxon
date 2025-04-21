@@ -114,12 +114,12 @@ const Positions = () => {
     {
       title: "Salesforce Developer",
       experience: "Experience: 0-3 Years",
-      skills: ["Aura", "LWC", "SQL", "Flow", "Apex", "VSCode", "Git"],
+      skills: ["Aura", "LWC", "Flow", "Apex", "VSCode"],
     },
     {
       title: "Project Cordinator",
       experience: "Experience: 1-5 Years",
-      skills: ["Project Management", "Communication", "Problem-Solving", "Documentation Tools", "Conflict Resolution", "Adaptability"],
+      skills: ["Project Management", "Communication", "Problem-Solving", "Documentation Tools", "Conflict Resolution"],
     },
     {
       title: "React Developer",
@@ -137,7 +137,7 @@ const Positions = () => {
       skills: ["Python", "Machine Learning", "Deep Learning", "SQL", "Pandas"],
     },
     {
-      title: "Full Stack Developer Intern",
+      title: "Full Stack Developer",
       experience: "Experience: Fresher",
       skills: ["Node.js", "React.js", "MongoDB", "Express.js", "Docker"],
     },

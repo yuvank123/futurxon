@@ -26,7 +26,7 @@ const cyberdev = () => {
 
         {/* Intense star particles */}
         <div className="absolute inset-0 opacity-70 animate-particles">
-          {[...Array(300)].map((_, i) => (
+          {[...Array(100)].map((_, i) => (
             <div 
               key={i} 
               className="absolute w-[2px] h-[2px] rounded-full bg-gradient-to-b from-pink-300 via-purple-300 to-blue-300 shadow-[0_0_15px_2px] shadow-purple-400/50"

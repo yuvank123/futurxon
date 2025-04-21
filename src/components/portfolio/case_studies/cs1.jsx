@@ -9,35 +9,35 @@ const AboutUs = () => {
     const sections = [
         {
             title: "Immersive AR/VR Experience Platform",
-            link: "/first",
+            link: "/case-studies/portfolio1",
             bgImage: Csbg1,
             subtitle: "Transforming Immersive Experiences",
             description: "Discover our next-generation AR/VR platform that delivers real-time 3D visualization, AR integration, and VR-enabled simulations for a truly immersive digital experience."
         },
         {
             title: " FurryCart: E-Commerce for Pets",
-            link: "/three",
+            link: "/case-studies/portfolio2",//hai ye three
             bgImage: Csbg2,
             subtitle: "Revolutionizing Pet Care Shopping",
             description: "Explore our robust online pet shop platform offering personalized recommendations, secure transactions, and efficient inventory management for pet lovers."
         },
         {
             title: "Business Analytical Dashboard",
-            link: "/second",
+            link: "/case-studies/portfolio3", //hai ye two
             bgImage: Csbg3,
             subtitle: "Turning Data into Insights",
             description: "Experience our dynamic analytical dashboard that transforms raw data into actionable insights, enabling businesses to drive revenue and growth."
         },
         {
             title: "Payroll Management System",
-            link: "/four",
+            link: "/case-studies/portfolio4",
             bgImage: Csbg4,
             subtitle: "Streamlining Payroll Processes",
             description: "Learn how our automated payroll system ensures compliance, enhances data security, and provides real-time financial insights for businesses of all sizes."
         },
         {
             title: "Inventory Management System",
-            link: "/five",
+            link: "/case-studies/portfolio5",
             bgImage: Csbg5,
             subtitle: "Optimizing Supply Chain Operations",
             description: "See how our inventory management solution provides real-time tracking, automated restocking, and data-driven analytics to optimize supply chain efficiency."
