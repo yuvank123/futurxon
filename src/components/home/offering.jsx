@@ -94,9 +94,9 @@ const Offering = () => {
           className="flex flex-col lg:flex-row justify-between gap-8 mb-12 text-center lg:text-left"
         >
           <div className="lg:w-1/2">
-            <h1 className="text-3xl unbounded-816 sm:text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-300 to-purple-200 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-purple-300 to-purple-200 mb-4">
               Revolutionizing Enterprise
-              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-tr from-blue-100 via-blue-300 to-blue-200 playwrite-dk-loopet font-mono">Solutions</span>
+              <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-tr from-blue-100 via-blue-300 to-blue-200 font-mono">Solutions</span>
             </h1>
             <p className="text-base sm:text-lg text-gray-400">
               Innovative technology solutions designed to address today's business challenges.

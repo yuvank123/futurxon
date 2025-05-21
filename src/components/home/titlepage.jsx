@@ -105,12 +105,12 @@ const TitlePage = () => {
           className="w-full mb-3 md:w-[100vw] h-auto flex flex-col justify-center items-center"
           variants={itemVariants}
         >
-          <h2 className="text-5xl md:text-7xl p-2 font-bold unbounded-816 text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-white mb-4 scale-y-110 drop-shadow-2xl ipad-main-title">
+          <h2 className="text-5xl md:text-7xl p-2 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-purple-300 to-white mb-4 scale-y-110 drop-shadow-2xl ipad-main-title">
             Agile & Scalable IT Services
           </h2>
-          <h2 className="text-5xl md:text-7xl font-bold unbounded-816 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-white mb-4 scale-y-110 drop-shadow-2xl ipad-main-title">
+          <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-300 to-white mb-4 scale-y-110 drop-shadow-2xl ipad-main-title">
             <motion.span
-              className="bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-white playwrite-dk-loopet rounded-2xl"
+              className="bg-clip-text bg-gradient-to-r from-blue-300 via-blue-400 to-white rounded-2xl"
               variants={colorTransition}
             >
               for Business{" "}

@@ -64,9 +64,9 @@ const Mapping = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col items-center px-4 text-center"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold unbounded-816 text-gray-100 mb-5 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 mb-5 leading-tight">
             Advanced Network{" "}
-            <span className="bg-clip-text text-transparent playwrite-dk-loopet bg-gradient-to-r from-purple-400 to-blue-400 font-mono">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 font-mono">
               Topology Solutions
             </span>
           </h1>
