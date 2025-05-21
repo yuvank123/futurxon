@@ -20,9 +20,9 @@ const homepage = () => {
       
       <div className='relative z-30'><Navbar /></div>
       
-      <div className='relative z-20 min-h-screen'>
+      <div className='relative z-20 h-auto'>
         <Titlepage />
-        <div className='relative w-full lg:h-auto flex justify-center items-center pt-[8%] pb-[12%] md:pt-[0%] md:pb-[0%] backdrop-blur-lg md:mt-20'>
+        <div className='relative w-full lg:h-auto flex justify-center items-center pt-[20%] pb-[12%] md:pt-[0%] md:pb-[0%] backdrop-blur-lg md:mt-20'>
           <VideoPlayer /> {/* ✅ replacing the old <video> block */}
         </div>
       </div>

@@ -51,7 +51,7 @@ const How = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
-      className="h-full w-full flex flex-col lg:flex-row items-center justify-center perspective-[600px] px-6 md:px-10 lg:px-20 relative"
+      className="h-full w-full flex flex-col lg:flex-row items-center justify-center perspective-[600px] px-3 md:px-5 lg:px-10 relative"
       aria-labelledby="ai-api-heading"
     >
       {/* Background SVG */}
@@ -123,7 +123,7 @@ const How = () => {
         <motion.h1
           variants={itemVariants}
           id="ai-api-heading"
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl unbounded-816 font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent drop-shadow-lg leading-tight"
         >
           Scalable AI API Development
         </motion.h1>

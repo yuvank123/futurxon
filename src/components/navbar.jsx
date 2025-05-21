@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import Callicon from "../../public/images/callicon.png";
 import One from '../../public/images/logo.svg';
 import "../style/navbar.css";
 
@@ -121,7 +122,7 @@ const Navbar = () => {
 
   const renderserviceDropdown = (menuName, leftItems, middleItems, rightItems) => (
     <div
-      className={`absolute top-full xl:-left-[300px] lg:-left-[200px] mt-5 w-full lg:w-[800px] xl:w-[900px] bg-white border border-gray-200 rounded-xl shadow-xl py-8 z-50 transition-all duration-200 ${
+      className={`absolute top-full xl:-left-[300px] lg:-left-[200px] mt-5 w-full lg:w-[800px] xl:w-[900px] bg-white rounded-xl shadow-xl py-8 z-50 transition-all duration-200 ${
         activeMenu === menuName
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-2 pointer-events-none'
@@ -289,7 +290,7 @@ const Navbar = () => {
           href='https://calendly.com/infinoidtech/infinoid-technologies'
           ref={ctaButton}
           onClick={handleCtaClick}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white px-3 sm:px-2 py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-medium"
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-500 text-white px-3 sm:px-2 py-3 sm:py-4 rounded-xl hover:shadow-lg transition-all duration-300 text-base sm:text-lg md:text-xl font-bold"
         >
           Schedule A Call
         </a>
@@ -299,7 +300,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      <nav className={`fixed border-b-1 border-purple-950/50 top-0 w-full z-50 transition-all duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         // Changed background styling here
@@ -417,7 +418,15 @@ const Navbar = () => {
                   href='https://calendly.com/infinoidtech/infinoid-technologies'
                   ref={ctaButton}
                   onClick={handleCtaClick}
-                  className="cta-button bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-3 rounded-xl hover:shadow-lg transition-all duration-300 font-[12px] md:font-[14px] relative overflow-hidden"
+                  className="cta-button font-semibold text-white p-2 md:p-2 bg-gradient-to-r to-purple-600 rounded-4xl hover:shadow-lg transition-all duration-300 md:font-[14px] relative overflow-hidden"
+                >
+                  <img src="https://img.icons8.com/3d-fluency/94/technical-support--v2.png" alt="call_icon" className="relative z-10 h-[40px]"/>
+                </a>
+                <a
+                  href='https://calendly.com/infinoidtech/infinoid-technologies'
+                  ref={ctaButton}
+                  onClick={handleCtaClick}
+                  className="cta-button font-semibold bg-gradient-to-r from-purple-600 to-blue-500 text-white p-2 md:p-4 rounded-4xl hover:shadow-lg transition-all duration-300 md:font-[14px] relative overflow-hidden"
                 >
                   <span className="relative z-10">Schedule A Call</span>
                 </a>

@@ -1,4 +1,6 @@
 import React from "react";
+import Startupindia from "../../public/images/startupindia.png";
+import MSME from "../../public/images/msme.png";
 import {
   FaLinkedin,
   FaTwitter,
@@ -10,35 +12,39 @@ import Logo from "../../public/images/logo.svg";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-10 px-5">
+    <footer className="text-white py-5 px-5">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Logo & Company Info */}
-        <div className="space-y-4 flex flex-col items-center md:items-start">
-          <div className="flex items-center space-x-3">
+        <div className="flex flex-col items-center md:items-start gap-4">
+          {/* Logo */}
+          <div className="flex items-center justify-center md:justify-start">
             <img
-              alt="logo"
-              className="w-20 md:w-40 transition-all duration-300 hover:animate-pulse"
+              alt="Infinoid Logo"
               src={Logo}
+              className="w-20 md:w-28 transition-all duration-300 hover:animate-pulse"
             />
           </div>
-          <p className="text-gray-400">Innovating the Future</p>
-          <div className="flex gap-4 mt-2">
-            <a
-              href="https://www.linkedin.com/company/infinoid-technologies/?viewAsMember=true"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin className="text-xl hover:text-blue-500 transition-transform transform hover:scale-110" />
-            </a>
-            <a
-              href="https://x.com/infinoid_tech"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTwitter className="text-xl hover:text-blue-400 transition-transform transform hover:scale-110" />
-            </a>
+
+          {/* Startup India Logo */}
+          <div className="flex justify-center md:justify-start">
+            <img
+              alt="Startup India"
+              src={Startupindia}
+              className="w-32 md:w-40"
+            />
           </div>
+
+          <div className="flex justify-center md:justify-start">
+            <img
+              alt="Startup India"
+              src={MSME}
+              className="w-32 md:w-40"
+            />
+          </div>
+
         </div>
+
+
 
         {/* Services */}
         <div className="space-y-4">
@@ -218,6 +224,25 @@ const Footer = () => {
               <p>(+91) 9871973348</p>
               <p>(+91) 9227088395</p>
             </div>
+          </div>
+          {/* Social Icons */}
+          <div className="flex gap-4 justify-center md:justify-start mt-2">
+            <a
+              href="https://www.linkedin.com/company/infinoid-technologies/?viewAsMember=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transform transition-transform duration-300"
+            >
+              <FaLinkedin className="text-2xl text-white hover:text-blue-500" />
+            </a>
+            <a
+              href="https://x.com/infinoid_tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:scale-110 transform transition-transform duration-300"
+            >
+              <FaTwitter className="text-2xl text-white hover:text-blue-400" />
+            </a>
           </div>
         </div>
       </div>

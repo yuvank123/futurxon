@@ -29,9 +29,9 @@ const Accerate = () => {
           className="text-center mb-16"
         >
           <div className="relative inline-block">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 relative z-10">
+            <h1 className="text-[42px] md:text-7xl font-bold text-white mb-4 relative z-10">
               Transform Your{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 font-mono">
+              <span className="text-transparent playwrite-dk-loopet bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 font-mono">
                 Digital Future
               </span>
             </h1>

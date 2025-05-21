@@ -212,7 +212,7 @@ const TechStack = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent p-2 font-mono">
+          <h1 className="text-5xl playwrite-dk-loopet md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent p-6 font-mono">
             Our Technology Expertise
           </h1>
           <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
